@@ -273,10 +273,10 @@ inline bool ParseN2kSystemTime(const tN2kMsg &N2kMsg, unsigned char &SID, uint16
  * of the source code. See parameter details on \ref SetN2kPGN129802
  * 
  */
-inline void SetN2kAISSafetyRelatedBroadcastMsg(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t SourceID,
-      tN2kAISTransceiverInformation AISTransceiverInformation, char * SafetyRelatedText) {
-   SetN2kPGN129802(N2kMsg, MessageID, Repeat, SourceID, AISTransceiverInformation, SafetyRelatedText);
-}
+// inline void SetN2kAISSafetyRelatedBroadcastMsg(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t SourceID,
+//       tN2kAISTransceiverInformation AISTransceiverInformation, char * SafetyRelatedText) {
+//    SetN2kPGN129802(N2kMsg, MessageID, Repeat, SourceID, AISTransceiverInformation, SafetyRelatedText);
+// }
 
 /************************************************************************//**
  * \brief Parsing the Content of a PGN129802 Message - "AIS Safety Related 
@@ -315,10 +315,10 @@ inline void SetN2kAISSafetyRelatedBroadcastMsg(tN2kMsg &N2kMsg, uint8_t MessageI
  * Alias of PGN 129802. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129802 
  */
-inline bool ParseN2kAISSafetyRelatedBroadcastMsg(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &SourceID,
-      tN2kAISTransceiverInformation &AISTransceiverInformation, char * SafetyRelatedText, size_t &SafetyRelatedTextMaxSize) {
-   return ParseN2kPGN129802(N2kMsg, MessageID, Repeat, SourceID, AISTransceiverInformation, SafetyRelatedText, SafetyRelatedTextMaxSize);
-}
+// inline bool ParseN2kAISSafetyRelatedBroadcastMsg(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &SourceID,
+//       tN2kAISTransceiverInformation &AISTransceiverInformation, char * SafetyRelatedText, size_t &SafetyRelatedTextMaxSize) {
+//    return ParseN2kPGN129802(N2kMsg, MessageID, Repeat, SourceID, AISTransceiverInformation, SafetyRelatedText, SafetyRelatedTextMaxSize);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN127233 Message "Man Overboard Notification"
@@ -376,23 +376,23 @@ inline bool ParseN2kAISSafetyRelatedBroadcastMsg(const tN2kMsg &N2kMsg, uint8_t 
  * of the source code. See parameter details on \ref SetN2kPGN127233
  * 
  */
-inline void SetN2kMOBNotification(tN2kMsg &N2kMsg,
-      unsigned char SID,
-      uint32_t MobEmitterId,
-      tN2kMOBStatus MOBStatus,
-      double ActivationTime,
-      tN2kMOBPositionSource PositionSource,
-      uint16_t PositionDate,
-      double PositionTime,
-      double Latitude,
-      double Longitude,
-      tN2kHeadingReference COGReference,
-      double COG,
-      double SOG,
-      uint32_t MMSI,
-      tN2kMOBEmitterBatteryStatus MOBEmitterBatteryStatus) {
-  SetN2kPGN127233(N2kMsg,SID,MobEmitterId,MOBStatus,ActivationTime,PositionSource,PositionDate,PositionTime,Latitude,Longitude,COGReference,COG,SOG,MMSI,MOBEmitterBatteryStatus);
-}
+// inline void SetN2kMOBNotification(tN2kMsg &N2kMsg,
+//       unsigned char SID,
+//       uint32_t MobEmitterId,
+//       tN2kMOBStatus MOBStatus,
+//       double ActivationTime,
+//       tN2kMOBPositionSource PositionSource,
+//       uint16_t PositionDate,
+//       double PositionTime,
+//       double Latitude,
+//       double Longitude,
+//       tN2kHeadingReference COGReference,
+//       double COG,
+//       double SOG,
+//       uint32_t MMSI,
+//       tN2kMOBEmitterBatteryStatus MOBEmitterBatteryStatus) {
+//   SetN2kPGN127233(N2kMsg,SID,MobEmitterId,MOBStatus,ActivationTime,PositionSource,PositionDate,PositionTime,Latitude,Longitude,COGReference,COG,SOG,MMSI,MOBEmitterBatteryStatus);
+// }
 
 /************************************************************************//**
  * \brief Parsing the Content of Message PGN127233 "Man Overboard Notification"
@@ -449,23 +449,23 @@ inline void SetN2kMOBNotification(tN2kMsg &N2kMsg,
  * Alias of PGN 127233. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127233 
  */
-inline bool ParseN2kMOBNotification(const tN2kMsg &N2kMsg,
-      unsigned char &SID,
-      uint32_t &MobEmitterId,
-      tN2kMOBStatus &MOBStatus,
-      double &ActivationTime,
-      tN2kMOBPositionSource &PositionSource,
-      uint16_t &PositionDate,
-      double &PositionTime,
-      double &Latitude,
-      double &Longitude,
-      tN2kHeadingReference &COGReference,
-      double &COG,
-      double &SOG,
-      uint32_t &MMSI,
-      tN2kMOBEmitterBatteryStatus &MOBEmitterBatteryStatus) {
-  return ParseN2kPGN127233(N2kMsg,SID,MobEmitterId,MOBStatus,ActivationTime,PositionSource,PositionDate,PositionTime,Latitude,Longitude,COGReference,COG,SOG,MMSI,MOBEmitterBatteryStatus);
-}
+// inline bool ParseN2kMOBNotification(const tN2kMsg &N2kMsg,
+//       unsigned char &SID,
+//       uint32_t &MobEmitterId,
+//       tN2kMOBStatus &MOBStatus,
+//       double &ActivationTime,
+//       tN2kMOBPositionSource &PositionSource,
+//       uint16_t &PositionDate,
+//       double &PositionTime,
+//       double &Latitude,
+//       double &Longitude,
+//       tN2kHeadingReference &COGReference,
+//       double &COG,
+//       double &SOG,
+//       uint32_t &MMSI,
+//       tN2kMOBEmitterBatteryStatus &MOBEmitterBatteryStatus) {
+//   return ParseN2kPGN127233(N2kMsg,SID,MobEmitterId,MOBStatus,ActivationTime,PositionSource,PositionDate,PositionTime,Latitude,Longitude,COGReference,COG,SOG,MMSI,MOBEmitterBatteryStatus);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN127237 Message "Heading/Track control"
@@ -496,24 +496,24 @@ inline bool ParseN2kMOBNotification(const tN2kMsg &N2kMsg,
  * \param VesselHeading             in radians
  * 
  */
-void SetN2kPGN127237(tN2kMsg &N2kMsg,
-      tN2kOnOff RudderLimitExceeded,
-      tN2kOnOff OffHeadingLimitExceeded,
-      tN2kOnOff OffTrackLimitExceeded,
-      tN2kOnOff Override,
-      tN2kSteeringMode SteeringMode,
-      tN2kTurnMode TurnMode,
-      tN2kHeadingReference HeadingReference,
-      tN2kRudderDirectionOrder CommandedRudderDirection,
-      double CommandedRudderAngle,
-      double HeadingToSteerCourse,
-      double Track,
-      double RudderLimit,
-      double OffHeadingLimit,
-      double RadiusOfTurnOrder,
-      double RateOfTurnOrder,
-      double OffTrackLimit,
-      double VesselHeading);
+// void SetN2kPGN127237(tN2kMsg &N2kMsg,
+//       tN2kOnOff RudderLimitExceeded,
+//       tN2kOnOff OffHeadingLimitExceeded,
+//       tN2kOnOff OffTrackLimitExceeded,
+//       tN2kOnOff Override,
+//       tN2kSteeringMode SteeringMode,
+//       tN2kTurnMode TurnMode,
+//       tN2kHeadingReference HeadingReference,
+//       tN2kRudderDirectionOrder CommandedRudderDirection,
+//       double CommandedRudderAngle,
+//       double HeadingToSteerCourse,
+//       double Track,
+//       double RudderLimit,
+//       double OffHeadingLimit,
+//       double RadiusOfTurnOrder,
+//       double RateOfTurnOrder,
+//       double OffTrackLimit,
+//       double VesselHeading);
 
 /************************************************************************//**
  * \brief Setting up Message "Heading/Track control" - PGN 127237
@@ -523,28 +523,28 @@ void SetN2kPGN127237(tN2kMsg &N2kMsg,
  * of the source code. See parameter details on \ref SetN2kPGN127237
  * 
  */
-inline void SetN2kHeadingTrackControl(tN2kMsg &N2kMsg,
-      tN2kOnOff RudderLimitExceeded,
-      tN2kOnOff OffHeadingLimitExceeded,
-      tN2kOnOff OffTrackLimitExceeded,
-      tN2kOnOff Override,
-      tN2kSteeringMode SteeringMode,
-      tN2kTurnMode TurnMode,
-      tN2kHeadingReference HeadingReference,
-      tN2kRudderDirectionOrder CommandedRudderDirection,
-      double CommandedRudderAngle,
-      double HeadingToSteerCourse,
-      double Track,
-      double RudderLimit,
-      double OffHeadingLimit,
-      double RadiusOfTurnOrder,
-      double RateOfTurnOrder,
-      double OffTrackLimit,
-      double VesselHeading) {
-  SetN2kPGN127237(N2kMsg, RudderLimitExceeded,OffHeadingLimitExceeded,OffTrackLimitExceeded,Override,SteeringMode,TurnMode,
-         HeadingReference,CommandedRudderDirection,CommandedRudderAngle,HeadingToSteerCourse,Track,RudderLimit,OffHeadingLimit,
-         RadiusOfTurnOrder,RateOfTurnOrder,OffTrackLimit,VesselHeading);
-}
+// inline void SetN2kHeadingTrackControl(tN2kMsg &N2kMsg,
+//       tN2kOnOff RudderLimitExceeded,
+//       tN2kOnOff OffHeadingLimitExceeded,
+//       tN2kOnOff OffTrackLimitExceeded,
+//       tN2kOnOff Override,
+//       tN2kSteeringMode SteeringMode,
+//       tN2kTurnMode TurnMode,
+//       tN2kHeadingReference HeadingReference,
+//       tN2kRudderDirectionOrder CommandedRudderDirection,
+//       double CommandedRudderAngle,
+//       double HeadingToSteerCourse,
+//       double Track,
+//       double RudderLimit,
+//       double OffHeadingLimit,
+//       double RadiusOfTurnOrder,
+//       double RateOfTurnOrder,
+//       double OffTrackLimit,
+//       double VesselHeading) {
+//   SetN2kPGN127237(N2kMsg, RudderLimitExceeded,OffHeadingLimitExceeded,OffTrackLimitExceeded,Override,SteeringMode,TurnMode,
+//          HeadingReference,CommandedRudderDirection,CommandedRudderAngle,HeadingToSteerCourse,Track,RudderLimit,OffHeadingLimit,
+//          RadiusOfTurnOrder,RateOfTurnOrder,OffTrackLimit,VesselHeading);
+// }
 
 /************************************************************************//**
  * \brief Parsing the Content of Message PGN127237 "Heading/Track control"
@@ -577,24 +577,24 @@ inline void SetN2kHeadingTrackControl(tN2kMsg &N2kMsg,
  * \return false    Parsing of PGN Message aborted
 */
 
-bool ParseN2kPGN127237(const tN2kMsg &N2kMsg,
-      tN2kOnOff &RudderLimitExceeded,
-      tN2kOnOff &OffHeadingLimitExceeded,
-      tN2kOnOff &OffTrackLimitExceeded,
-      tN2kOnOff &Override,
-      tN2kSteeringMode &SteeringMode,
-      tN2kTurnMode &TurnMode,
-      tN2kHeadingReference &HeadingReference,
-      tN2kRudderDirectionOrder &CommandedRudderDirection,
-      double &CommandedRudderAngle,
-      double &HeadingToSteerCourse,
-      double &Track,
-      double &RudderLimit,
-      double &OffHeadingLimit,
-      double &RadiusOfTurnOrder,
-      double &RateOfTurnOrder,
-      double &OffTrackLimit,
-      double &VesselHeading);
+// bool ParseN2kPGN127237(const tN2kMsg &N2kMsg,
+//       tN2kOnOff &RudderLimitExceeded,
+//       tN2kOnOff &OffHeadingLimitExceeded,
+//       tN2kOnOff &OffTrackLimitExceeded,
+//       tN2kOnOff &Override,
+//       tN2kSteeringMode &SteeringMode,
+//       tN2kTurnMode &TurnMode,
+//       tN2kHeadingReference &HeadingReference,
+//       tN2kRudderDirectionOrder &CommandedRudderDirection,
+//       double &CommandedRudderAngle,
+//       double &HeadingToSteerCourse,
+//       double &Track,
+//       double &RudderLimit,
+//       double &OffHeadingLimit,
+//       double &RadiusOfTurnOrder,
+//       double &RateOfTurnOrder,
+//       double &OffTrackLimit,
+//       double &VesselHeading);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Heading/Track control" 
@@ -604,29 +604,29 @@ bool ParseN2kPGN127237(const tN2kMsg &N2kMsg,
  * Alias of PGN 127237. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127237 
  */
-inline bool ParseN2kHeadingTrackControl(const tN2kMsg &N2kMsg,
-      tN2kOnOff &RudderLimitExceeded,
-      tN2kOnOff &OffHeadingLimitExceeded,
-      tN2kOnOff &OffTrackLimitExceeded,
-      tN2kOnOff &Override,
-      tN2kSteeringMode &SteeringMode,
-      tN2kTurnMode &TurnMode,
-      tN2kHeadingReference &HeadingReference,
-      tN2kRudderDirectionOrder &CommandedRudderDirection,
-      double &CommandedRudderAngle,
-      double &HeadingToSteerCourse,
-      double &Track,
-      double &RudderLimit,
-      double &OffHeadingLimit,
-      double &RadiusOfTurnOrder,
-      double &RateOfTurnOrder,
-      double &OffTrackLimit,
-      double &VesselHeading)
-{
-  return ParseN2kPGN127237(N2kMsg,RudderLimitExceeded,OffHeadingLimitExceeded,OffTrackLimitExceeded,Override,SteeringMode,
-         TurnMode,HeadingReference,CommandedRudderDirection, CommandedRudderAngle,HeadingToSteerCourse,Track,RudderLimit,
-         OffHeadingLimit,RadiusOfTurnOrder,RateOfTurnOrder,OffTrackLimit,VesselHeading);
-}
+// inline bool ParseN2kHeadingTrackControl(const tN2kMsg &N2kMsg,
+//       tN2kOnOff &RudderLimitExceeded,
+//       tN2kOnOff &OffHeadingLimitExceeded,
+//       tN2kOnOff &OffTrackLimitExceeded,
+//       tN2kOnOff &Override,
+//       tN2kSteeringMode &SteeringMode,
+//       tN2kTurnMode &TurnMode,
+//       tN2kHeadingReference &HeadingReference,
+//       tN2kRudderDirectionOrder &CommandedRudderDirection,
+//       double &CommandedRudderAngle,
+//       double &HeadingToSteerCourse,
+//       double &Track,
+//       double &RudderLimit,
+//       double &OffHeadingLimit,
+//       double &RadiusOfTurnOrder,
+//       double &RateOfTurnOrder,
+//       double &OffTrackLimit,
+//       double &VesselHeading)
+// {
+//   return ParseN2kPGN127237(N2kMsg,RudderLimitExceeded,OffHeadingLimitExceeded,OffTrackLimitExceeded,Override,SteeringMode,
+//          TurnMode,HeadingReference,CommandedRudderDirection, CommandedRudderAngle,HeadingToSteerCourse,Track,RudderLimit,
+//          OffHeadingLimit,RadiusOfTurnOrder,RateOfTurnOrder,OffTrackLimit,VesselHeading);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN127245 Message "Rudder"
@@ -731,7 +731,7 @@ inline bool ParseN2kRudder(const tN2kMsg &N2kMsg, double &RudderPosition) {
  * \param ref         Heading reference. See definition 
  *                    of \ref tN2kHeadingReference.
  */
-void SetN2kPGN127250(tN2kMsg &N2kMsg, unsigned char SID, double Heading, double Deviation, double Variation, tN2kHeadingReference ref);
+// void SetN2kPGN127250(tN2kMsg &N2kMsg, unsigned char SID, double Heading, double Deviation, double Variation, tN2kHeadingReference ref);
 
 /************************************************************************//**
  * \brief Setting up Message "Vessel Heading" - PGN 127250
@@ -740,9 +740,9 @@ void SetN2kPGN127250(tN2kMsg &N2kMsg, unsigned char SID, double Heading, double 
  * Alias of PGN 127250. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127250
   */
-inline void SetN2kTrueHeading(tN2kMsg &N2kMsg, unsigned char SID, double Heading) {
-  SetN2kPGN127250(N2kMsg,SID,Heading,N2kDoubleNA,N2kDoubleNA,N2khr_true);
-}
+// inline void SetN2kTrueHeading(tN2kMsg &N2kMsg, unsigned char SID, double Heading) {
+//   SetN2kPGN127250(N2kMsg,SID,Heading,N2kDoubleNA,N2kDoubleNA,N2khr_true);
+// }
 
 /************************************************************************//**
  * \brief Setting up Message "Vessel Heading" - PGN 127250
@@ -751,9 +751,9 @@ inline void SetN2kTrueHeading(tN2kMsg &N2kMsg, unsigned char SID, double Heading
  * Alias of PGN 127250. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127250
   */
-inline void SetN2kMagneticHeading(tN2kMsg &N2kMsg, unsigned char SID, double Heading, double Deviation=N2kDoubleNA, double Variation=N2kDoubleNA) {
-  SetN2kPGN127250(N2kMsg,SID,Heading,Deviation,Variation,N2khr_magnetic);
-}
+// inline void SetN2kMagneticHeading(tN2kMsg &N2kMsg, unsigned char SID, double Heading, double Deviation=N2kDoubleNA, double Variation=N2kDoubleNA) {
+//   SetN2kPGN127250(N2kMsg,SID,Heading,Deviation,Variation,N2khr_magnetic);
+// }
 
 /************************************************************************//**
  * \brief Parsing Content of Message PGN 127250 "Vessel Heading"
@@ -778,7 +778,7 @@ inline void SetN2kMagneticHeading(tN2kMsg &N2kMsg, unsigned char SID, double Hea
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127250(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heading, double &Deviation, double &Variation, tN2kHeadingReference &ref);
+// bool ParseN2kPGN127250(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heading, double &Deviation, double &Variation, tN2kHeadingReference &ref);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Vessel Heading" 
@@ -788,9 +788,9 @@ bool ParseN2kPGN127250(const tN2kMsg &N2kMsg, unsigned char &SID, double &Headin
  * Alias of PGN 127250. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127250 
  */
-inline bool ParseN2kHeading(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heading, double &Deviation, double &Variation, tN2kHeadingReference &ref) {
-  return ParseN2kPGN127250(N2kMsg,SID,Heading,Deviation,Variation,ref);
-}
+// inline bool ParseN2kHeading(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heading, double &Deviation, double &Variation, tN2kHeadingReference &ref) {
+//   return ParseN2kPGN127250(N2kMsg,SID,Heading,Deviation,Variation,ref);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127251 Message "Rate of Turn"
@@ -807,7 +807,7 @@ inline bool ParseN2kHeading(const tN2kMsg &N2kMsg, unsigned char &SID, double &H
  * \param RateOfTurn  Change in heading in radians per second
  * 
  */
-void SetN2kPGN127251(tN2kMsg &N2kMsg, unsigned char SID, double RateOfTurn);
+// void SetN2kPGN127251(tN2kMsg &N2kMsg, unsigned char SID, double RateOfTurn);
 
 /************************************************************************//**
  * \brief Setting up Message "Rate of Turn" - PGN 127251
@@ -816,9 +816,9 @@ void SetN2kPGN127251(tN2kMsg &N2kMsg, unsigned char SID, double RateOfTurn);
  * Alias of PGN 127251. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127251
   */
-inline void SetN2kRateOfTurn(tN2kMsg &N2kMsg, unsigned char SID, double RateOfTurn) {
-  SetN2kPGN127251(N2kMsg,SID,RateOfTurn);
-}
+// inline void SetN2kRateOfTurn(tN2kMsg &N2kMsg, unsigned char SID, double RateOfTurn) {
+//   SetN2kPGN127251(N2kMsg,SID,RateOfTurn);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN127251 "Rate of Turn"
@@ -834,7 +834,7 @@ inline void SetN2kRateOfTurn(tN2kMsg &N2kMsg, unsigned char SID, double RateOfTu
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127251(const tN2kMsg &N2kMsg, unsigned char &SID, double &RateOfTurn);
+// bool ParseN2kPGN127251(const tN2kMsg &N2kMsg, unsigned char &SID, double &RateOfTurn);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Rate of Turn" 
@@ -844,9 +844,9 @@ bool ParseN2kPGN127251(const tN2kMsg &N2kMsg, unsigned char &SID, double &RateOf
  * Alias of PGN 127251. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127251 
  */
-inline bool ParseN2kRateOfTurn(const tN2kMsg &N2kMsg, unsigned char &SID, double &RateOfTurn) {
-  return ParseN2kPGN127251(N2kMsg,SID,RateOfTurn);
-}
+// inline bool ParseN2kRateOfTurn(const tN2kMsg &N2kMsg, unsigned char &SID, double &RateOfTurn) {
+//   return ParseN2kPGN127251(N2kMsg,SID,RateOfTurn);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127252 Message "Heave"
@@ -865,8 +865,8 @@ inline bool ParseN2kRateOfTurn(const tN2kMsg &N2kMsg, unsigned char &SID, double
  * \param Delay       Delay added by calculations in seconds
  * \param DelaySource Delay Source, see \ref tN2kDelaySource
  */
-void SetN2kPGN127252(tN2kMsg &N2kMsg, unsigned char SID, double Heave,
-                     double Delay=N2kDoubleNA, tN2kDelaySource DelaySource=N2kDD374_DataNotAvailable);
+// void SetN2kPGN127252(tN2kMsg &N2kMsg, unsigned char SID, double Heave,
+//                      double Delay=N2kDoubleNA, tN2kDelaySource DelaySource=N2kDD374_DataNotAvailable);
 
 /************************************************************************//**
  * \brief Setting up Message "Rate of Turn" - PGN 127252
@@ -875,10 +875,10 @@ void SetN2kPGN127252(tN2kMsg &N2kMsg, unsigned char SID, double Heave,
  * Alias of PGN 127252. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127252
   */
-inline void SetN2kHeave(tN2kMsg &N2kMsg, unsigned char SID, double Heave,
-                     double Delay=N2kDoubleNA, tN2kDelaySource DelaySource=N2kDD374_DataNotAvailable) {
-  SetN2kPGN127252(N2kMsg, SID, Heave, Delay, DelaySource);
-}
+// inline void SetN2kHeave(tN2kMsg &N2kMsg, unsigned char SID, double Heave,
+//                      double Delay=N2kDoubleNA, tN2kDelaySource DelaySource=N2kDD374_DataNotAvailable) {
+//   SetN2kPGN127252(N2kMsg, SID, Heave, Delay, DelaySource);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN127252 "Heave"
@@ -898,7 +898,7 @@ inline void SetN2kHeave(tN2kMsg &N2kMsg, unsigned char SID, double Heave,
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127252(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heave, double &Delay, tN2kDelaySource &DelaySource);
+// bool ParseN2kPGN127252(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heave, double &Delay, tN2kDelaySource &DelaySource);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Heave" 
@@ -908,11 +908,11 @@ bool ParseN2kPGN127252(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heave,
  * Alias of PGN 127252. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127252 
  */
-inline bool ParseN2kHeave(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heave) {
-  double Delay;
-  tN2kDelaySource DelaySource;
-  return ParseN2kPGN127252(N2kMsg, SID, Heave, Delay, DelaySource);
-}
+// inline bool ParseN2kHeave(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heave) {
+//   double Delay;
+//   tN2kDelaySource DelaySource;
+//   return ParseN2kPGN127252(N2kMsg, SID, Heave, Delay, DelaySource);
+// }
 /************************************************************************//**
  * \brief Parsing the content of a "Heave" 
  *        message - PGN 127252
@@ -921,9 +921,9 @@ inline bool ParseN2kHeave(const tN2kMsg &N2kMsg, unsigned char &SID, double &Hea
  * Alias of PGN 127252. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127252 
  */
-inline bool ParseN2kHeave(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heave, double &Delay, tN2kDelaySource &DelaySource) {
-  return ParseN2kPGN127252(N2kMsg, SID, Heave, Delay, DelaySource);
-}
+// inline bool ParseN2kHeave(const tN2kMsg &N2kMsg, unsigned char &SID, double &Heave, double &Delay, tN2kDelaySource &DelaySource) {
+//   return ParseN2kPGN127252(N2kMsg, SID, Heave, Delay, DelaySource);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127257 Message "Attitude"
@@ -945,7 +945,7 @@ inline bool ParseN2kHeave(const tN2kMsg &N2kMsg, unsigned char &SID, double &Hea
  * \param Roll        Roll in radians. Positive, when tilted right.
  * 
  */
-void SetN2kPGN127257(tN2kMsg &N2kMsg, unsigned char SID, double Yaw, double Pitch, double Roll);
+// void SetN2kPGN127257(tN2kMsg &N2kMsg, unsigned char SID, double Yaw, double Pitch, double Roll);
 
 /************************************************************************//**
  * \brief Setting up Message "Attitude" - PGN 127257
@@ -954,9 +954,9 @@ void SetN2kPGN127257(tN2kMsg &N2kMsg, unsigned char SID, double Yaw, double Pitc
  * Alias of PGN 127257. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127257
   */
-inline void SetN2kAttitude(tN2kMsg &N2kMsg, unsigned char SID, double Yaw, double Pitch, double Roll) {
-  SetN2kPGN127257(N2kMsg,SID, Yaw, Pitch, Roll);
-}
+// inline void SetN2kAttitude(tN2kMsg &N2kMsg, unsigned char SID, double Yaw, double Pitch, double Roll) {
+//   SetN2kPGN127257(N2kMsg,SID, Yaw, Pitch, Roll);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN 127257 "Attitude"
@@ -977,7 +977,7 @@ inline void SetN2kAttitude(tN2kMsg &N2kMsg, unsigned char SID, double Yaw, doubl
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127257(const tN2kMsg &N2kMsg, unsigned char &SID, double &Yaw, double &Pitch, double &Roll);
+// bool ParseN2kPGN127257(const tN2kMsg &N2kMsg, unsigned char &SID, double &Yaw, double &Pitch, double &Roll);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Attitude" 
@@ -987,9 +987,9 @@ bool ParseN2kPGN127257(const tN2kMsg &N2kMsg, unsigned char &SID, double &Yaw, d
  * Alias of PGN 127257. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127257 
  */
-inline bool ParseN2kAttitude(const tN2kMsg &N2kMsg, unsigned char &SID, double &Yaw, double &Pitch, double &Roll) {
-  return ParseN2kPGN127257(N2kMsg,SID, Yaw, Pitch, Roll);
-}
+// inline bool ParseN2kAttitude(const tN2kMsg &N2kMsg, unsigned char &SID, double &Yaw, double &Pitch, double &Roll) {
+//   return ParseN2kPGN127257(N2kMsg,SID, Yaw, Pitch, Roll);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127258 Message "Magnetic Variation"
@@ -1012,7 +1012,7 @@ inline bool ParseN2kAttitude(const tN2kMsg &N2kMsg, unsigned char &SID, double &
  * \param Variation       Magnetic variation/declination in radians
  * 
  */
-void SetN2kPGN127258(tN2kMsg &N2kMsg, unsigned char SID, tN2kMagneticVariation Source, uint16_t DaysSince1970, double Variation);
+// void SetN2kPGN127258(tN2kMsg &N2kMsg, unsigned char SID, tN2kMagneticVariation Source, uint16_t DaysSince1970, double Variation);
 
 /************************************************************************//**
  * \brief Setting up Message "Magnetic Variation" - PGN 127258
@@ -1021,9 +1021,9 @@ void SetN2kPGN127258(tN2kMsg &N2kMsg, unsigned char SID, tN2kMagneticVariation S
  * Alias of PGN 127258. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127258
   */
-inline void SetN2kMagneticVariation(tN2kMsg &N2kMsg, unsigned char SID, tN2kMagneticVariation Source, uint16_t DaysSince1970, double Variation) {
-  SetN2kPGN127258(N2kMsg, SID, Source, DaysSince1970, Variation);
-}
+// inline void SetN2kMagneticVariation(tN2kMsg &N2kMsg, unsigned char SID, tN2kMagneticVariation Source, uint16_t DaysSince1970, double Variation) {
+//   SetN2kPGN127258(N2kMsg, SID, Source, DaysSince1970, Variation);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN 127258 "Magnetic Variation"
@@ -1045,7 +1045,7 @@ inline void SetN2kMagneticVariation(tN2kMsg &N2kMsg, unsigned char SID, tN2kMagn
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127258(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kMagneticVariation &Source, uint16_t &DaysSince1970, double &Variation);
+// bool ParseN2kPGN127258(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kMagneticVariation &Source, uint16_t &DaysSince1970, double &Variation);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Magnetic Variation" 
@@ -1055,9 +1055,9 @@ bool ParseN2kPGN127258(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kMagneticVa
  * Alias of PGN 127258. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127258 
  */
-inline bool ParseN2kMagneticVariation(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kMagneticVariation &Source, uint16_t &DaysSince1970, double &Variation) {
-  return ParseN2kPGN127258(N2kMsg, SID, Source, DaysSince1970, Variation);
-}
+// inline bool ParseN2kMagneticVariation(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kMagneticVariation &Source, uint16_t &DaysSince1970, double &Variation) {
+//   return ParseN2kPGN127258(N2kMsg, SID, Source, DaysSince1970, Variation);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127488 Message "Engine parameters rapid"
@@ -1603,7 +1603,7 @@ typedef uint64_t tN2kBinaryStatus;
  * \sa ParseN2kPGN127501 or ParseN2kBinaryStatus
  * 
  */
-tN2kOnOff N2kGetStatusOnBinaryStatus(tN2kBinaryStatus BankStatus, uint8_t ItemIndex=1);
+// tN2kOnOff N2kGetStatusOnBinaryStatus(tN2kBinaryStatus BankStatus, uint8_t ItemIndex=1);
 
 /************************************************************************//**
  * \brief Reset all single binary status values to not available
@@ -1613,7 +1613,7 @@ tN2kOnOff N2kGetStatusOnBinaryStatus(tN2kBinaryStatus BankStatus, uint8_t ItemIn
  * 
  * \param BankStatus 64bit full bank status \ref tN2kBinaryStatus
  */
-inline void N2kResetBinaryStatus(tN2kBinaryStatus &BankStatus) { BankStatus=0xffffffffffffffffULL; }
+// inline void N2kResetBinaryStatus(tN2kBinaryStatus &BankStatus) { BankStatus=0xffffffffffffffffULL; }
 
 /************************************************************************//**
  * \brief Set single status to full binary bank status.
@@ -1626,7 +1626,7 @@ inline void N2kResetBinaryStatus(tN2kBinaryStatus &BankStatus) { BankStatus=0xff
  * \param ItemStatus    individual item status
  * \param ItemIndex     index of the item [1 .. 28]
  */
-void N2kSetStatusBinaryOnStatus(tN2kBinaryStatus &BankStatus, tN2kOnOff ItemStatus, uint8_t ItemIndex=1);
+// void N2kSetStatusBinaryOnStatus(tN2kBinaryStatus &BankStatus, tN2kOnOff ItemStatus, uint8_t ItemIndex=1);
 
 /************************************************************************//**
  * \brief Setting up PGN 127501 Message "Universal Binary Status Report"
@@ -1643,7 +1643,7 @@ void N2kSetStatusBinaryOnStatus(tN2kBinaryStatus &BankStatus, tN2kOnOff ItemStat
  * \param BankStatus          Full bank status. Read single status by using
  *                            \ref N2kGetStatusOnBinaryStatus
  */
-void SetN2kPGN127501(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance, tN2kBinaryStatus BankStatus);
+// void SetN2kPGN127501(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance, tN2kBinaryStatus BankStatus);
 
 /************************************************************************//**
  * \brief Setting up Message "Universal Binary Status Report" - PGN 127501
@@ -1652,9 +1652,9 @@ void SetN2kPGN127501(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance, tN2kBina
  * Alias of PGN 127501. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127501
   */
-inline void SetN2kBinaryStatus(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance, tN2kBinaryStatus BankStatus) {
-	SetN2kPGN127501(N2kMsg,DeviceBankInstance,BankStatus);
-}
+// inline void SetN2kBinaryStatus(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance, tN2kBinaryStatus BankStatus) {
+// 	SetN2kPGN127501(N2kMsg,DeviceBankInstance,BankStatus);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127501 Message "Universal Binary Status Report"
@@ -1676,12 +1676,12 @@ inline void SetN2kBinaryStatus(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance
  * \param Status4             On/Off for Status4
  * 
  */
-void SetN2kPGN127501(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance
-                      ,tN2kOnOff Status1
-                      ,tN2kOnOff Status2=N2kOnOff_Unavailable
-                      ,tN2kOnOff Status3=N2kOnOff_Unavailable
-                      ,tN2kOnOff Status4=N2kOnOff_Unavailable
-                    );
+// void SetN2kPGN127501(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance
+//                       ,tN2kOnOff Status1
+//                       ,tN2kOnOff Status2=N2kOnOff_Unavailable
+//                       ,tN2kOnOff Status3=N2kOnOff_Unavailable
+//                       ,tN2kOnOff Status4=N2kOnOff_Unavailable
+//                     );
 
 /************************************************************************//**
  * \brief Setting up Message "Universal Binary Status Report" - PGN 127501
@@ -1690,14 +1690,14 @@ void SetN2kPGN127501(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance
  * Alias of PGN 127501. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127501
   */
-inline void SetN2kBinaryStatus(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance
-                      ,tN2kOnOff Status1
-                      ,tN2kOnOff Status2=N2kOnOff_Unavailable
-                      ,tN2kOnOff Status3=N2kOnOff_Unavailable
-                      ,tN2kOnOff Status4=N2kOnOff_Unavailable
-					) {
-  SetN2kPGN127501(N2kMsg, DeviceBankInstance,Status1,Status2,Status3,Status4);
-}
+// inline void SetN2kBinaryStatus(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance
+//                       ,tN2kOnOff Status1
+//                       ,tN2kOnOff Status2=N2kOnOff_Unavailable
+//                       ,tN2kOnOff Status3=N2kOnOff_Unavailable
+//                       ,tN2kOnOff Status4=N2kOnOff_Unavailable
+// 					) {
+//   SetN2kPGN127501(N2kMsg, DeviceBankInstance,Status1,Status2,Status3,Status4);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN 127501 Message "Universal Binary
@@ -1723,12 +1723,12 @@ inline void SetN2kBinaryStatus(tN2kMsg &N2kMsg, unsigned char DeviceBankInstance
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127501(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance
-                      ,tN2kOnOff &Status1
-                      ,tN2kOnOff &Status2
-                      ,tN2kOnOff &Status3
-                      ,tN2kOnOff &Status4
-                    );
+// bool ParseN2kPGN127501(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance
+//                       ,tN2kOnOff &Status1
+//                       ,tN2kOnOff &Status2
+//                       ,tN2kOnOff &Status3
+//                       ,tN2kOnOff &Status4
+//                     );
 
 /************************************************************************//**
  * \brief Parsing the content of a "Universal Binary Status Report" 
@@ -1738,14 +1738,14 @@ bool ParseN2kPGN127501(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance
  * Alias of PGN 127501. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127501 
  */
-inline bool ParseN2kBinaryStatus(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance
-                      ,tN2kOnOff &Status1
-                      ,tN2kOnOff &Status2
-                      ,tN2kOnOff &Status3
-                      ,tN2kOnOff &Status4
-                    ) {
- return ParseN2kPGN127501(N2kMsg,DeviceBankInstance,Status1,Status2,Status3,Status4);
-}
+// inline bool ParseN2kBinaryStatus(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance
+//                       ,tN2kOnOff &Status1
+//                       ,tN2kOnOff &Status2
+//                       ,tN2kOnOff &Status3
+//                       ,tN2kOnOff &Status4
+//                     ) {
+//  return ParseN2kPGN127501(N2kMsg,DeviceBankInstance,Status1,Status2,Status3,Status4);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN 127501 Message "Universal Binary
@@ -1769,7 +1769,7 @@ inline bool ParseN2kBinaryStatus(const tN2kMsg &N2kMsg, unsigned char &DeviceBan
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127501(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance, tN2kBinaryStatus &BankStatus);
+// bool ParseN2kPGN127501(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance, tN2kBinaryStatus &BankStatus);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Universal Binary Status Report" 
@@ -1779,9 +1779,9 @@ bool ParseN2kPGN127501(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance,
  * Alias of PGN 127501. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127501 
  */
-inline bool ParseN2kBinaryStatus(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance, tN2kBinaryStatus &BankStatus) {
- return ParseN2kPGN127501(N2kMsg,DeviceBankInstance,BankStatus);
-}
+// inline bool ParseN2kBinaryStatus(const tN2kMsg &N2kMsg, unsigned char &DeviceBankInstance, tN2kBinaryStatus &BankStatus) {
+//  return ParseN2kPGN127501(N2kMsg,DeviceBankInstance,BankStatus);
+// }
 
 /************************************************************************//**
  * \brief Parse the content of a PGN 127502 (Switch Bank Control) message.
@@ -1806,7 +1806,7 @@ inline bool ParseN2kBinaryStatus(const tN2kMsg &N2kMsg, unsigned char &DeviceBan
  * \return true               Parsing of PGN Message successful
  * \return false              Parsing of PGN Message aborted
  */
-bool ParseN2kPGN127502(const tN2kMsg &N2kMsg, unsigned char &TargetBankInstance, tN2kBinaryStatus &BankStatus);
+// bool ParseN2kPGN127502(const tN2kMsg &N2kMsg, unsigned char &TargetBankInstance, tN2kBinaryStatus &BankStatus);
 
 /************************************************************************//**
  * \brief Parse PGN 127502 "Switch Bank Control" message.
@@ -1815,9 +1815,9 @@ bool ParseN2kPGN127502(const tN2kMsg &N2kMsg, unsigned char &TargetBankInstance,
  * Alias of \ref ParseN2kPGN127502. This alias was introduced to improve the
  * readability of the source code.
  */
-inline bool ParseN2kSwitchbankControl(const tN2kMsg &N2kMsg, unsigned char &TargetBankInstance, tN2kBinaryStatus &BankStatus) {
-  return ParseN2kPGN127502(N2kMsg, TargetBankInstance, BankStatus);
-}
+// inline bool ParseN2kSwitchbankControl(const tN2kMsg &N2kMsg, unsigned char &TargetBankInstance, tN2kBinaryStatus &BankStatus) {
+//   return ParseN2kPGN127502(N2kMsg, TargetBankInstance, BankStatus);
+// }
 
 /************************************************************************//**
  * \brief Set up PGN 127502 "Switch Bank Control" message.
@@ -1850,7 +1850,7 @@ inline bool ParseN2kSwitchbankControl(const tN2kMsg &N2kMsg, unsigned char &Targ
  *                            to be commanded on the remote switchbank.
  *                            \ref N2kGetStatusOnBinaryStatus
  */
-void SetN2kPGN127502(tN2kMsg &N2kMsg, unsigned char TargetBankInstance, tN2kBinaryStatus BankStatus);
+// void SetN2kPGN127502(tN2kMsg &N2kMsg, unsigned char TargetBankInstance, tN2kBinaryStatus BankStatus);
 
 /************************************************************************//**
  * \brief Set up PGN 127502 "Switch Bank Control" message.
@@ -1859,9 +1859,9 @@ void SetN2kPGN127502(tN2kMsg &N2kMsg, unsigned char TargetBankInstance, tN2kBina
  * Alias of \ref SetN2kPGN127502. This alias was introduced to improve the
  * readability of the source code.
  */
-inline void SetN2kSwitchbankControl(tN2kMsg &N2kMsg, unsigned char TargetBankInstance, tN2kBinaryStatus BankStatus) {
-	SetN2kPGN127502(N2kMsg, TargetBankInstance, BankStatus);
-}
+// inline void SetN2kSwitchbankControl(tN2kMsg &N2kMsg, unsigned char TargetBankInstance, tN2kBinaryStatus BankStatus) {
+// 	SetN2kPGN127502(N2kMsg, TargetBankInstance, BankStatus);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127505 Message "Fluid level"
@@ -1882,7 +1882,7 @@ inline void SetN2kSwitchbankControl(tN2kMsg &N2kMsg, unsigned char TargetBankIns
  * \param Capacity     Tank Capacity in litres
  * 
  */
-void SetN2kPGN127505(tN2kMsg &N2kMsg, unsigned char Instance, tN2kFluidType FluidType, double Level, double Capacity);
+// void SetN2kPGN127505(tN2kMsg &N2kMsg, unsigned char Instance, tN2kFluidType FluidType, double Level, double Capacity);
 
 /************************************************************************//**
  * \brief Setting up Message "Fluid level" - PGN 127505
@@ -1891,9 +1891,9 @@ void SetN2kPGN127505(tN2kMsg &N2kMsg, unsigned char Instance, tN2kFluidType Flui
  * Alias of PGN 127505. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127505
   */
-inline void SetN2kFluidLevel(tN2kMsg &N2kMsg, unsigned char Instance, tN2kFluidType FluidType, double Level, double Capacity) {
-  SetN2kPGN127505(N2kMsg, Instance, FluidType, Level, Capacity);
-}
+// inline void SetN2kFluidLevel(tN2kMsg &N2kMsg, unsigned char Instance, tN2kFluidType FluidType, double Level, double Capacity) {
+//   SetN2kPGN127505(N2kMsg, Instance, FluidType, Level, Capacity);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 127505 "Fluid level"
@@ -1916,7 +1916,7 @@ inline void SetN2kFluidLevel(tN2kMsg &N2kMsg, unsigned char Instance, tN2kFluidT
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127505(const tN2kMsg &N2kMsg, unsigned char &Instance, tN2kFluidType &FluidType, double &Level, double &Capacity);
+// bool ParseN2kPGN127505(const tN2kMsg &N2kMsg, unsigned char &Instance, tN2kFluidType &FluidType, double &Level, double &Capacity);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Fluid level" 
@@ -1926,9 +1926,9 @@ bool ParseN2kPGN127505(const tN2kMsg &N2kMsg, unsigned char &Instance, tN2kFluid
  * Alias of PGN 127505. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127505 
  */
-inline bool ParseN2kFluidLevel(const tN2kMsg &N2kMsg, unsigned char &Instance, tN2kFluidType &FluidType, double &Level, double &Capacity) {
-  return ParseN2kPGN127505(N2kMsg, Instance, FluidType, Level, Capacity);
-}
+// inline bool ParseN2kFluidLevel(const tN2kMsg &N2kMsg, unsigned char &Instance, tN2kFluidType &FluidType, double &Level, double &Capacity) {
+//   return ParseN2kPGN127505(N2kMsg, Instance, FluidType, Level, Capacity);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127506 Message "DC Detailed Status"
@@ -1954,8 +1954,8 @@ inline bool ParseN2kFluidLevel(const tN2kMsg &N2kMsg, unsigned char &Instance, t
  * \param Capacity        Battery capacity in coulombs
  * 
  */
-void SetN2kPGN127506(tN2kMsg &N2kMsg, unsigned char SID, unsigned char DCInstance, tN2kDCType DCType,
-                     unsigned char StateOfCharge, unsigned char StateOfHealth, double TimeRemaining, double RippleVoltage=N2kDoubleNA, double Capacity=N2kDoubleNA);
+// void SetN2kPGN127506(tN2kMsg &N2kMsg, unsigned char SID, unsigned char DCInstance, tN2kDCType DCType,
+//                      unsigned char StateOfCharge, unsigned char StateOfHealth, double TimeRemaining, double RippleVoltage=N2kDoubleNA, double Capacity=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "DC Detailed Status" - PGN 127506
@@ -1964,10 +1964,10 @@ void SetN2kPGN127506(tN2kMsg &N2kMsg, unsigned char SID, unsigned char DCInstanc
  * Alias of PGN 127506. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127506
   */
-inline void SetN2kDCStatus(tN2kMsg &N2kMsg, unsigned char SID, unsigned char DCInstance, tN2kDCType DCType,
-                     unsigned char StateOfCharge, unsigned char StateOfHealth, double TimeRemaining, double RippleVoltage=N2kDoubleNA, double Capacity=N2kDoubleNA) {
-  SetN2kPGN127506(N2kMsg,SID,DCInstance,DCType,StateOfCharge,StateOfHealth,TimeRemaining,RippleVoltage,Capacity);
-}
+// inline void SetN2kDCStatus(tN2kMsg &N2kMsg, unsigned char SID, unsigned char DCInstance, tN2kDCType DCType,
+//                      unsigned char StateOfCharge, unsigned char StateOfHealth, double TimeRemaining, double RippleVoltage=N2kDoubleNA, double Capacity=N2kDoubleNA) {
+//   SetN2kPGN127506(N2kMsg,SID,DCInstance,DCType,StateOfCharge,StateOfHealth,TimeRemaining,RippleVoltage,Capacity);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 127506 "DC Detailed Status"
@@ -1992,8 +1992,8 @@ inline void SetN2kDCStatus(tN2kMsg &N2kMsg, unsigned char SID, unsigned char DCI
  * \return false    Parsing of PGN Message aborted
  *  
  */
-bool ParseN2kPGN127506(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &DCInstance, tN2kDCType &DCType,
-                     unsigned char &StateOfCharge, unsigned char &StateOfHealth, double &TimeRemaining, double &RippleVoltage, double &Capacity);
+// bool ParseN2kPGN127506(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &DCInstance, tN2kDCType &DCType,
+//                      unsigned char &StateOfCharge, unsigned char &StateOfHealth, double &TimeRemaining, double &RippleVoltage, double &Capacity);
 
 /************************************************************************//**
  * \brief Parsing the content of a "DC Detailed Status" 
@@ -2003,10 +2003,10 @@ bool ParseN2kPGN127506(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char 
  * Alias of PGN 127506. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127506 
  */
-inline bool ParseN2kDCStatus(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &DCInstance, tN2kDCType &DCType,
-                     unsigned char &StateOfCharge, unsigned char &StateOfHealth, double &TimeRemaining, double &RippleVoltage, double &Capacity) {
-  return ParseN2kPGN127506(N2kMsg,SID,DCInstance,DCType,StateOfCharge,StateOfHealth,TimeRemaining,RippleVoltage, Capacity);
-}
+// inline bool ParseN2kDCStatus(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &DCInstance, tN2kDCType &DCType,
+//                      unsigned char &StateOfCharge, unsigned char &StateOfHealth, double &TimeRemaining, double &RippleVoltage, double &Capacity) {
+//   return ParseN2kPGN127506(N2kMsg,SID,DCInstance,DCType,StateOfCharge,StateOfHealth,TimeRemaining,RippleVoltage, Capacity);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127507 Message "DC Charger Status"
@@ -2026,9 +2026,9 @@ inline bool ParseN2kDCStatus(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned
  * \param EqualizationTimeRemaining   double seconds
  * 
  */
-void SetN2kPGN127507(tN2kMsg &N2kMsg, unsigned char Instance, unsigned char BatteryInstance,
-                     tN2kChargeState ChargeState, tN2kChargerMode ChargerMode=N2kCM_Standalone,
-                     tN2kOnOff Enabled=N2kOnOff_On, tN2kOnOff EqualizationPending=N2kOnOff_Unavailable, double EqualizationTimeRemaining=N2kDoubleNA);
+// void SetN2kPGN127507(tN2kMsg &N2kMsg, unsigned char Instance, unsigned char BatteryInstance,
+//                      tN2kChargeState ChargeState, tN2kChargerMode ChargerMode=N2kCM_Standalone,
+//                      tN2kOnOff Enabled=N2kOnOff_On, tN2kOnOff EqualizationPending=N2kOnOff_Unavailable, double EqualizationTimeRemaining=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "DC Charger Status" - PGN 127507
@@ -2037,11 +2037,11 @@ void SetN2kPGN127507(tN2kMsg &N2kMsg, unsigned char Instance, unsigned char Batt
  * Alias of PGN 127507. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127507
   */
-inline void SetN2kChargerStatus(tN2kMsg &N2kMsg, unsigned char Instance, unsigned char BatteryInstance,
-                     tN2kChargeState ChargeState, tN2kChargerMode ChargerMode=N2kCM_Standalone,
-                     tN2kOnOff Enabled=N2kOnOff_On, tN2kOnOff EqualizationPending=N2kOnOff_Unavailable, double EqualizationTimeRemaining=N2kDoubleNA) {
- SetN2kPGN127507(N2kMsg, Instance,BatteryInstance,ChargeState,ChargerMode,Enabled,EqualizationPending,EqualizationTimeRemaining);
-}
+// inline void SetN2kChargerStatus(tN2kMsg &N2kMsg, unsigned char Instance, unsigned char BatteryInstance,
+//                      tN2kChargeState ChargeState, tN2kChargerMode ChargerMode=N2kCM_Standalone,
+//                      tN2kOnOff Enabled=N2kOnOff_On, tN2kOnOff EqualizationPending=N2kOnOff_Unavailable, double EqualizationTimeRemaining=N2kDoubleNA) {
+//  SetN2kPGN127507(N2kMsg, Instance,BatteryInstance,ChargeState,ChargerMode,Enabled,EqualizationPending,EqualizationTimeRemaining);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 127507 "DC Charger Status"
@@ -2064,9 +2064,9 @@ inline void SetN2kChargerStatus(tN2kMsg &N2kMsg, unsigned char Instance, unsigne
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127507(const tN2kMsg &N2kMsg, unsigned char &Instance, unsigned char &BatteryInstance,
-                     tN2kChargeState &ChargeState, tN2kChargerMode &ChargerMode,
-                     tN2kOnOff &Enabled, tN2kOnOff &EqualizationPending, double &EqualizationTimeRemaining);
+// bool ParseN2kPGN127507(const tN2kMsg &N2kMsg, unsigned char &Instance, unsigned char &BatteryInstance,
+//                      tN2kChargeState &ChargeState, tN2kChargerMode &ChargerMode,
+//                      tN2kOnOff &Enabled, tN2kOnOff &EqualizationPending, double &EqualizationTimeRemaining);
 
 /************************************************************************//**
  * \brief Parsing the content of a "DC Charger Status" 
@@ -2076,11 +2076,11 @@ bool ParseN2kPGN127507(const tN2kMsg &N2kMsg, unsigned char &Instance, unsigned 
  * Alias of PGN 127507. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127507 
  */
-inline bool ParseN2kChargerStatus(const tN2kMsg &N2kMsg, unsigned char &Instance, unsigned char &BatteryInstance,
-                     tN2kChargeState &ChargeState, tN2kChargerMode &ChargerMode,
-                     tN2kOnOff &Enabled, tN2kOnOff &EqualizationPending, double &EqualizationTimeRemaining) {
- return ParseN2kPGN127507(N2kMsg, Instance,BatteryInstance,ChargeState,ChargerMode,Enabled,EqualizationPending,EqualizationTimeRemaining);
-}
+// inline bool ParseN2kChargerStatus(const tN2kMsg &N2kMsg, unsigned char &Instance, unsigned char &BatteryInstance,
+//                      tN2kChargeState &ChargeState, tN2kChargerMode &ChargerMode,
+//                      tN2kOnOff &Enabled, tN2kOnOff &EqualizationPending, double &EqualizationTimeRemaining) {
+//  return ParseN2kPGN127507(N2kMsg, Instance,BatteryInstance,ChargeState,ChargerMode,Enabled,EqualizationPending,EqualizationTimeRemaining);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127508 Message "Battery Status"
@@ -2103,8 +2103,8 @@ inline bool ParseN2kChargerStatus(const tN2kMsg &N2kMsg, unsigned char &Instance
  *                            The sequence identifier field is used to tie different PGNs data together to same 
  *                            sampling or calculation time.
  */
-void SetN2kPGN127508(tN2kMsg &N2kMsg, unsigned char BatteryInstance, double BatteryVoltage, double BatteryCurrent=N2kDoubleNA,
-                     double BatteryTemperature=N2kDoubleNA, unsigned char SID=0xff);
+// void SetN2kPGN127508(tN2kMsg &N2kMsg, unsigned char BatteryInstance, double BatteryVoltage, double BatteryCurrent=N2kDoubleNA,
+//                      double BatteryTemperature=N2kDoubleNA, unsigned char SID=0xff);
 
 /************************************************************************//**
  * \brief Setting up Message "Battery Status" - PGN 127508
@@ -2113,10 +2113,10 @@ void SetN2kPGN127508(tN2kMsg &N2kMsg, unsigned char BatteryInstance, double Batt
  * Alias of PGN 127508. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127508
   */
-inline void SetN2kDCBatStatus(tN2kMsg &N2kMsg, unsigned char BatteryInstance, double BatteryVoltage, double BatteryCurrent=N2kDoubleNA,
-                     double BatteryTemperature=N2kDoubleNA, unsigned char SID=1) {
-  SetN2kPGN127508(N2kMsg,BatteryInstance,BatteryVoltage,BatteryCurrent,BatteryTemperature,SID);
-}
+// inline void SetN2kDCBatStatus(tN2kMsg &N2kMsg, unsigned char BatteryInstance, double BatteryVoltage, double BatteryCurrent=N2kDoubleNA,
+//                      double BatteryTemperature=N2kDoubleNA, unsigned char SID=1) {
+//   SetN2kPGN127508(N2kMsg,BatteryInstance,BatteryVoltage,BatteryCurrent,BatteryTemperature,SID);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 127508 "Battery Status"
@@ -2140,8 +2140,8 @@ inline void SetN2kDCBatStatus(tN2kMsg &N2kMsg, unsigned char BatteryInstance, do
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127508(const tN2kMsg &N2kMsg, unsigned char &BatteryInstance, double &BatteryVoltage, double &BatteryCurrent,
-                     double &BatteryTemperature, unsigned char &SID);
+// bool ParseN2kPGN127508(const tN2kMsg &N2kMsg, unsigned char &BatteryInstance, double &BatteryVoltage, double &BatteryCurrent,
+//                      double &BatteryTemperature, unsigned char &SID);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Battery Status" 
@@ -2151,10 +2151,10 @@ bool ParseN2kPGN127508(const tN2kMsg &N2kMsg, unsigned char &BatteryInstance, do
  * Alias of PGN 127508. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127508 
  */
-inline bool ParseN2kDCBatStatus(const tN2kMsg &N2kMsg, unsigned char &BatteryInstance, double &BatteryVoltage, double &BatteryCurrent,
-                     double &BatteryTemperature, unsigned char &SID) {
-  return ParseN2kPGN127508(N2kMsg, BatteryInstance, BatteryVoltage, BatteryCurrent, BatteryTemperature, SID);
-}
+// inline bool ParseN2kDCBatStatus(const tN2kMsg &N2kMsg, unsigned char &BatteryInstance, double &BatteryVoltage, double &BatteryCurrent,
+//                      double &BatteryTemperature, unsigned char &SID) {
+//   return ParseN2kPGN127508(N2kMsg, BatteryInstance, BatteryVoltage, BatteryCurrent, BatteryTemperature, SID);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 127513 Message "Battery Configuration Status"
@@ -2176,9 +2176,9 @@ inline bool ParseN2kDCBatStatus(const tN2kMsg &N2kMsg, unsigned char &BatteryIns
  * \param ChargeEfficiencyFactor      Charge efficiency factor
  * 
  */
-void SetN2kPGN127513(tN2kMsg &N2kMsg, unsigned char BatInstance, tN2kBatType BatType, tN2kBatEqSupport SupportsEqual,
-                     tN2kBatNomVolt BatNominalVoltage, tN2kBatChem BatChemistry, double BatCapacity, int8_t BatTemperatureCoefficient,
-				double PeukertExponent, int8_t ChargeEfficiencyFactor);
+// void SetN2kPGN127513(tN2kMsg &N2kMsg, unsigned char BatInstance, tN2kBatType BatType, tN2kBatEqSupport SupportsEqual,
+//                      tN2kBatNomVolt BatNominalVoltage, tN2kBatChem BatChemistry, double BatCapacity, int8_t BatTemperatureCoefficient,
+// 				double PeukertExponent, int8_t ChargeEfficiencyFactor);
 
 /************************************************************************//**
  * \brief Setting up Message "Battery Configuration Status" - PGN 127513
@@ -2187,12 +2187,12 @@ void SetN2kPGN127513(tN2kMsg &N2kMsg, unsigned char BatInstance, tN2kBatType Bat
  * Alias of PGN 127513. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN127513
   */
-inline void SetN2kBatConf(tN2kMsg &N2kMsg, unsigned char BatInstance, tN2kBatType BatType, tN2kBatEqSupport SupportsEqual,
-                     tN2kBatNomVolt BatNominalVoltage, tN2kBatChem BatChemistry, double BatCapacity, int8_t BatTemperatureCoefficient,
-				double PeukertExponent, int8_t ChargeEfficiencyFactor) {
-   SetN2kPGN127513(N2kMsg,BatInstance,BatType,SupportsEqual,BatNominalVoltage,BatChemistry,BatCapacity,BatTemperatureCoefficient,
-				PeukertExponent,ChargeEfficiencyFactor);
-}
+// inline void SetN2kBatConf(tN2kMsg &N2kMsg, unsigned char BatInstance, tN2kBatType BatType, tN2kBatEqSupport SupportsEqual,
+//                      tN2kBatNomVolt BatNominalVoltage, tN2kBatChem BatChemistry, double BatCapacity, int8_t BatTemperatureCoefficient,
+// 				double PeukertExponent, int8_t ChargeEfficiencyFactor) {
+//    SetN2kPGN127513(N2kMsg,BatInstance,BatType,SupportsEqual,BatNominalVoltage,BatChemistry,BatCapacity,BatTemperatureCoefficient,
+// 				PeukertExponent,ChargeEfficiencyFactor);
+// }
 /************************************************************************//**
  * \brief Parsing the content of message PGN 127513 "Battery 
  * Configuration Status"
@@ -2217,9 +2217,9 @@ inline void SetN2kBatConf(tN2kMsg &N2kMsg, unsigned char BatInstance, tN2kBatTyp
  * \return false    Parsing of PGN Message aborted
  *
  */
-bool ParseN2kPGN127513(const tN2kMsg &N2kMsg, unsigned char &BatInstance, tN2kBatType &BatType, tN2kBatEqSupport &SupportsEqual,
-                     tN2kBatNomVolt &BatNominalVoltage, tN2kBatChem &BatChemistry, double &BatCapacity, int8_t &BatTemperatureCoefficient,
-				double &PeukertExponent, int8_t &ChargeEfficiencyFactor);
+// bool ParseN2kPGN127513(const tN2kMsg &N2kMsg, unsigned char &BatInstance, tN2kBatType &BatType, tN2kBatEqSupport &SupportsEqual,
+//                      tN2kBatNomVolt &BatNominalVoltage, tN2kBatChem &BatChemistry, double &BatCapacity, int8_t &BatTemperatureCoefficient,
+// 				double &PeukertExponent, int8_t &ChargeEfficiencyFactor);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Battery Configuration Status" 
@@ -2229,12 +2229,12 @@ bool ParseN2kPGN127513(const tN2kMsg &N2kMsg, unsigned char &BatInstance, tN2kBa
  * Alias of PGN 127513. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN127513 
  */
-inline bool ParseN2kBatConf(const tN2kMsg &N2kMsg, unsigned char &BatInstance, tN2kBatType &BatType, tN2kBatEqSupport &SupportsEqual,
-                     tN2kBatNomVolt &BatNominalVoltage, tN2kBatChem &BatChemistry, double &BatCapacity, int8_t &BatTemperatureCoefficient,
-				double &PeukertExponent, int8_t &ChargeEfficiencyFactor) {
-	return ParseN2kPGN127513(N2kMsg,BatInstance,BatType,SupportsEqual,BatNominalVoltage,BatChemistry,BatCapacity,BatTemperatureCoefficient,
-				PeukertExponent,ChargeEfficiencyFactor);
-}
+// inline bool ParseN2kBatConf(const tN2kMsg &N2kMsg, unsigned char &BatInstance, tN2kBatType &BatType, tN2kBatEqSupport &SupportsEqual,
+//                      tN2kBatNomVolt &BatNominalVoltage, tN2kBatChem &BatChemistry, double &BatCapacity, int8_t &BatTemperatureCoefficient,
+// 				double &PeukertExponent, int8_t &ChargeEfficiencyFactor) {
+// 	return ParseN2kPGN127513(N2kMsg,BatInstance,BatType,SupportsEqual,BatNominalVoltage,BatChemistry,BatCapacity,BatTemperatureCoefficient,
+// 				PeukertExponent,ChargeEfficiencyFactor);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 128000 Message "Nautical Leeway Angle"
@@ -2271,7 +2271,7 @@ inline bool ParseN2kBatConf(const tN2kMsg &N2kMsg, unsigned char &BatInstance, t
  *                    is, the vessel is tracking to the right of its heading,
  *                    and negative angles indicate slippage to port
  */
-void SetN2kPGN128000(tN2kMsg &N2kMsg, unsigned char SID, double Leeway);
+// void SetN2kPGN128000(tN2kMsg &N2kMsg, unsigned char SID, double Leeway);
 
 /************************************************************************//**
  * \brief Setting up Message "Nautical Leeway Angle" - PGN 128000
@@ -2280,9 +2280,9 @@ void SetN2kPGN128000(tN2kMsg &N2kMsg, unsigned char SID, double Leeway);
  * Alias of PGN 128000. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN128000
   */
-inline void SetN2kLeeway(tN2kMsg &N2kMsg, unsigned char SID, double Leeway) {
-  SetN2kPGN128000(N2kMsg,SID,Leeway);
-}
+// inline void SetN2kLeeway(tN2kMsg &N2kMsg, unsigned char SID, double Leeway) {
+//   SetN2kPGN128000(N2kMsg,SID,Leeway);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN 128000 "Nautical Leeway Angle"
@@ -2320,7 +2320,7 @@ inline void SetN2kLeeway(tN2kMsg &N2kMsg, unsigned char SID, double Leeway) {
  * \return false    Parsing of PGN Message aborted
  *
  */
-bool ParseN2kPGN128000(const tN2kMsg &N2kMsg, unsigned char &SID, double &Leeway);
+// bool ParseN2kPGN128000(const tN2kMsg &N2kMsg, unsigned char &SID, double &Leeway);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Nautical Leeway Angle" 
@@ -2330,9 +2330,9 @@ bool ParseN2kPGN128000(const tN2kMsg &N2kMsg, unsigned char &SID, double &Leeway
  * Alias of PGN 128000. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN128000 
  */
-inline bool ParseN2kLeeway(const tN2kMsg &N2kMsg, unsigned char &SID, double &Leeway) {
-  return ParseN2kPGN128000(N2kMsg, SID, Leeway);
-}
+// inline bool ParseN2kLeeway(const tN2kMsg &N2kMsg, unsigned char &SID, double &Leeway) {
+//   return ParseN2kPGN128000(N2kMsg, SID, Leeway);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 128259 Message "Boat Speed, Water Referenced"
@@ -2354,7 +2354,7 @@ inline bool ParseN2kLeeway(const tN2kMsg &N2kMsg, unsigned char &SID, double &Le
  * \todo  There is an additional 4bit field "speed direction" in this PGN
  *         this could be added for the future.
  */
-void SetN2kPGN128259(tN2kMsg &N2kMsg, unsigned char SID, double WaterReferenced, double GroundReferenced=N2kDoubleNA, tN2kSpeedWaterReferenceType SWRT=N2kSWRT_Paddle_wheel);
+// void SetN2kPGN128259(tN2kMsg &N2kMsg, unsigned char SID, double WaterReferenced, double GroundReferenced=N2kDoubleNA, tN2kSpeedWaterReferenceType SWRT=N2kSWRT_Paddle_wheel);
 
 /************************************************************************//**
  * \brief Setting up Message "Boat Speed, Water Referenced" - PGN 128259
@@ -2363,9 +2363,9 @@ void SetN2kPGN128259(tN2kMsg &N2kMsg, unsigned char SID, double WaterReferenced,
  * Alias of PGN 128259. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN128259
   */
-inline void SetN2kBoatSpeed(tN2kMsg &N2kMsg, unsigned char SID, double WaterReferenced, double GroundReferenced=N2kDoubleNA, tN2kSpeedWaterReferenceType SWRT=N2kSWRT_Paddle_wheel) {
-  SetN2kPGN128259(N2kMsg,SID,WaterReferenced,GroundReferenced,SWRT);
-}
+// inline void SetN2kBoatSpeed(tN2kMsg &N2kMsg, unsigned char SID, double WaterReferenced, double GroundReferenced=N2kDoubleNA, tN2kSpeedWaterReferenceType SWRT=N2kSWRT_Paddle_wheel) {
+//   SetN2kPGN128259(N2kMsg,SID,WaterReferenced,GroundReferenced,SWRT);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 128259 "Boat Speed, Water
@@ -2386,7 +2386,7 @@ inline void SetN2kBoatSpeed(tN2kMsg &N2kMsg, unsigned char SID, double WaterRefe
  * \return false    Parsing of PGN Message aborted
  *
  */
-bool ParseN2kPGN128259(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterReferenced, double &GroundReferenced, tN2kSpeedWaterReferenceType &SWRT);
+// bool ParseN2kPGN128259(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterReferenced, double &GroundReferenced, tN2kSpeedWaterReferenceType &SWRT);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Boat Speed, Water Referenced" 
@@ -2396,9 +2396,9 @@ bool ParseN2kPGN128259(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterR
  * Alias of PGN 128259. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN128259 
  */
-inline bool ParseN2kBoatSpeed(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterReferenced, double &GroundReferenced, tN2kSpeedWaterReferenceType &SWRT) {
-  return ParseN2kPGN128259(N2kMsg, SID, WaterReferenced, GroundReferenced, SWRT);
-}
+// inline bool ParseN2kBoatSpeed(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterReferenced, double &GroundReferenced, tN2kSpeedWaterReferenceType &SWRT) {
+//   return ParseN2kPGN128259(N2kMsg, SID, WaterReferenced, GroundReferenced, SWRT);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 128267 Message "Water depth"
@@ -2420,7 +2420,7 @@ inline bool ParseN2kBoatSpeed(const tN2kMsg &N2kMsg, unsigned char &SID, double 
  * \param Range       maximum depth range tha can be measured
  * 
  */
-void SetN2kPGN128267(tN2kMsg &N2kMsg, unsigned char SID, double DepthBelowTransducer, double Offset, double Range=N2kDoubleNA);
+// void SetN2kPGN128267(tN2kMsg &N2kMsg, unsigned char SID, double DepthBelowTransducer, double Offset, double Range=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "Water depth" - PGN 128267
@@ -2429,9 +2429,9 @@ void SetN2kPGN128267(tN2kMsg &N2kMsg, unsigned char SID, double DepthBelowTransd
  * Alias of PGN 128267. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN128267
   */
-inline void SetN2kWaterDepth(tN2kMsg &N2kMsg, unsigned char SID, double DepthBelowTransducer, double Offset, double Range=N2kDoubleNA) {
-  SetN2kPGN128267(N2kMsg,SID,DepthBelowTransducer,Offset,Range);
-}
+// inline void SetN2kWaterDepth(tN2kMsg &N2kMsg, unsigned char SID, double DepthBelowTransducer, double Offset, double Range=N2kDoubleNA) {
+//   SetN2kPGN128267(N2kMsg,SID,DepthBelowTransducer,Offset,Range);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message  PGN 128267 "Water depth"
@@ -2453,7 +2453,7 @@ inline void SetN2kWaterDepth(tN2kMsg &N2kMsg, unsigned char SID, double DepthBel
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN128267(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset, double &Range);
+// bool ParseN2kPGN128267(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset, double &Range);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Water depth" 
@@ -2463,10 +2463,10 @@ bool ParseN2kPGN128267(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthB
  * Alias of PGN 128267. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN128267 
  */
-inline bool ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset) {
-  double Range;
-  return ParseN2kPGN128267(N2kMsg, SID, DepthBelowTransducer, Offset, Range);
-}
+// inline bool ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset) {
+//   double Range;
+//   return ParseN2kPGN128267(N2kMsg, SID, DepthBelowTransducer, Offset, Range);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of a "Water depth" 
@@ -2476,9 +2476,9 @@ inline bool ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double
  * Alias of PGN 128267. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN128267 
  */
-inline bool ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset, double &Range) {
-  return ParseN2kPGN128267(N2kMsg, SID, DepthBelowTransducer, Offset, Range);
-}
+// inline bool ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double &DepthBelowTransducer, double &Offset, double &Range) {
+//   return ParseN2kPGN128267(N2kMsg, SID, DepthBelowTransducer, Offset, Range);
+// }
 
 
 /************************************************************************//**
@@ -2500,7 +2500,7 @@ inline bool ParseN2kWaterDepth(const tN2kMsg &N2kMsg, unsigned char &SID, double
  *                              traveled through the water since last reset 
  *                              in units of 1 m.
  */
-void SetN2kPGN128275(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, uint32_t Log, uint32_t TripLog);
+// void SetN2kPGN128275(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, uint32_t Log, uint32_t TripLog);
 
 /************************************************************************//**
  * \brief Setting up Message "Distance log" - PGN 128275
@@ -2509,9 +2509,9 @@ void SetN2kPGN128275(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinc
  * Alias of PGN 128275. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN128275
   */
-inline void SetN2kDistanceLog(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, uint32_t Log, uint32_t TripLog) {
-  SetN2kPGN128275(N2kMsg,DaysSince1970,SecondsSinceMidnight,Log,TripLog);
-}
+// inline void SetN2kDistanceLog(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, uint32_t Log, uint32_t TripLog) {
+//   SetN2kPGN128275(N2kMsg,DaysSince1970,SecondsSinceMidnight,Log,TripLog);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 128275 "Distance log"
@@ -2535,7 +2535,7 @@ inline void SetN2kDistanceLog(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double Se
  * \return false    Parsing of PGN Message aborted
  *
  */
-bool ParseN2kPGN128275(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, uint32_t &Log, uint32_t &TripLog);
+// bool ParseN2kPGN128275(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, uint32_t &Log, uint32_t &TripLog);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Distance log" 
@@ -2545,9 +2545,9 @@ bool ParseN2kPGN128275(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &S
  * Alias of PGN 128275. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN128275 
  */
-inline bool ParseN2kDistanceLog(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, uint32_t &Log, uint32_t &TripLog) {
-  return ParseN2kPGN128275(N2kMsg,DaysSince1970,SecondsSinceMidnight,Log,TripLog);
-}
+// inline bool ParseN2kDistanceLog(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, uint32_t &Log, uint32_t &TripLog) {
+//   return ParseN2kPGN128275(N2kMsg,DaysSince1970,SecondsSinceMidnight,Log,TripLog);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 128776 Message "Anchor Windlass Control Status"
@@ -2596,21 +2596,21 @@ inline bool ParseN2kDistanceLog(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, 
  *                                          Command Group Function (PGN 126208).
  * 
  */
-void SetN2kPGN128776(
-  tN2kMsg &N2kMsg,
-  unsigned char SID,
-  unsigned char WindlassIdentifier,
-  tN2kWindlassDirectionControl WindlassDirectionControl,
-  unsigned char SpeedControl,
-  tN2kSpeedType SpeedControlType = N2kDD488_DataNotAvailable,
-  tN2kGenericStatusPair AnchorDockingControl = N2kDD002_Unavailable,
-  tN2kGenericStatusPair PowerEnable = N2kDD002_Unavailable,
-  tN2kGenericStatusPair MechanicalLock = N2kDD002_Unavailable,
-  tN2kGenericStatusPair DeckAndAnchorWash = N2kDD002_Unavailable,
-  tN2kGenericStatusPair AnchorLight = N2kDD002_Unavailable,
-  double CommandTimeout = 0.4,
-  const tN2kWindlassControlEvents &WindlassControlEvents = tN2kWindlassControlEvents()
-);
+// void SetN2kPGN128776(
+//   tN2kMsg &N2kMsg,
+//   unsigned char SID,
+//   unsigned char WindlassIdentifier,
+//   tN2kWindlassDirectionControl WindlassDirectionControl,
+//   unsigned char SpeedControl,
+//   tN2kSpeedType SpeedControlType = N2kDD488_DataNotAvailable,
+//   tN2kGenericStatusPair AnchorDockingControl = N2kDD002_Unavailable,
+//   tN2kGenericStatusPair PowerEnable = N2kDD002_Unavailable,
+//   tN2kGenericStatusPair MechanicalLock = N2kDD002_Unavailable,
+//   tN2kGenericStatusPair DeckAndAnchorWash = N2kDD002_Unavailable,
+//   tN2kGenericStatusPair AnchorLight = N2kDD002_Unavailable,
+//   double CommandTimeout = 0.4,
+//   const tN2kWindlassControlEvents &WindlassControlEvents = tN2kWindlassControlEvents()
+// );
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 128776 "Anchor Windlass
@@ -2659,21 +2659,21 @@ void SetN2kPGN128776(
  * \return false    Parsing of PGN Message aborted
  *
  */
-bool ParseN2kPGN128776(
-  const tN2kMsg &N2kMsg,
-  unsigned char &SID,
-  unsigned char &WindlassIdentifier,
-  tN2kWindlassDirectionControl &WindlassDirectionControl,
-  unsigned char &SpeedControl,
-  tN2kSpeedType &SpeedControlType,
-  tN2kGenericStatusPair &AnchorDockingControl,
-  tN2kGenericStatusPair &PowerEnable,
-  tN2kGenericStatusPair &MechanicalLock,
-  tN2kGenericStatusPair &DeckAndAnchorWash,
-  tN2kGenericStatusPair &AnchorLight,
-  double &CommandTimeout,
-  tN2kWindlassControlEvents &WindlassControlEvents
-);
+// bool ParseN2kPGN128776(
+//   const tN2kMsg &N2kMsg,
+//   unsigned char &SID,
+//   unsigned char &WindlassIdentifier,
+//   tN2kWindlassDirectionControl &WindlassDirectionControl,
+//   unsigned char &SpeedControl,
+//   tN2kSpeedType &SpeedControlType,
+//   tN2kGenericStatusPair &AnchorDockingControl,
+//   tN2kGenericStatusPair &PowerEnable,
+//   tN2kGenericStatusPair &MechanicalLock,
+//   tN2kGenericStatusPair &DeckAndAnchorWash,
+//   tN2kGenericStatusPair &AnchorLight,
+//   double &CommandTimeout,
+//   tN2kWindlassControlEvents &WindlassControlEvents
+// );
 
 /************************************************************************//**
  * \brief Setting up PGN 128777 Message "Anchor Windlass Operating Status"
@@ -2719,17 +2719,17 @@ bool ParseN2kPGN128776(
  * \param WindlassOperatingEvents see \ref tN2kWindlassOperatingEvents
  * 
  */
-void SetN2kPGN128777(
-  tN2kMsg &N2kMsg,
-  unsigned char SID,
-  unsigned char WindlassIdentifier,
-  double RodeCounterValue,
-  double WindlassLineSpeed = N2kDoubleNA,
-  tN2kWindlassMotionStates WindlassMotionStatus = N2kDD480_Unavailable,
-  tN2kRodeTypeStates RodeTypeStatus = N2kDD481_Unavailable,
-  tN2kDD482 AnchorDockingStatus = N2kDD482_DataNotAvailable,
-  const tN2kWindlassOperatingEvents &WindlassOperatingEvents = tN2kWindlassOperatingEvents()
-);
+// void SetN2kPGN128777(
+//   tN2kMsg &N2kMsg,
+//   unsigned char SID,
+//   unsigned char WindlassIdentifier,
+//   double RodeCounterValue,
+//   double WindlassLineSpeed = N2kDoubleNA,
+//   tN2kWindlassMotionStates WindlassMotionStatus = N2kDD480_Unavailable,
+//   tN2kRodeTypeStates RodeTypeStatus = N2kDD481_Unavailable,
+//   tN2kDD482 AnchorDockingStatus = N2kDD482_DataNotAvailable,
+//   const tN2kWindlassOperatingEvents &WindlassOperatingEvents = tN2kWindlassOperatingEvents()
+// );
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 128777 "Anchor Windlass
@@ -2775,17 +2775,17 @@ void SetN2kPGN128777(
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN128777(
-  const tN2kMsg &N2kMsg,
-  unsigned char &SID,
-  unsigned char &WindlassIdentifier,
-  double &RodeCounterValue,
-  double &WindlassLineSpeed,
-  tN2kWindlassMotionStates &WindlassMotionStatus,
-  tN2kRodeTypeStates &RodeTypeStatus,
-  tN2kAnchorDockingStates &AnchorDockingStatus,
-  tN2kWindlassOperatingEvents &WindlassOperatingEvents
-);
+// bool ParseN2kPGN128777(
+//   const tN2kMsg &N2kMsg,
+//   unsigned char &SID,
+//   unsigned char &WindlassIdentifier,
+//   double &RodeCounterValue,
+//   double &WindlassLineSpeed,
+//   tN2kWindlassMotionStates &WindlassMotionStatus,
+//   tN2kRodeTypeStates &RodeTypeStatus,
+//   tN2kAnchorDockingStates &AnchorDockingStatus,
+//   tN2kWindlassOperatingEvents &WindlassOperatingEvents
+// );
 
 /************************************************************************//**
  * \brief Setting up PGN 128778Message "Anchor Windlass Monitoring Status"
@@ -2828,15 +2828,15 @@ bool ParseN2kPGN128777(
  *                                      see \ref tN2kWindlassMonitoringEvents
  * 
  */
-void SetN2kPGN128778(
-  tN2kMsg &N2kMsg,
-  unsigned char SID,
-  unsigned char WindlassIdentifier,
-  double TotalMotorTime,
-  double ControllerVoltage = N2kDoubleNA,
-  double MotorCurrent = N2kDoubleNA,
-  const tN2kWindlassMonitoringEvents &WindlassMonitoringEvents = tN2kWindlassMonitoringEvents()
-);
+// void SetN2kPGN128778(
+//   tN2kMsg &N2kMsg,
+//   unsigned char SID,
+//   unsigned char WindlassIdentifier,
+//   double TotalMotorTime,
+//   double ControllerVoltage = N2kDoubleNA,
+//   double MotorCurrent = N2kDoubleNA,
+//   const tN2kWindlassMonitoringEvents &WindlassMonitoringEvents = tN2kWindlassMonitoringEvents()
+// );
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN128778 "Anchor Windlass
@@ -2880,15 +2880,15 @@ void SetN2kPGN128778(
  * \return false    Parsing of PGN Message aborted
  *  
  */
-bool ParseN2kPGN128778(
-  const tN2kMsg &N2kMsg,
-  unsigned char &SID,
-  unsigned char &WindlassIdentifier,
-  double &TotalMotorTime,
-  double &ControllerVoltage,
-  double &MotorCurrent,
-  tN2kWindlassMonitoringEvents &WindlassMonitoringEvents
-);
+// bool ParseN2kPGN128778(
+//   const tN2kMsg &N2kMsg,
+//   unsigned char &SID,
+//   unsigned char &WindlassIdentifier,
+//   double &TotalMotorTime,
+//   double &ControllerVoltage,
+//   double &MotorCurrent,
+//   tN2kWindlassMonitoringEvents &WindlassMonitoringEvents
+// );
 
 /************************************************************************//**
  * \brief Setting up PGN 129025 Message "Position, Rapid Update"
@@ -2908,7 +2908,7 @@ bool ParseN2kPGN128778(
  * \param Longitude   Longitude in degrees
  * 
  */
-void SetN2kPGN129025(tN2kMsg &N2kMsg, double Latitude, double Longitude);
+// void SetN2kPGN129025(tN2kMsg &N2kMsg, double Latitude, double Longitude);
 
 /************************************************************************//**
  * \brief Setting up Message "Position, Rapid Update" - PGN 129025
@@ -2917,9 +2917,9 @@ void SetN2kPGN129025(tN2kMsg &N2kMsg, double Latitude, double Longitude);
  * Alias of PGN 129025. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129025
   */
-inline void SetN2kLatLonRapid(tN2kMsg &N2kMsg, double Latitude, double Longitude) {
-  SetN2kPGN129025(N2kMsg,Latitude,Longitude);
-}
+// inline void SetN2kLatLonRapid(tN2kMsg &N2kMsg, double Latitude, double Longitude) {
+//   SetN2kPGN129025(N2kMsg,Latitude,Longitude);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of PGN 129025 "Position, Rapid Update"
@@ -2941,7 +2941,7 @@ inline void SetN2kLatLonRapid(tN2kMsg &N2kMsg, double Latitude, double Longitude
  * \return false    Parsing of PGN Message aborted
  *   
  */
-bool ParseN2kPGN129025(const tN2kMsg &N2kMsg, double &Latitude, double &Longitude);
+// bool ParseN2kPGN129025(const tN2kMsg &N2kMsg, double &Latitude, double &Longitude);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Position, Rapid Update" 
@@ -2951,9 +2951,9 @@ bool ParseN2kPGN129025(const tN2kMsg &N2kMsg, double &Latitude, double &Longitud
  * Alias of PGN 129025. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129025 
  */
-inline bool ParseN2kPositionRapid(const tN2kMsg &N2kMsg, double &Latitude, double &Longitude) {
-	return ParseN2kPGN129025(N2kMsg, Latitude, Longitude);
-}
+// inline bool ParseN2kPositionRapid(const tN2kMsg &N2kMsg, double &Latitude, double &Longitude) {
+// 	return ParseN2kPGN129025(N2kMsg, Latitude, Longitude);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129026 Message "COG SOG rapid update"
@@ -2973,7 +2973,7 @@ inline bool ParseN2kPositionRapid(const tN2kMsg &N2kMsg, double &Latitude, doubl
  * \param SOG         Speed Over Ground in m/s
  * 
  */
-void SetN2kPGN129026(tN2kMsg &N2kMsg, unsigned char SID, tN2kHeadingReference ref, double COG, double SOG);
+// void SetN2kPGN129026(tN2kMsg &N2kMsg, unsigned char SID, tN2kHeadingReference ref, double COG, double SOG);
 
 /************************************************************************//**
  * \brief Setting up Message "COG SOG rapid update" - PGN 129026
@@ -2982,9 +2982,9 @@ void SetN2kPGN129026(tN2kMsg &N2kMsg, unsigned char SID, tN2kHeadingReference re
  * Alias of PGN 129026. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129026
   */
-inline void SetN2kCOGSOGRapid(tN2kMsg &N2kMsg, unsigned char SID, tN2kHeadingReference ref, double COG, double SOG) {
-  SetN2kPGN129026(N2kMsg,SID,ref,COG,SOG);
-}
+// inline void SetN2kCOGSOGRapid(tN2kMsg &N2kMsg, unsigned char SID, tN2kHeadingReference ref, double COG, double SOG) {
+//   SetN2kPGN129026(N2kMsg,SID,ref,COG,SOG);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of PGN 129026 "COG SOG rapid update"
@@ -3003,7 +3003,7 @@ inline void SetN2kCOGSOGRapid(tN2kMsg &N2kMsg, unsigned char SID, tN2kHeadingRef
  * \return false    Parsing of PGN Message aborted
  *  
  */
-bool ParseN2kPGN129026(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kHeadingReference &ref, double &COG, double &SOG);
+// bool ParseN2kPGN129026(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kHeadingReference &ref, double &COG, double &SOG);
 
 /************************************************************************//**
  * \brief Parsing the content of a "COG SOG Rapid Update" 
@@ -3012,9 +3012,9 @@ bool ParseN2kPGN129026(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kHeadingRef
  * Alias of PGN 129026. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129026 
  */
-inline bool ParseN2kCOGSOGRapid(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kHeadingReference &ref, double &COG, double &SOG) {
-  return ParseN2kPGN129026(N2kMsg,SID,ref,COG,SOG);
-}
+// inline bool ParseN2kCOGSOGRapid(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kHeadingReference &ref, double &COG, double &SOG) {
+//   return ParseN2kPGN129026(N2kMsg,SID,ref,COG,SOG);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129029 Message "GNSS Position Data"
@@ -3047,13 +3047,13 @@ inline bool ParseN2kCOGSOGRapid(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kH
  * \param AgeOfCorrection       Age of DGNSS Corrections
  * 
  */
-void SetN2kPGN129029(tN2kMsg &N2kMsg, unsigned char SID, uint16_t DaysSince1970, double SecondsSinceMidnight,
-                     double Latitude, double Longitude, double Altitude,
-                     tN2kGNSStype GNSStype, tN2kGNSSmethod GNSSmethod,
-                     unsigned char nSatellites, double HDOP, double PDOP=0, double GeoidalSeparation=0,
-                     unsigned char nReferenceStations=0, tN2kGNSStype ReferenceStationType=N2kGNSSt_GPS, uint16_t ReferenceSationID=0,
-                     double AgeOfCorrection=0
-                     );
+// void SetN2kPGN129029(tN2kMsg &N2kMsg, unsigned char SID, uint16_t DaysSince1970, double SecondsSinceMidnight,
+//                      double Latitude, double Longitude, double Altitude,
+//                      tN2kGNSStype GNSStype, tN2kGNSSmethod GNSSmethod,
+//                      unsigned char nSatellites, double HDOP, double PDOP=0, double GeoidalSeparation=0,
+//                      unsigned char nReferenceStations=0, tN2kGNSStype ReferenceStationType=N2kGNSSt_GPS, uint16_t ReferenceSationID=0,
+//                      double AgeOfCorrection=0
+//                      );
 
 /************************************************************************//**
  * \brief Setting up Message "GNSS Position Data" - PGN 129029
@@ -3062,20 +3062,20 @@ void SetN2kPGN129029(tN2kMsg &N2kMsg, unsigned char SID, uint16_t DaysSince1970,
  * Alias of PGN 129029. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129029
   */
-inline void SetN2kGNSS(tN2kMsg &N2kMsg, unsigned char SID, uint16_t DaysSince1970, double SecondsSinceMidnight,
-                     double Latitude, double Longitude, double Altitude,
-                     tN2kGNSStype GNSStype, tN2kGNSSmethod GNSSmethod,
-                     unsigned char nSatellites, double HDOP, double PDOP=0, double GeoidalSeparation=0,
-                     unsigned char nReferenceStations=0, tN2kGNSStype ReferenceStationType=N2kGNSSt_GPS, uint16_t ReferenceSationID=0,
-                     double AgeOfCorrection=0
-                     ) {
-  SetN2kPGN129029(N2kMsg,SID,DaysSince1970,SecondsSinceMidnight,
-                  Latitude,Longitude,Altitude,
-                  GNSStype,GNSSmethod,
-                  nSatellites,HDOP,PDOP,GeoidalSeparation,
-                  nReferenceStations,ReferenceStationType,ReferenceSationID,
-                  AgeOfCorrection);
-}
+// inline void SetN2kGNSS(tN2kMsg &N2kMsg, unsigned char SID, uint16_t DaysSince1970, double SecondsSinceMidnight,
+//                      double Latitude, double Longitude, double Altitude,
+//                      tN2kGNSStype GNSStype, tN2kGNSSmethod GNSSmethod,
+//                      unsigned char nSatellites, double HDOP, double PDOP=0, double GeoidalSeparation=0,
+//                      unsigned char nReferenceStations=0, tN2kGNSStype ReferenceStationType=N2kGNSSt_GPS, uint16_t ReferenceSationID=0,
+//                      double AgeOfCorrection=0
+//                      ) {
+//   SetN2kPGN129029(N2kMsg,SID,DaysSince1970,SecondsSinceMidnight,
+//                   Latitude,Longitude,Altitude,
+//                   GNSStype,GNSSmethod,
+//                   nSatellites,HDOP,PDOP,GeoidalSeparation,
+//                   nReferenceStations,ReferenceStationType,ReferenceSationID,
+//                   AgeOfCorrection);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129029 "GNSS Position Data"
@@ -3111,13 +3111,13 @@ inline void SetN2kGNSS(tN2kMsg &N2kMsg, unsigned char SID, uint16_t DaysSince197
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN129029(const tN2kMsg &N2kMsg, unsigned char &SID, uint16_t &DaysSince1970, double &SecondsSinceMidnight,
-                     double &Latitude, double &Longitude, double &Altitude,
-                     tN2kGNSStype &GNSStype, tN2kGNSSmethod &GNSSmethod,
-                     unsigned char &nSatellites, double &HDOP, double &PDOP, double &GeoidalSeparation,
-                     unsigned char &nReferenceStations, tN2kGNSStype &ReferenceStationType, uint16_t &ReferenceSationID,
-                     double &AgeOfCorrection
-                     );
+// bool ParseN2kPGN129029(const tN2kMsg &N2kMsg, unsigned char &SID, uint16_t &DaysSince1970, double &SecondsSinceMidnight,
+//                      double &Latitude, double &Longitude, double &Altitude,
+//                      tN2kGNSStype &GNSStype, tN2kGNSSmethod &GNSSmethod,
+//                      unsigned char &nSatellites, double &HDOP, double &PDOP, double &GeoidalSeparation,
+//                      unsigned char &nReferenceStations, tN2kGNSStype &ReferenceStationType, uint16_t &ReferenceSationID,
+//                      double &AgeOfCorrection
+//                      );
 
 /************************************************************************//**
  * \brief Parsing the content of a "GNSS Position Data" 
@@ -3127,21 +3127,21 @@ bool ParseN2kPGN129029(const tN2kMsg &N2kMsg, unsigned char &SID, uint16_t &Days
  * Alias of PGN 129029. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129029 
  */
-inline bool ParseN2kGNSS(const tN2kMsg &N2kMsg, unsigned char &SID, uint16_t &DaysSince1970, double &SecondsSinceMidnight,
-                     double &Latitude, double &Longitude, double &Altitude,
-                     tN2kGNSStype &GNSStype, tN2kGNSSmethod &GNSSmethod,
-                     unsigned char &nSatellites, double &HDOP, double &PDOP, double &GeoidalSeparation,
-                     unsigned char &nReferenceStations, tN2kGNSStype &ReferenceStationType, uint16_t &ReferenceSationID,
-                     double &AgeOfCorrection
-                     ) {
-  return ParseN2kPGN129029(N2kMsg, SID, DaysSince1970, SecondsSinceMidnight,
-                     Latitude, Longitude, Altitude,
-                     GNSStype, GNSSmethod,
-                     nSatellites, HDOP, PDOP, GeoidalSeparation,
-                     nReferenceStations, ReferenceStationType, ReferenceSationID,
-                     AgeOfCorrection
-                     );
-}
+// inline bool ParseN2kGNSS(const tN2kMsg &N2kMsg, unsigned char &SID, uint16_t &DaysSince1970, double &SecondsSinceMidnight,
+//                      double &Latitude, double &Longitude, double &Altitude,
+//                      tN2kGNSStype &GNSStype, tN2kGNSSmethod &GNSSmethod,
+//                      unsigned char &nSatellites, double &HDOP, double &PDOP, double &GeoidalSeparation,
+//                      unsigned char &nReferenceStations, tN2kGNSStype &ReferenceStationType, uint16_t &ReferenceSationID,
+//                      double &AgeOfCorrection
+//                      ) {
+//   return ParseN2kPGN129029(N2kMsg, SID, DaysSince1970, SecondsSinceMidnight,
+//                      Latitude, Longitude, Altitude,
+//                      GNSStype, GNSSmethod,
+//                      nSatellites, HDOP, PDOP, GeoidalSeparation,
+//                      nReferenceStations, ReferenceStationType, ReferenceSationID,
+//                      AgeOfCorrection
+//                      );
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129033 Message "Date,Time & Local offset"
@@ -3161,7 +3161,7 @@ inline bool ParseN2kGNSS(const tN2kMsg &N2kMsg, unsigned char &SID, uint16_t &Da
  * \param LocalOffset           Local offset in minutes
  * 
  */
-void SetN2kPGN129033(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, int16_t LocalOffset);
+// void SetN2kPGN129033(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, int16_t LocalOffset);
 
 /************************************************************************//**
  * \brief Setting up Message "Date,Time & Local offset" - PGN 129033
@@ -3170,9 +3170,9 @@ void SetN2kPGN129033(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinc
  * Alias of PGN 129033. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129033
   */
-inline void SetN2kLocalOffset(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, int16_t LocalOffset) {
-  SetN2kPGN129033(N2kMsg,DaysSince1970,SecondsSinceMidnight,LocalOffset);
-}
+// inline void SetN2kLocalOffset(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double SecondsSinceMidnight, int16_t LocalOffset) {
+//   SetN2kPGN129033(N2kMsg,DaysSince1970,SecondsSinceMidnight,LocalOffset);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129033 "Date,Time & Local offset"
@@ -3195,7 +3195,7 @@ inline void SetN2kLocalOffset(tN2kMsg &N2kMsg, uint16_t DaysSince1970, double Se
  * \return false    Parsing of PGN Message aborted
  *
  */
-bool ParseN2kPGN129033(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, int16_t &LocalOffset);
+// bool ParseN2kPGN129033(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, int16_t &LocalOffset);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Date,Time & Local offset" 
@@ -3205,9 +3205,9 @@ bool ParseN2kPGN129033(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &S
  * Alias of PGN 129033. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129033 
  */
-inline bool ParseN2kLocalOffset(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, int16_t &LocalOffset) {
-  return ParseN2kPGN129033(N2kMsg,DaysSince1970,SecondsSinceMidnight,LocalOffset);
-}
+// inline bool ParseN2kLocalOffset(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, double &SecondsSinceMidnight, int16_t &LocalOffset) {
+//   return ParseN2kPGN129033(N2kMsg,DaysSince1970,SecondsSinceMidnight,LocalOffset);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129038 Message "AIS position reports for Class A"
@@ -3253,10 +3253,10 @@ inline bool ParseN2kLocalOffset(const tN2kMsg &N2kMsg, uint16_t &DaysSince1970, 
  * \param NavStatus   Navigational status, see \ref tN2kAISNavStatus
  * 
  */
-void SetN2kPGN129038(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, 
-                        double Latitude, double Longitude, bool Accuracy, bool RAIM, 
-                        uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation, 
-                        double Heading, double ROT, tN2kAISNavStatus NavStatus);
+// void SetN2kPGN129038(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, 
+//                         double Latitude, double Longitude, bool Accuracy, bool RAIM, 
+//                         uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation, 
+//                         double Heading, double ROT, tN2kAISNavStatus NavStatus);
 /************************************************************************//**
  * \brief Setting up Message "AIS position reports for Class A" - PGN 129038
  * \ingroup group_msgSetUp
@@ -3264,13 +3264,13 @@ void SetN2kPGN129038(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, u
  * Alias of PGN 129038. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129038
   */
-inline void SetN2kAISClassAPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, 
-                        double Latitude, double Longitude, bool Accuracy, bool RAIM, 
-                        uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation,  
-                        double Heading, double ROT, tN2kAISNavStatus NavStatus) {
-  SetN2kPGN129038(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, 
-                  Accuracy, RAIM, Seconds, COG, SOG, AISTransceiverInformation, Heading, ROT, NavStatus);
-}
+// inline void SetN2kAISClassAPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, 
+//                         double Latitude, double Longitude, bool Accuracy, bool RAIM, 
+//                         uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation,  
+//                         double Heading, double ROT, tN2kAISNavStatus NavStatus) {
+//   SetN2kPGN129038(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, 
+//                   Accuracy, RAIM, Seconds, COG, SOG, AISTransceiverInformation, Heading, ROT, NavStatus);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129038 "AIS position reports 
@@ -3319,8 +3319,8 @@ inline void SetN2kAISClassAPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISR
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN129038(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, double &Latitude, double &Longitude,
-                        bool &Accuracy, bool &RAIM, uint8_t &Seconds, double &COG, double &SOG, double &Heading, double &ROT, tN2kAISNavStatus &NavStatus);
+// bool ParseN2kPGN129038(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, double &Latitude, double &Longitude,
+//                         bool &Accuracy, bool &RAIM, uint8_t &Seconds, double &COG, double &SOG, double &Heading, double &ROT, tN2kAISNavStatus &NavStatus);
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS position reports for Class A" 
@@ -3330,10 +3330,10 @@ bool ParseN2kPGN129038(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat 
  * Alias of PGN 129038. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129038 
  */
-inline bool ParseN2kAISClassAPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, double &Latitude, double &Longitude,
-                        bool &Accuracy, bool &RAIM, uint8_t &Seconds, double &COG, double &SOG, double &Heading, double &ROT, tN2kAISNavStatus & NavStatus) {
-  return ParseN2kPGN129038(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds, COG, SOG, Heading, ROT, NavStatus);
-}
+// inline bool ParseN2kAISClassAPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, double &Latitude, double &Longitude,
+//                         bool &Accuracy, bool &RAIM, uint8_t &Seconds, double &COG, double &SOG, double &Heading, double &ROT, tN2kAISNavStatus & NavStatus) {
+//   return ParseN2kPGN129038(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds, COG, SOG, Heading, ROT, NavStatus);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129039 Message "AIS position reports for Class B"
@@ -3407,11 +3407,11 @@ inline bool ParseN2kAISClassAPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID,
  *                    sampling or calculation time.
  * 
  */
-void SetN2kPGN129039(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
-                        double Latitude, double Longitude, bool Accuracy, bool RAIM,
-                        uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation,
-                        double Heading, tN2kAISUnit Unit, bool Display, bool DSC, bool Band, bool Msg22, tN2kAISMode Mode,
-                        bool State, unsigned char SID=0xff);
+// void SetN2kPGN129039(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
+//                         double Latitude, double Longitude, bool Accuracy, bool RAIM,
+//                         uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation,
+//                         double Heading, tN2kAISUnit Unit, bool Display, bool DSC, bool Band, bool Msg22, tN2kAISMode Mode,
+//                         bool State, unsigned char SID=0xff);
 
 /************************************************************************//**
  * \brief Setting up Message "AIS position reports for Class B" - PGN 129039
@@ -3421,14 +3421,14 @@ void SetN2kPGN129039(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, u
  * Alias of PGN 129039. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129039
   */
-inline void SetN2kAISClassBPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
-                        double Latitude, double Longitude, bool Accuracy, bool RAIM,
-                        uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation,
-                        double Heading, tN2kAISUnit Unit, bool Display, bool DSC, bool Band, bool Msg22, tN2kAISMode Mode,
-                        bool State, unsigned char SID=0xff) {
-  SetN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds,
-                    COG, SOG, AISTransceiverInformation, Heading, Unit, Display, DSC, Band, Msg22, Mode, State, SID);
-}
+// inline void SetN2kAISClassBPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
+//                         double Latitude, double Longitude, bool Accuracy, bool RAIM,
+//                         uint8_t Seconds, double COG, double SOG, tN2kAISTransceiverInformation AISTransceiverInformation,
+//                         double Heading, tN2kAISUnit Unit, bool Display, bool DSC, bool Band, bool Msg22, tN2kAISMode Mode,
+//                         bool State, unsigned char SID=0xff) {
+//   SetN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds,
+//                     COG, SOG, AISTransceiverInformation, Heading, Unit, Display, DSC, Band, Msg22, Mode, State, SID);
+// }
 
 /************************************************************************//**
  * \brief Setting up Message "AIS position reports for Class B" - PGN 129039 
@@ -3441,13 +3441,13 @@ inline void SetN2kAISClassBPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISR
  * Alias of PGN 129039. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129039
   */
-inline void SetN2kAISClassBPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
-                        double Latitude, double Longitude, bool Accuracy, bool RAIM,
-                        uint8_t Seconds, double COG, double SOG, double Heading, tN2kAISUnit Unit,
-                        bool Display, bool DSC, bool Band, bool Msg22, tN2kAISMode Mode, bool State) {
-  SetN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds,
-                    COG, SOG, N2kaischannel_A_VDL_reception, Heading, Unit, Display, DSC, Band, Msg22, Mode, State);
-}
+// inline void SetN2kAISClassBPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
+//                         double Latitude, double Longitude, bool Accuracy, bool RAIM,
+//                         uint8_t Seconds, double COG, double SOG, double Heading, tN2kAISUnit Unit,
+//                         bool Display, bool DSC, bool Band, bool Msg22, tN2kAISMode Mode, bool State) {
+//   SetN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds,
+//                     COG, SOG, N2kaischannel_A_VDL_reception, Heading, Unit, Display, DSC, Band, Msg22, Mode, State);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129039 "AIS position reports
@@ -3521,10 +3521,10 @@ inline void SetN2kAISClassBPosition(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISR
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN129039(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
-                        double &Latitude, double &Longitude, bool &Accuracy, bool &RAIM, uint8_t &Seconds, double &COG,
-                        double &SOG, tN2kAISTransceiverInformation &AISTransceiverInformation, double &Heading,
-                        tN2kAISUnit &Unit, bool &Display, bool &DSC, bool &Band, bool &Msg22, tN2kAISMode &Mode, bool &State);
+// bool ParseN2kPGN129039(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
+//                         double &Latitude, double &Longitude, bool &Accuracy, bool &RAIM, uint8_t &Seconds, double &COG,
+//                         double &SOG, tN2kAISTransceiverInformation &AISTransceiverInformation, double &Heading,
+//                         tN2kAISUnit &Unit, bool &Display, bool &DSC, bool &Band, bool &Msg22, tN2kAISMode &Mode, bool &State);
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS position reports for Class B" 
@@ -3536,13 +3536,13 @@ bool ParseN2kPGN129039(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat 
  * Alias of PGN 129039. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129039 
  */
-inline bool ParseN2kAISClassBPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
-                        double &Latitude, double &Longitude, bool &Accuracy, bool &RAIM,
-                        uint8_t &Seconds, double &COG, double &SOG, tN2kAISTransceiverInformation &AISTransceiverInformation,
-                        double &Heading, tN2kAISUnit &Unit, bool &Display, bool &DSC, bool &Band, bool &Msg22, tN2kAISMode &Mode,
-                        bool &State) {
-  return ParseN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds, COG, SOG, AISTransceiverInformation, Heading, Unit, Display, DSC, Band, Msg22, Mode, State);
-}
+// inline bool ParseN2kAISClassBPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
+//                         double &Latitude, double &Longitude, bool &Accuracy, bool &RAIM,
+//                         uint8_t &Seconds, double &COG, double &SOG, tN2kAISTransceiverInformation &AISTransceiverInformation,
+//                         double &Heading, tN2kAISUnit &Unit, bool &Display, bool &DSC, bool &Band, bool &Msg22, tN2kAISMode &Mode,
+//                         bool &State) {
+//   return ParseN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy, RAIM, Seconds, COG, SOG, AISTransceiverInformation, Heading, Unit, Display, DSC, Band, Msg22, Mode, State);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS position reports for Class B" 
@@ -3555,14 +3555,14 @@ inline bool ParseN2kAISClassBPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID,
  * Alias of PGN 129039. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129039 
  */
-inline bool ParseN2kAISClassBPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
-                        double &Latitude, double &Longitude, bool &Accuracy, bool &RAIM,
-                        uint8_t &Seconds, double &COG, double &SOG, double &Heading, tN2kAISUnit &Unit,
-                        bool &Display, bool &DSC, bool &Band, bool &Msg22, tN2kAISMode &Mode, bool &State) {
-  tN2kAISTransceiverInformation AISTransceiverInformation; // for backwards compatibility
-  return ParseN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy,
-                            RAIM, Seconds, COG, SOG, AISTransceiverInformation, Heading, Unit, Display, DSC, Band, Msg22, Mode, State);
-}
+// inline bool ParseN2kAISClassBPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
+//                         double &Latitude, double &Longitude, bool &Accuracy, bool &RAIM,
+//                         uint8_t &Seconds, double &COG, double &SOG, double &Heading, tN2kAISUnit &Unit,
+//                         bool &Display, bool &DSC, bool &Band, bool &Msg22, tN2kAISMode &Mode, bool &State) {
+//   tN2kAISTransceiverInformation AISTransceiverInformation; // for backwards compatibility
+//   return ParseN2kPGN129039(N2kMsg, MessageID, Repeat, UserID, Latitude, Longitude, Accuracy,
+//                             RAIM, Seconds, COG, SOG, AISTransceiverInformation, Heading, Unit, Display, DSC, Band, Msg22, Mode, State);
+// }
 
 /************************************************************************//**
  * \brief Dedicated structure to handle AIS Aids to Navigation (AtoN) Report
@@ -3574,151 +3574,151 @@ inline bool ParseN2kAISClassBPosition(const tN2kMsg &N2kMsg, uint8_t &MessageID,
  * \sa SetN2kPGN129041 and ParseN2kPGN129041
  * \sa [ITU-R M.1371](https://www.itu.int/rec/R-REC-M.1371)
  */
-struct tN2kAISAtoNReportData {
-  /** \brief Message Type ID according to e ITU-R M.1371 */
-  uint8_t MessageID;
-  /** \brief Repeat indicator, Used by the repeater to indicate how many times a message has been repeated. see \ref tN2kAISRepeat*/
-  tN2kAISRepeat Repeat; 
-  /** \brief MMSI number */
-  uint32_t UserID;
-  /** \brief longitude of position [degree] */
-  double Longitude;
-  /** \brief latitude of position [degree] */
-  double Latitude;
+// struct tN2kAISAtoNReportData {
+//   /** \brief Message Type ID according to e ITU-R M.1371 */
+//   uint8_t MessageID;
+//   /** \brief Repeat indicator, Used by the repeater to indicate how many times a message has been repeated. see \ref tN2kAISRepeat*/
+//   tN2kAISRepeat Repeat; 
+//   /** \brief MMSI number */
+//   uint32_t UserID;
+//   /** \brief longitude of position [degree] */
+//   double Longitude;
+//   /** \brief latitude of position [degree] */
+//   double Latitude;
 
-  /** \brief position accuracy 
-   * - 0 = default
-   * - 1 = high (≤10 m)
-   * - 0 = low (>10 m)
-  */
-  bool Accuracy;
+//   /** \brief position accuracy 
+//    * - 0 = default
+//    * - 1 = high (≤10 m)
+//    * - 0 = low (>10 m)
+//   */
+//   bool Accuracy;
 
-  /** \brief Receiver autonomous integrity monitoring (RAIM) flag of
-   *  electronic position fixing device
-   *    - 0 = RAIM not in use = default
-   *    - 1 = RAIM in use
-   */
-  bool RAIM;
+//   /** \brief Receiver autonomous integrity monitoring (RAIM) flag of
+//    *  electronic position fixing device
+//    *    - 0 = RAIM not in use = default
+//    *    - 1 = RAIM in use
+//    */
+//   bool RAIM;
 
-  /**********************************************************************//**
-   * \brief TimeStamp UTC second when the report was generated
-   * 
-   * TimeStamp UTC second when the report was generated by the EPFS
-   * (0-59 or 60) if time stamp is not available, which should also
-   * be the default value or 61 if positioning system is in manual
-   * input mode or 62 if electronic position fixing system operates
-   * in estimated (dead reckoning) mode, or 63 if the positioning
-   * system is inoperative)
-   */
-  uint8_t Seconds;
-  /** \brief AtoN Structure Length/Diameter in meters*/
-  double Length;
-  /** \brief AtoN Structure Beam/Diameter in meters*/
-  double Beam;
-  /** \brief Position Reference Point from Starboard Structure Edge/Radius */
-  double PositionReferenceStarboard ;
-  /** \brief Position Reference Point from True North facing Structure 
-   * Edge/Radius */
-  double PositionReferenceTrueNorth;
-  /** \brief Aid to Navigation (AtoN) Type, see \ref tN2kAISAtoNType*/
-  tN2kAISAtoNType AtoNType;
+//   /**********************************************************************//**
+//    * \brief TimeStamp UTC second when the report was generated
+//    * 
+//    * TimeStamp UTC second when the report was generated by the EPFS
+//    * (0-59 or 60) if time stamp is not available, which should also
+//    * be the default value or 61 if positioning system is in manual
+//    * input mode or 62 if electronic position fixing system operates
+//    * in estimated (dead reckoning) mode, or 63 if the positioning
+//    * system is inoperative)
+//    */
+//   uint8_t Seconds;
+//   /** \brief AtoN Structure Length/Diameter in meters*/
+//   double Length;
+//   /** \brief AtoN Structure Beam/Diameter in meters*/
+//   double Beam;
+//   /** \brief Position Reference Point from Starboard Structure Edge/Radius */
+//   double PositionReferenceStarboard ;
+//   /** \brief Position Reference Point from True North facing Structure 
+//    * Edge/Radius */
+//   double PositionReferenceTrueNorth;
+//   /** \brief Aid to Navigation (AtoN) Type, see \ref tN2kAISAtoNType*/
+//   tN2kAISAtoNType AtoNType;
 
-  /**********************************************************************//**
-   * \brief Off Position Indicator
-   * For floating AtoN, only
-   * - 0 = on position
-   * - 1 = off position.
-   * 
-   * \note This flag should only be considered valid by receiving station,
-   * if the AtoN is a floating aid, and if time stamp is equal to or below 59. 
-   * For floating AtoN the guard zone parameters should be set on installation
-  */
-  bool OffPositionIndicator;
+//   /**********************************************************************//**
+//    * \brief Off Position Indicator
+//    * For floating AtoN, only
+//    * - 0 = on position
+//    * - 1 = off position.
+//    * 
+//    * \note This flag should only be considered valid by receiving station,
+//    * if the AtoN is a floating aid, and if time stamp is equal to or below 59. 
+//    * For floating AtoN the guard zone parameters should be set on installation
+//   */
+//   bool OffPositionIndicator;
 
-  /**********************************************************************//**
-   * \brief Virtual AtoN flag
-   * - 0 = default = real AtoN at indicated position
-   * - 1 = virtual AtoN, does not physically exist.
-  */
-  bool VirtualAtoNFlag;
+//   /**********************************************************************//**
+//    * \brief Virtual AtoN flag
+//    * - 0 = default = real AtoN at indicated position
+//    * - 1 = virtual AtoN, does not physically exist.
+//   */
+//   bool VirtualAtoNFlag;
 
-  /**********************************************************************//**
-   * \brief Assigned Mode Flag
-   * - 0 = Station operating in autonomous and continuous mode = default
-   * - 1 = Station operating in assigned mode
-  */
-  bool AssignedModeFlag;
+//   /**********************************************************************//**
+//    * \brief Assigned Mode Flag
+//    * - 0 = Station operating in autonomous and continuous mode = default
+//    * - 1 = Station operating in assigned mode
+//   */
+//   bool AssignedModeFlag;
 
-  /**********************************************************************//**
-   * \brief Type of electronic position fixing device
-   * See \ref tN2kGNSStype
-  */
-  tN2kGNSStype GNSSType;
+//   /**********************************************************************//**
+//    * \brief Type of electronic position fixing device
+//    * See \ref tN2kGNSStype
+//   */
+//   tN2kGNSStype GNSSType;
 
-  /**********************************************************************//**
-   * \brief AtoN Status byte
-   * Reserved for the indication of the AtoN status 00000000 = default
-  */
-  uint8_t AtoNStatus;
+//   /**********************************************************************//**
+//    * \brief AtoN Status byte
+//    * Reserved for the indication of the AtoN status 00000000 = default
+//   */
+//   uint8_t AtoNStatus;
 
-  /** \brief AIS Transceiver Information
-   * see \ref tN2kAISTransceiverInformation
-  */
-  tN2kAISTransceiverInformation AISTransceiverInformation; 
+//   /** \brief AIS Transceiver Information
+//    * see \ref tN2kAISTransceiverInformation
+//   */
+//   tN2kAISTransceiverInformation AISTransceiverInformation; 
 
-  /************************************************************************//**
-   * \brief Name of AtoN Object
-   * 
-   * According to e ITU-R M.1371  
-   * 
-   * This parameter of up to 14 additional 6-bit-ASCII characters for a
-   * 2-slot message may be combined with the parameter “Name of 
-   * Aid-to-Navigation” at the end of that parameter, when more than 20
-   * characters are needed for the name of the AtoN. This parameter
-   * should be omitted when no more than 20 characters for the name of
-   * the A-to-N are needed in total. Only the required number of
-   * characters should be transmitted, i.e. no @-character should be used
-  */
-  char AtoNName[34 + 1];
+//   /************************************************************************//**
+//    * \brief Name of AtoN Object
+//    * 
+//    * According to e ITU-R M.1371  
+//    * 
+//    * This parameter of up to 14 additional 6-bit-ASCII characters for a
+//    * 2-slot message may be combined with the parameter “Name of 
+//    * Aid-to-Navigation” at the end of that parameter, when more than 20
+//    * characters are needed for the name of the AtoN. This parameter
+//    * should be omitted when no more than 20 characters for the name of
+//    * the A-to-N are needed in total. Only the required number of
+//    * characters should be transmitted, i.e. no @-character should be used
+//   */
+//   char AtoNName[34 + 1];
 
-  /**********************************************************************//**
-   * \brief Construct a new t N2k AIS AtoN Report Data object
-   * 
-   * This constructor takes care of a proper initialisation.
-   */
-  tN2kAISAtoNReportData():
-    MessageID(N2kUInt8NA),
-    Repeat(N2kaisr_Initial),
-    UserID(N2kUInt32NA),
-    Longitude(N2kDoubleNA),
-    Latitude(N2kDoubleNA),
-    Accuracy(false),
-    RAIM(false),
-    Seconds(N2kUInt8NA),
-    Length(N2kDoubleNA),
-    Beam(N2kDoubleNA),
-    PositionReferenceStarboard(N2kDoubleNA),
-    PositionReferenceTrueNorth(N2kDoubleNA),
-    AtoNType(N2kAISAtoN_not_specified),
-    OffPositionIndicator(false),
-    VirtualAtoNFlag(false),
-    AssignedModeFlag(false),
-    GNSSType(N2kGNSSt_GPS),
-    AtoNStatus(N2kUInt8NA),
-    AISTransceiverInformation(N2kaischannel_A_VDL_reception) { 
-      AtoNName[0]=0; 
-   }
+//   /**********************************************************************//**
+//    * \brief Construct a new t N2k AIS AtoN Report Data object
+//    * 
+//    * This constructor takes care of a proper initialisation.
+//    */
+//   tN2kAISAtoNReportData():
+//     MessageID(N2kUInt8NA),
+//     Repeat(N2kaisr_Initial),
+//     UserID(N2kUInt32NA),
+//     Longitude(N2kDoubleNA),
+//     Latitude(N2kDoubleNA),
+//     Accuracy(false),
+//     RAIM(false),
+//     Seconds(N2kUInt8NA),
+//     Length(N2kDoubleNA),
+//     Beam(N2kDoubleNA),
+//     PositionReferenceStarboard(N2kDoubleNA),
+//     PositionReferenceTrueNorth(N2kDoubleNA),
+//     AtoNType(N2kAISAtoN_not_specified),
+//     OffPositionIndicator(false),
+//     VirtualAtoNFlag(false),
+//     AssignedModeFlag(false),
+//     GNSSType(N2kGNSSt_GPS),
+//     AtoNStatus(N2kUInt8NA),
+//     AISTransceiverInformation(N2kaischannel_A_VDL_reception) { 
+//       AtoNName[0]=0; 
+//    }
 
-  /**********************************************************************//**
-   * \brief Set the AtoN Name
-   * 
-   * \param name Name of Aid-to-Navigation
-   */
-  void SetAtoNName(const char *name) {
-    strncpy(AtoNName, name, sizeof(AtoNName));
-    AtoNName[sizeof(AtoNName) - 1] = 0;
-  }
-};
+//   /**********************************************************************//**
+//    * \brief Set the AtoN Name
+//    * 
+//    * \param name Name of Aid-to-Navigation
+//    */
+//   void SetAtoNName(const char *name) {
+//     strncpy(AtoNName, name, sizeof(AtoNName));
+//     AtoNName[sizeof(AtoNName) - 1] = 0;
+//   }
+// };
 
 /************************************************************************//**
  * \brief Setting up PGN 129041 Message "AIS Aids to Navigation (AtoN) Report"
@@ -3732,7 +3732,7 @@ struct tN2kAISAtoNReportData {
  * \param N2kData     structure that consists all relevant data, see 
  *                    \ref tN2kAISAtoNReportData
  */
-void SetN2kPGN129041(tN2kMsg &N2kMsg, const tN2kAISAtoNReportData &N2kData);
+// void SetN2kPGN129041(tN2kMsg &N2kMsg, const tN2kAISAtoNReportData &N2kData);
 
 /************************************************************************//**
  * \brief Setting up Message "AIS Aids to Navigation (AtoN) Report" - PGN 129041
@@ -3741,9 +3741,9 @@ void SetN2kPGN129041(tN2kMsg &N2kMsg, const tN2kAISAtoNReportData &N2kData);
  * Alias of PGN 129041. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129041
   */
-inline void SetN2kAISAtoNReport(tN2kMsg &N2kMsg, const tN2kAISAtoNReportData &N2kData) {
-  SetN2kPGN129041(N2kMsg, N2kData);
-}
+// inline void SetN2kAISAtoNReport(tN2kMsg &N2kMsg, const tN2kAISAtoNReportData &N2kData) {
+//   SetN2kPGN129041(N2kMsg, N2kData);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129041 "AIS Aids to
@@ -3762,7 +3762,7 @@ inline void SetN2kAISAtoNReport(tN2kMsg &N2kMsg, const tN2kAISAtoNReportData &N2
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN129041(const tN2kMsg &N2kMsg, tN2kAISAtoNReportData &N2kData);
+// bool ParseN2kPGN129041(const tN2kMsg &N2kMsg, tN2kAISAtoNReportData &N2kData);
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS Aids to Navigation (AtoN) Report" 
@@ -3772,9 +3772,9 @@ bool ParseN2kPGN129041(const tN2kMsg &N2kMsg, tN2kAISAtoNReportData &N2kData);
  * Alias of PGN 129041. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129041 
  */
-inline bool ParseN2kAISAtoNReport(const tN2kMsg &N2kMsg, tN2kAISAtoNReportData &N2kData) {
-  return ParseN2kPGN129041(N2kMsg, N2kData);
-}
+// inline bool ParseN2kAISAtoNReport(const tN2kMsg &N2kMsg, tN2kAISAtoNReportData &N2kData) {
+//   return ParseN2kPGN129041(N2kMsg, N2kData);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129283 Message "Cross Track Error"
@@ -3794,7 +3794,7 @@ inline bool ParseN2kAISAtoNReport(const tN2kMsg &N2kMsg, tN2kAISAtoNReportData &
  * \param XTE         CrossTrackError in meter
  * 
 */
-void SetN2kPGN129283(tN2kMsg &N2kMsg, unsigned char SID, tN2kXTEMode XTEMode, bool NavigationTerminated, double XTE);
+// void SetN2kPGN129283(tN2kMsg &N2kMsg, unsigned char SID, tN2kXTEMode XTEMode, bool NavigationTerminated, double XTE);
 
 /************************************************************************//**
  * \brief Setting up Message "Cross Track Error" - PGN 129283
@@ -3803,9 +3803,9 @@ void SetN2kPGN129283(tN2kMsg &N2kMsg, unsigned char SID, tN2kXTEMode XTEMode, bo
  * Alias of PGN 129283. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129283
   */
-inline void SetN2kXTE(tN2kMsg &N2kMsg, unsigned char SID, tN2kXTEMode XTEMode, bool NavigationTerminated, double XTE) {
-  SetN2kPGN129283(N2kMsg, SID, XTEMode, NavigationTerminated, XTE);
-}
+// inline void SetN2kXTE(tN2kMsg &N2kMsg, unsigned char SID, tN2kXTEMode XTEMode, bool NavigationTerminated, double XTE) {
+//   SetN2kPGN129283(N2kMsg, SID, XTEMode, NavigationTerminated, XTE);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of Message PGN 129283 Message "Cross Track Error"
@@ -3825,7 +3825,7 @@ inline void SetN2kXTE(tN2kMsg &N2kMsg, unsigned char SID, tN2kXTEMode XTEMode, b
  * \return false    Parsing of PGN Message aborted
  *
 */
-bool ParseN2kPGN129283(const tN2kMsg &N2kMsg, unsigned char& SID, tN2kXTEMode& XTEMode, bool& NavigationTerminated, double& XTE);
+// bool ParseN2kPGN129283(const tN2kMsg &N2kMsg, unsigned char& SID, tN2kXTEMode& XTEMode, bool& NavigationTerminated, double& XTE);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Cross Track Error" 
@@ -3835,9 +3835,9 @@ bool ParseN2kPGN129283(const tN2kMsg &N2kMsg, unsigned char& SID, tN2kXTEMode& X
  * Alias of PGN 129283. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129283 
  */
-inline bool ParseN2kXTE(const tN2kMsg &N2kMsg, unsigned char& SID, tN2kXTEMode& XTEMode, bool& NavigationTerminated, double& XTE) {
-   return ParseN2kPGN129283(N2kMsg, SID, XTEMode, NavigationTerminated, XTE);
-}
+// inline bool ParseN2kXTE(const tN2kMsg &N2kMsg, unsigned char& SID, tN2kXTEMode& XTEMode, bool& NavigationTerminated, double& XTE) {
+//    return ParseN2kPGN129283(N2kMsg, SID, XTEMode, NavigationTerminated, XTE);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129284 Message "Navigation Data"
@@ -3874,11 +3874,11 @@ inline bool ParseN2kXTE(const tN2kMsg &N2kMsg, unsigned char& SID, tN2kXTEMode& 
  * \param WaypointClosingVelocity      Waypoint Closing Velocity
  * 
  */
-void SetN2kPGN129284(tN2kMsg &N2kMsg, unsigned char SID, double DistanceToWaypoint, tN2kHeadingReference BearingReference,
-                      bool PerpendicularCrossed, bool ArrivalCircleEntered, tN2kDistanceCalculationType CalculationType,
-                      double ETATime, int16_t ETADate, double BearingOriginToDestinationWaypoint, double BearingPositionToDestinationWaypoint,
-                      uint32_t OriginWaypointNumber, uint32_t DestinationWaypointNumber,
-                      double DestinationLatitude, double DestinationLongitude, double WaypointClosingVelocity);
+// void SetN2kPGN129284(tN2kMsg &N2kMsg, unsigned char SID, double DistanceToWaypoint, tN2kHeadingReference BearingReference,
+//                       bool PerpendicularCrossed, bool ArrivalCircleEntered, tN2kDistanceCalculationType CalculationType,
+//                       double ETATime, int16_t ETADate, double BearingOriginToDestinationWaypoint, double BearingPositionToDestinationWaypoint,
+//                       uint32_t OriginWaypointNumber, uint32_t DestinationWaypointNumber,
+//                       double DestinationLatitude, double DestinationLongitude, double WaypointClosingVelocity);
 
 /************************************************************************//**
  * \brief Setting up Message "Navigation Data" - PGN 129284
@@ -3887,17 +3887,17 @@ void SetN2kPGN129284(tN2kMsg &N2kMsg, unsigned char SID, double DistanceToWaypoi
  * Alias of PGN 129284. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129284
   */
-inline void SetN2kNavigationInfo(tN2kMsg &N2kMsg, unsigned char SID, double DistanceToWaypoint, tN2kHeadingReference BearingReference,
-                      bool PerpendicularCrossed, bool ArrivalCircleEntered, tN2kDistanceCalculationType CalculationType,
-                      double ETATime, int16_t ETADate, double BearingOriginToDestinationWaypoint, double BearingPositionToDestinationWaypoint,
-                      uint32_t OriginWaypointNumber, uint32_t DestinationWaypointNumber,
-                      double DestinationLatitude, double DestinationLongitude, double WaypointClosingVelocity) {
-  SetN2kPGN129284(N2kMsg, SID, DistanceToWaypoint, BearingReference,
-                      PerpendicularCrossed, ArrivalCircleEntered, CalculationType,
-                      ETATime, ETADate, BearingOriginToDestinationWaypoint, BearingPositionToDestinationWaypoint,
-                      OriginWaypointNumber, DestinationWaypointNumber,
-                      DestinationLatitude, DestinationLongitude, WaypointClosingVelocity);
-}
+// inline void SetN2kNavigationInfo(tN2kMsg &N2kMsg, unsigned char SID, double DistanceToWaypoint, tN2kHeadingReference BearingReference,
+//                       bool PerpendicularCrossed, bool ArrivalCircleEntered, tN2kDistanceCalculationType CalculationType,
+//                       double ETATime, int16_t ETADate, double BearingOriginToDestinationWaypoint, double BearingPositionToDestinationWaypoint,
+//                       uint32_t OriginWaypointNumber, uint32_t DestinationWaypointNumber,
+//                       double DestinationLatitude, double DestinationLongitude, double WaypointClosingVelocity) {
+//   SetN2kPGN129284(N2kMsg, SID, DistanceToWaypoint, BearingReference,
+//                       PerpendicularCrossed, ArrivalCircleEntered, CalculationType,
+//                       ETATime, ETADate, BearingOriginToDestinationWaypoint, BearingPositionToDestinationWaypoint,
+//                       OriginWaypointNumber, DestinationWaypointNumber,
+//                       DestinationLatitude, DestinationLongitude, WaypointClosingVelocity);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129284 "Navigation Data"
@@ -3934,11 +3934,11 @@ inline void SetN2kNavigationInfo(tN2kMsg &N2kMsg, unsigned char SID, double Dist
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN129284(const tN2kMsg &N2kMsg, unsigned char& SID, double& DistanceToWaypoint, tN2kHeadingReference& BearingReference,
-                      bool& PerpendicularCrossed, bool& ArrivalCircleEntered, tN2kDistanceCalculationType& CalculationType,
-                      double& ETATime, int16_t& ETADate, double& BearingOriginToDestinationWaypoint, double& BearingPositionToDestinationWaypoint,
-                      uint32_t& OriginWaypointNumber, uint32_t& DestinationWaypointNumber,
-                      double& DestinationLatitude, double& DestinationLongitude, double& WaypointClosingVelocity);
+// bool ParseN2kPGN129284(const tN2kMsg &N2kMsg, unsigned char& SID, double& DistanceToWaypoint, tN2kHeadingReference& BearingReference,
+//                       bool& PerpendicularCrossed, bool& ArrivalCircleEntered, tN2kDistanceCalculationType& CalculationType,
+//                       double& ETATime, int16_t& ETADate, double& BearingOriginToDestinationWaypoint, double& BearingPositionToDestinationWaypoint,
+//                       uint32_t& OriginWaypointNumber, uint32_t& DestinationWaypointNumber,
+//                       double& DestinationLatitude, double& DestinationLongitude, double& WaypointClosingVelocity);
 
 
 /************************************************************************//**
@@ -3949,15 +3949,15 @@ bool ParseN2kPGN129284(const tN2kMsg &N2kMsg, unsigned char& SID, double& Distan
  * Alias of PGN 129284. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129284 
  */
-inline bool ParseN2kNavigationInfo(const tN2kMsg &N2kMsg, unsigned char& SID, double& DistanceToWaypoint, tN2kHeadingReference& BearingReference,
-                      bool& PerpendicularCrossed, bool& ArrivalCircleEntered, tN2kDistanceCalculationType& CalculationType,
-                      double& ETATime, int16_t& ETADate, double& BearingOriginToDestinationWaypoint, double& BearingPositionToDestinationWaypoint,
-                      uint32_t& OriginWaypointNumber, uint32_t& DestinationWaypointNumber,
-                      double& DestinationLatitude, double& DestinationLongitude, double& WaypointClosingVelocity) {
-   return ParseN2kPGN129284(N2kMsg, SID, DistanceToWaypoint, BearingReference, PerpendicularCrossed, ArrivalCircleEntered, CalculationType,
-                            ETATime, ETADate, BearingOriginToDestinationWaypoint, BearingPositionToDestinationWaypoint,
-                            OriginWaypointNumber, DestinationWaypointNumber, DestinationLatitude, DestinationLongitude, WaypointClosingVelocity);
-}
+// inline bool ParseN2kNavigationInfo(const tN2kMsg &N2kMsg, unsigned char& SID, double& DistanceToWaypoint, tN2kHeadingReference& BearingReference,
+//                       bool& PerpendicularCrossed, bool& ArrivalCircleEntered, tN2kDistanceCalculationType& CalculationType,
+//                       double& ETATime, int16_t& ETADate, double& BearingOriginToDestinationWaypoint, double& BearingPositionToDestinationWaypoint,
+//                       uint32_t& OriginWaypointNumber, uint32_t& DestinationWaypointNumber,
+//                       double& DestinationLatitude, double& DestinationLongitude, double& WaypointClosingVelocity) {
+//    return ParseN2kPGN129284(N2kMsg, SID, DistanceToWaypoint, BearingReference, PerpendicularCrossed, ArrivalCircleEntered, CalculationType,
+//                             ETATime, ETADate, BearingOriginToDestinationWaypoint, BearingPositionToDestinationWaypoint,
+//                             OriginWaypointNumber, DestinationWaypointNumber, DestinationLatitude, DestinationLongitude, WaypointClosingVelocity);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129285 Message "Route/WP information"
@@ -3978,8 +3978,8 @@ inline bool ParseN2kNavigationInfo(const tN2kMsg &N2kMsg, unsigned char& SID, do
  * \param RouteName   The name of the current route
  * 
  */
-void SetN2kPGN129285(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, uint16_t Route,
-      tN2kNavigationDirection NavDirection, const char* RouteName, tN2kGenericStatusPair SupplementaryData=N2kDD002_No);
+// void SetN2kPGN129285(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, uint16_t Route,
+//       tN2kNavigationDirection NavDirection, const char* RouteName, tN2kGenericStatusPair SupplementaryData=N2kDD002_No);
 
 /************************************************************************//**
  * \brief Setting up Message "Route/WP information" - PGN 129285
@@ -3988,10 +3988,10 @@ void SetN2kPGN129285(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, uint16_
  * Alias of PGN 129285. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129285
   */
-inline void SetN2kRouteWPInfo(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, uint16_t Route,
-      tN2kNavigationDirection NavDirection, const char* RouteName, tN2kGenericStatusPair SupplementaryData=N2kDD002_No) {
-  SetN2kPGN129285(N2kMsg, Start, Database, Route, NavDirection, RouteName, SupplementaryData);
-}
+// inline void SetN2kRouteWPInfo(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, uint16_t Route,
+//       tN2kNavigationDirection NavDirection, const char* RouteName, tN2kGenericStatusPair SupplementaryData=N2kDD002_No) {
+//   SetN2kPGN129285(N2kMsg, Start, Database, Route, NavDirection, RouteName, SupplementaryData);
+// }
 
 /************************************************************************//**
  * \brief Setting up Message "Route/WP information" - PGN 129285
@@ -4001,13 +4001,13 @@ inline void SetN2kRouteWPInfo(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database
  * Alias of PGN 129285. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129285
   */
-inline void SetN2kPGN129285(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, uint16_t Route,
-                        bool NavDirection, bool SupplementaryData, char* RouteName)
-{
-   tN2kNavigationDirection NavDirection1 = NavDirection?N2kdir_reverse:N2kdir_forward;
-   tN2kGenericStatusPair N2kSupplementaryData = SupplementaryData?N2kDD002_Yes:N2kDD002_No;
-	SetN2kPGN129285(N2kMsg, Start, Database, Route, NavDirection1, RouteName, N2kSupplementaryData);
-}                        
+// inline void SetN2kPGN129285(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, uint16_t Route,
+//                         bool NavDirection, bool SupplementaryData, char* RouteName)
+// {
+//    tN2kNavigationDirection NavDirection1 = NavDirection?N2kdir_reverse:N2kdir_forward;
+//    tN2kGenericStatusPair N2kSupplementaryData = SupplementaryData?N2kDD002_Yes:N2kDD002_No;
+// 	SetN2kPGN129285(N2kMsg, Start, Database, Route, NavDirection1, RouteName, N2kSupplementaryData);
+// }                        
 
 /************************************************************************//**
  * \brief  Append another Waypoint to PGN 129285 "Route/WP information"
@@ -4026,7 +4026,7 @@ inline void SetN2kPGN129285(tN2kMsg &N2kMsg, uint16_t Start, uint16_t Database, 
  * \return false 
  * 
  */
-bool AppendN2kPGN129285(tN2kMsg &N2kMsg, uint16_t WPID, const char* WPName, double Latitude, double Longitude);
+// bool AppendN2kPGN129285(tN2kMsg &N2kMsg, uint16_t WPID, const char* WPName, double Latitude, double Longitude);
 
 /************************************************************************//**
  * \brief Append another Waypoint to "Route/WP information"- PGN 129285
@@ -4035,9 +4035,9 @@ bool AppendN2kPGN129285(tN2kMsg &N2kMsg, uint16_t WPID, const char* WPName, doub
  * This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref AppendN2kPGN129285
   */
-inline bool AppendN2kRouteWPInfo(tN2kMsg &N2kMsg, uint16_t WPID, const char* WPName, double Latitude, double Longitude) {
-   return AppendN2kPGN129285(N2kMsg, WPID, WPName, Latitude, Longitude);
-}
+// inline bool AppendN2kRouteWPInfo(tN2kMsg &N2kMsg, uint16_t WPID, const char* WPName, double Latitude, double Longitude) {
+//    return AppendN2kPGN129285(N2kMsg, WPID, WPName, Latitude, Longitude);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129539 Message "GNSS DOP data"
@@ -4063,8 +4063,8 @@ inline bool AppendN2kRouteWPInfo(tN2kMsg &N2kMsg, uint16_t WPID, const char* WPN
  * \param TDOP          Time dilution of precision
  * 
  */
-void SetN2kPGN129539(tN2kMsg& N2kMsg, unsigned char SID, tN2kGNSSDOPmode DesiredMode, tN2kGNSSDOPmode ActualMode,
-                     double HDOP, double VDOP, double TDOP);
+// void SetN2kPGN129539(tN2kMsg& N2kMsg, unsigned char SID, tN2kGNSSDOPmode DesiredMode, tN2kGNSSDOPmode ActualMode,
+//                      double HDOP, double VDOP, double TDOP);
 
 /************************************************************************//**
  * \brief Setting up Message "GNSS DOP data - PGN 129539
@@ -4073,11 +4073,11 @@ void SetN2kPGN129539(tN2kMsg& N2kMsg, unsigned char SID, tN2kGNSSDOPmode Desired
  * Alias of PGN 129539. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129539
   */
-inline void SetN2kGNSSDOPData(tN2kMsg& N2kMsg, unsigned char SID, tN2kGNSSDOPmode DesiredMode, tN2kGNSSDOPmode ActualMode,
-                              double HDOP, double VDOP, double TDOP)
-{
-    SetN2kPGN129539(N2kMsg, SID, DesiredMode, ActualMode, HDOP, VDOP, TDOP);
-}
+// inline void SetN2kGNSSDOPData(tN2kMsg& N2kMsg, unsigned char SID, tN2kGNSSDOPmode DesiredMode, tN2kGNSSDOPmode ActualMode,
+//                               double HDOP, double VDOP, double TDOP)
+// {
+//     SetN2kPGN129539(N2kMsg, SID, DesiredMode, ActualMode, HDOP, VDOP, TDOP);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129539 "GNSS DOP data"
@@ -4101,8 +4101,8 @@ inline void SetN2kGNSSDOPData(tN2kMsg& N2kMsg, unsigned char SID, tN2kGNSSDOPmod
  * \return true     Parsing of PGN Message successful
  * \return false    Parsing of PGN Message aborted
  */
-bool ParseN2kPgn129539(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kGNSSDOPmode& DesiredMode, tN2kGNSSDOPmode& ActualMode,
-                       double& HDOP, double& VDOP, double& TDOP);
+// bool ParseN2kPgn129539(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kGNSSDOPmode& DesiredMode, tN2kGNSSDOPmode& ActualMode,
+//                        double& HDOP, double& VDOP, double& TDOP);
 
 /************************************************************************//**
  * \brief Parsing the content of a "GNSS DOP data" 
@@ -4112,11 +4112,11 @@ bool ParseN2kPgn129539(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kGNSSDOPmod
  * Alias of PGN 129539. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPgn129539 
  */
-inline bool ParseN2kGNSSDOPData(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kGNSSDOPmode& DesiredMode, tN2kGNSSDOPmode& ActualMode,
-                         double& HDOP, double& VDOP, double& TDOP)
-{
-    return ParseN2kPgn129539(N2kMsg, SID, DesiredMode, ActualMode, HDOP, VDOP, TDOP);
-}
+// inline bool ParseN2kGNSSDOPData(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kGNSSDOPmode& DesiredMode, tN2kGNSSDOPmode& ActualMode,
+//                          double& HDOP, double& VDOP, double& TDOP)
+// {
+//     return ParseN2kPgn129539(N2kMsg, SID, DesiredMode, ActualMode, HDOP, VDOP, TDOP);
+// }
 
 /************************************************************************//**
  * \brief Dedicated structure to handle GNSS satellite information
@@ -4127,14 +4127,14 @@ inline bool ParseN2kGNSSDOPData(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kG
  * 
  * \sa SetN2kPGN129540 and AppendN2kPGN129540
  */
-struct tSatelliteInfo {
-  unsigned char PRN;        ///< PRN number [ 01 .. 32] of the satellite 
-  double Elevation;         ///< Elevation of the satellite
-  double Azimuth;           ///< Azimuth of the satellite
-  double SNR;               ///< SignalToNoiseRatio of the satellite
-  double RangeResiduals;    ///< Range Residual
-  tN2kPRNUsageStatus UsageStatus;   ///<  Usage Status, see tN2kPRNUsageStatus
-};
+// struct tSatelliteInfo {
+//   unsigned char PRN;        ///< PRN number [ 01 .. 32] of the satellite 
+//   double Elevation;         ///< Elevation of the satellite
+//   double Azimuth;           ///< Azimuth of the satellite
+//   double SNR;               ///< SignalToNoiseRatio of the satellite
+//   double RangeResiduals;    ///< Range Residual
+//   tN2kPRNUsageStatus UsageStatus;   ///<  Usage Status, see tN2kPRNUsageStatus
+// };
 
 /************************************************************************//**
  * \brief Setting up PGN 129540 Message "GNSS Satellites in View"
@@ -4156,7 +4156,7 @@ struct tSatelliteInfo {
  * 
  * \sa AppendN2kPGN129540, SetN2kGNSSSatellitesInView
  */
-void SetN2kPGN129540(tN2kMsg& N2kMsg, unsigned char SID=0xff, tN2kRangeResidualMode Mode=N2kDD072_Unavailable);
+// void SetN2kPGN129540(tN2kMsg& N2kMsg, unsigned char SID=0xff, tN2kRangeResidualMode Mode=N2kDD072_Unavailable);
 
 /************************************************************************//**
  * \brief Append a new satellite info to PGN 129540 Message
@@ -4173,7 +4173,7 @@ void SetN2kPGN129540(tN2kMsg& N2kMsg, unsigned char SID=0xff, tN2kRangeResidualM
  * 
  * \sa SetN2kPGN129540
  */
-bool AppendN2kPGN129540(tN2kMsg& N2kMsg, const tSatelliteInfo& SatelliteInfo);
+// bool AppendN2kPGN129540(tN2kMsg& N2kMsg, const tSatelliteInfo& SatelliteInfo);
 
 /************************************************************************//**
  * \brief Setting up Message "GNSS DOP data" - PGN 129540
@@ -4182,9 +4182,9 @@ bool AppendN2kPGN129540(tN2kMsg& N2kMsg, const tSatelliteInfo& SatelliteInfo);
  * Alias of PGN 129540. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129540
   */
-inline void SetN2kGNSSSatellitesInView(tN2kMsg& N2kMsg, unsigned char SID=0xff, tN2kRangeResidualMode Mode=N2kDD072_Unavailable) {
-  SetN2kPGN129540(N2kMsg,SID,Mode);
-}
+// inline void SetN2kGNSSSatellitesInView(tN2kMsg& N2kMsg, unsigned char SID=0xff, tN2kRangeResidualMode Mode=N2kDD072_Unavailable) {
+//   SetN2kPGN129540(N2kMsg,SID,Mode);
+// }
 
 /************************************************************************//**
  * \brief Append a new satellite info to Message "GNSS Satellites in View" - 
@@ -4193,9 +4193,9 @@ inline void SetN2kGNSSSatellitesInView(tN2kMsg& N2kMsg, unsigned char SID=0xff, 
  * Alias of PGN 129540. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref AppendN2kPGN129540
   */
-inline bool AppendSatelliteInfo(tN2kMsg& N2kMsg, const tSatelliteInfo& SatelliteInfo) {
-  return AppendN2kPGN129540(N2kMsg,SatelliteInfo);
-}
+// inline bool AppendSatelliteInfo(tN2kMsg& N2kMsg, const tSatelliteInfo& SatelliteInfo) {
+//   return AppendN2kPGN129540(N2kMsg,SatelliteInfo);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129540 "GNSS Satellites in View"
@@ -4217,7 +4217,7 @@ inline bool AppendSatelliteInfo(tN2kMsg& N2kMsg, const tSatelliteInfo& Satellite
  * \return false        called with wrong message
  * 
  */
-bool ParseN2kPGN129540(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kRangeResidualMode &Mode, uint8_t& NumberOfSVs);
+// bool ParseN2kPGN129540(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kRangeResidualMode &Mode, uint8_t& NumberOfSVs);
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129540 "GNSS Satellites in View"
@@ -4239,7 +4239,7 @@ bool ParseN2kPGN129540(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kRangeResid
  * \return false        called with wrong message or SVIndex is out of range.
  * 
  */
-bool ParseN2kPGN129540(const tN2kMsg& N2kMsg, uint8_t SVIndex, tSatelliteInfo& SatelliteInfo);
+// bool ParseN2kPGN129540(const tN2kMsg& N2kMsg, uint8_t SVIndex, tSatelliteInfo& SatelliteInfo);
 
 /************************************************************************//**
  * \brief Parsing the content of a "GNSS Satellites in View" 
@@ -4249,9 +4249,9 @@ bool ParseN2kPGN129540(const tN2kMsg& N2kMsg, uint8_t SVIndex, tSatelliteInfo& S
  * Alias of PGN 129540. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129540 
  */
-inline bool ParseN2kPGNSatellitesInView(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kRangeResidualMode &Mode, uint8_t& NumberOfSVs){
-  return ParseN2kPGN129540(N2kMsg,SID,Mode,NumberOfSVs);
-}
+// inline bool ParseN2kPGNSatellitesInView(const tN2kMsg& N2kMsg, unsigned char& SID, tN2kRangeResidualMode &Mode, uint8_t& NumberOfSVs){
+//   return ParseN2kPGN129540(N2kMsg,SID,Mode,NumberOfSVs);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of a "GNSS Satellites in View" 
@@ -4261,9 +4261,9 @@ inline bool ParseN2kPGNSatellitesInView(const tN2kMsg& N2kMsg, unsigned char& SI
  * Alias of PGN 129540. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129540 
  */
-inline bool ParseN2kPGNSatellitesInView(const tN2kMsg& N2kMsg, uint8_t SVIndex, tSatelliteInfo& SatelliteInfo){
-  return ParseN2kPGN129540(N2kMsg,SVIndex,SatelliteInfo);
-}
+// inline bool ParseN2kPGNSatellitesInView(const tN2kMsg& N2kMsg, uint8_t SVIndex, tSatelliteInfo& SatelliteInfo){
+//   return ParseN2kPGN129540(N2kMsg,SVIndex,SatelliteInfo);
+// }
 
 
 /************************************************************************//**
@@ -4318,11 +4318,11 @@ inline bool ParseN2kPGNSatellitesInView(const tN2kMsg& N2kMsg, uint8_t SVIndex, 
  * \param AISinfo         AIS Transceiver Information,
  *                        see \ref tN2kAISTransceiverInformation
  */
-void SetN2kPGN129794(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
-                        uint32_t IMOnumber, const char *Callsign, const char *Name, uint8_t VesselType, double Length,
-                        double Beam, double PosRefStbd, double PosRefBow, uint16_t ETAdate, double ETAtime,
-                        double Draught, const char *Destination, tN2kAISVersion AISversion, tN2kGNSStype GNSStype,
-                        tN2kAISDTE DTE, tN2kAISTransceiverInformation AISinfo);
+// void SetN2kPGN129794(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
+//                         uint32_t IMOnumber, const char *Callsign, const char *Name, uint8_t VesselType, double Length,
+//                         double Beam, double PosRefStbd, double PosRefBow, uint16_t ETAdate, double ETAtime,
+//                         double Draught, const char *Destination, tN2kAISVersion AISversion, tN2kGNSStype GNSStype,
+//                         tN2kAISDTE DTE, tN2kAISTransceiverInformation AISinfo);
 
 /************************************************************************//**
  * \brief Setting up Message "AIS static data class A" - PGN 129794
@@ -4331,14 +4331,14 @@ void SetN2kPGN129794(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, u
  * Alias of PGN 129794. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129794
   */
-inline void SetN2kAISClassAStatic(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
-                        uint32_t IMOnumber, const char *Callsign, const char *Name, uint8_t VesselType, double Length,
-                        double Beam, double PosRefStbd, double PosRefBow, uint16_t ETAdate, double ETAtime,
-                        double Draught, char const *Destination, tN2kAISVersion AISversion, tN2kGNSStype GNSStype,
-                        tN2kAISDTE DTE, tN2kAISTransceiverInformation AISinfo) {
-  SetN2kPGN129794(N2kMsg, MessageID, Repeat, UserID, IMOnumber, Callsign, Name, VesselType, Length,
-                  Beam, PosRefStbd, PosRefBow, ETAdate, ETAtime, Draught, Destination, AISversion, GNSStype, DTE, AISinfo);
-}
+// inline void SetN2kAISClassAStatic(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
+//                         uint32_t IMOnumber, const char *Callsign, const char *Name, uint8_t VesselType, double Length,
+//                         double Beam, double PosRefStbd, double PosRefBow, uint16_t ETAdate, double ETAtime,
+//                         double Draught, char const *Destination, tN2kAISVersion AISversion, tN2kGNSStype GNSStype,
+//                         tN2kAISDTE DTE, tN2kAISTransceiverInformation AISinfo) {
+//   SetN2kPGN129794(N2kMsg, MessageID, Repeat, UserID, IMOnumber, Callsign, Name, VesselType, Length,
+//                   Beam, PosRefStbd, PosRefBow, ETAdate, ETAtime, Draught, Destination, AISversion, GNSStype, DTE, AISinfo);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129794 "AIS static data class A"
@@ -4397,11 +4397,11 @@ inline void SetN2kAISClassAStatic(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRep
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN129794(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
-                        uint32_t &IMOnumber, char *Callsign, size_t CallsignBufSize, char *Name, size_t NameBufSize, uint8_t &VesselType, double &Length,
-                        double &Beam, double &PosRefStbd, double &PosRefBow, uint16_t &ETAdate, double &ETAtime,
-                        double &Draught, char *Destination, size_t DestinationBufSize, tN2kAISVersion &AISversion, tN2kGNSStype &GNSStype,
-                        tN2kAISDTE &DTE, tN2kAISTransceiverInformation &AISinfo);
+// bool ParseN2kPGN129794(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
+//                         uint32_t &IMOnumber, char *Callsign, size_t CallsignBufSize, char *Name, size_t NameBufSize, uint8_t &VesselType, double &Length,
+//                         double &Beam, double &PosRefStbd, double &PosRefBow, uint16_t &ETAdate, double &ETAtime,
+//                         double &Draught, char *Destination, size_t DestinationBufSize, tN2kAISVersion &AISversion, tN2kGNSStype &GNSStype,
+//                         tN2kAISDTE &DTE, tN2kAISTransceiverInformation &AISinfo);
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS static data class A" 
@@ -4411,15 +4411,15 @@ bool ParseN2kPGN129794(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat 
  * Alias of PGN 129794. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129794 
  */
-inline bool ParseN2kAISClassAStatic(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
-                        uint32_t & IMOnumber, char *Callsign, size_t CallsignBufSize, char *Name, size_t NameBufSize, uint8_t &VesselType, double &Length,
-                        double &Beam, double &PosRefStbd, double &PosRefBow, uint16_t &ETAdate, double &ETAtime,
-                        double &Draught, char *Destination, size_t DestinationBufSize, tN2kAISVersion &AISversion, tN2kGNSStype &GNSStype,
-                        tN2kAISDTE &DTE, tN2kAISTransceiverInformation &AISinfo) {
-  return ParseN2kPGN129794(N2kMsg, MessageID, Repeat, UserID, IMOnumber, Callsign, CallsignBufSize, Name, NameBufSize, VesselType, Length,
-                          Beam, PosRefStbd, PosRefBow, ETAdate, ETAtime, Draught, Destination, DestinationBufSize,AISversion,
-                          GNSStype, DTE, AISinfo);
-}
+// inline bool ParseN2kAISClassAStatic(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
+//                         uint32_t & IMOnumber, char *Callsign, size_t CallsignBufSize, char *Name, size_t NameBufSize, uint8_t &VesselType, double &Length,
+//                         double &Beam, double &PosRefStbd, double &PosRefBow, uint16_t &ETAdate, double &ETAtime,
+//                         double &Draught, char *Destination, size_t DestinationBufSize, tN2kAISVersion &AISversion, tN2kGNSStype &GNSStype,
+//                         tN2kAISDTE &DTE, tN2kAISTransceiverInformation &AISinfo) {
+//   return ParseN2kPGN129794(N2kMsg, MessageID, Repeat, UserID, IMOnumber, Callsign, CallsignBufSize, Name, NameBufSize, VesselType, Length,
+//                           Beam, PosRefStbd, PosRefBow, ETAdate, ETAtime, Draught, Destination, DestinationBufSize,AISversion,
+//                           GNSStype, DTE, AISinfo);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129809 Message "AIS static data class B part A"
@@ -4446,7 +4446,7 @@ inline bool ParseN2kAISClassAStatic(const tN2kMsg &N2kMsg, uint8_t &MessageID, t
  *                        Input string will be converted to contain only SixBit ASCII character set (see. ITU-R M.1371-1)
  * 
  */
-void SetN2kPGN129809(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, const char *Name);
+// void SetN2kPGN129809(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, const char *Name);
 
 /************************************************************************//**
  * \brief Setting up Message "AIS static data class B part A" - PGN 129809
@@ -4455,9 +4455,9 @@ void SetN2kPGN129809(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, u
  * Alias of PGN 129809. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129809
   */
-inline void SetN2kAISClassBStaticPartA(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, const char *Name) {
-  SetN2kPGN129809(N2kMsg, MessageID, Repeat, UserID, Name);
-}
+// inline void SetN2kAISClassBStaticPartA(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID, const char *Name) {
+//   SetN2kPGN129809(N2kMsg, MessageID, Repeat, UserID, Name);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129809 "AIS static data
@@ -4488,7 +4488,7 @@ inline void SetN2kAISClassBStaticPartA(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kA
  * \return true     Parsing of PGN Message successful
  * \return false    Parsing of PGN Message aborted
  */
-bool ParseN2kPGN129809(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, char *Name, size_t NameBufSize);
+// bool ParseN2kPGN129809(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, char *Name, size_t NameBufSize);
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS static data class B part A" 
@@ -4498,9 +4498,9 @@ bool ParseN2kPGN129809(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat 
  * Alias of PGN 129809. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129809 
  */
-inline bool ParseN2kAISClassBStaticPartA(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, char *Name, size_t NameBufSize) {
-  return ParseN2kPGN129809(N2kMsg, MessageID, Repeat, UserID, Name, NameBufSize);
-}
+// inline bool ParseN2kAISClassBStaticPartA(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID, char *Name, size_t NameBufSize) {
+//   return ParseN2kPGN129809(N2kMsg, MessageID, Repeat, UserID, Name, NameBufSize);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 129810 Message "AIS static data class B part B"
@@ -4537,9 +4537,9 @@ inline bool ParseN2kAISClassBStaticPartA(const tN2kMsg &N2kMsg, uint8_t &Message
  * \param MothershipID    MMSI of the mothership 
  * 
  */
-void SetN2kPGN129810(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
-                      uint8_t VesselType, const char *Vendor, const char *Callsign, double Length, double Beam,
-                      double PosRefStbd, double PosRefBow, uint32_t MothershipID);
+// void SetN2kPGN129810(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
+//                       uint8_t VesselType, const char *Vendor, const char *Callsign, double Length, double Beam,
+//                       double PosRefStbd, double PosRefBow, uint32_t MothershipID);
 
 /************************************************************************//**
  * \brief Setting up Message "AIS static data class B part B" - PGN 129810
@@ -4548,12 +4548,12 @@ void SetN2kPGN129810(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, u
  * Alias of PGN 129810. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN129810
   */
-inline void SetN2kAISClassBStaticPartB(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
-                      uint8_t VesselType, const char *Vendor, const char *Callsign, double Length, double Beam,
-                      double PosRefStbd, double PosRefBow, uint32_t MothershipID) {
-  SetN2kPGN129810(N2kMsg, MessageID, Repeat, UserID, VesselType, Vendor, Callsign, Length, Beam,
-                  PosRefStbd, PosRefBow, MothershipID);
-}
+// inline void SetN2kAISClassBStaticPartB(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t UserID,
+//                       uint8_t VesselType, const char *Vendor, const char *Callsign, double Length, double Beam,
+//                       double PosRefStbd, double PosRefBow, uint32_t MothershipID) {
+//   SetN2kPGN129810(N2kMsg, MessageID, Repeat, UserID, VesselType, Vendor, Callsign, Length, Beam,
+//                   PosRefStbd, PosRefBow, MothershipID);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 129810 "AIS static data
@@ -4595,10 +4595,10 @@ inline void SetN2kAISClassBStaticPartB(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kA
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN129810(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
-                      uint8_t &VesselType, char *Vendor, size_t VendorBufSize, char *Callsign, size_t CallsignBufSize,
-                      double &Length, double &Beam,
-                      double &PosRefStbd, double &PosRefBow, uint32_t &MothershipID);
+// bool ParseN2kPGN129810(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
+//                       uint8_t &VesselType, char *Vendor, size_t VendorBufSize, char *Callsign, size_t CallsignBufSize,
+//                       double &Length, double &Beam,
+//                       double &PosRefStbd, double &PosRefBow, uint32_t &MothershipID);
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS static data class B part B" 
@@ -4608,15 +4608,15 @@ bool ParseN2kPGN129810(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat 
  * Alias of PGN 129810. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN129810 
  */
-inline bool ParseN2kAISClassBStaticPartB(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
-		                  uint8_t &VesselType, char *Vendor, size_t VendorBufSize, char *Callsign, size_t CallsignBufSize, 
-                      double &Length, double &Beam,
-                      double &PosRefStbd, double &PosRefBow, uint32_t &MothershipID) {
-  return ParseN2kPGN129810(N2kMsg, MessageID, Repeat, UserID,
-                           VesselType, Vendor, VendorBufSize, Callsign, CallsignBufSize,
-                           Length, Beam,
-                           PosRefStbd, PosRefBow, MothershipID);
-}
+// inline bool ParseN2kAISClassBStaticPartB(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &UserID,
+// 		                  uint8_t &VesselType, char *Vendor, size_t VendorBufSize, char *Callsign, size_t CallsignBufSize, 
+//                       double &Length, double &Beam,
+//                       double &PosRefStbd, double &PosRefBow, uint32_t &MothershipID) {
+//   return ParseN2kPGN129810(N2kMsg, MessageID, Repeat, UserID,
+//                            VesselType, Vendor, VendorBufSize, Callsign, CallsignBufSize,
+//                            Length, Beam,
+//                            PosRefStbd, PosRefBow, MothershipID);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130074 Message " Route and WP Service - WP List - 
@@ -4637,7 +4637,7 @@ inline bool ParseN2kAISClassBStaticPartB(const tN2kMsg &N2kMsg, uint8_t &Message
  * \param NumWaypoints  Number of valid WPs in the WP-List
  * \param Database      Database ID
  */
-void SetN2kPGN130074(tN2kMsg &N2kMsg, uint16_t Start, uint16_t NumWaypoints, uint16_t Database);
+// void SetN2kPGN130074(tN2kMsg &N2kMsg, uint16_t Start, uint16_t NumWaypoints, uint16_t Database);
 
 /************************************************************************//**
  * \brief Setting up Message "Route and WP Service - WP List - 
@@ -4647,9 +4647,9 @@ void SetN2kPGN130074(tN2kMsg &N2kMsg, uint16_t Start, uint16_t NumWaypoints, uin
  * Alias of PGN 130074. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130074
   */
-inline void SetN2kWaypointList(tN2kMsg &N2kMsg, uint16_t Start, uint16_t NumWaypoints, uint16_t Database) {
-  SetN2kPGN130074(N2kMsg,Start,NumWaypoints,Database);
-}
+// inline void SetN2kWaypointList(tN2kMsg &N2kMsg, uint16_t Start, uint16_t NumWaypoints, uint16_t Database) {
+//   SetN2kPGN130074(N2kMsg,Start,NumWaypoints,Database);
+// }
 
 /************************************************************************//**
  * \brief Append a Waypoint to PGN 130074 Message " Route and WP Service - 
@@ -4671,7 +4671,7 @@ inline void SetN2kWaypointList(tN2kMsg &N2kMsg, uint16_t Start, uint16_t NumWayp
  * \return true       waypoint successfully added 
  * \return false      aborted
  */
-bool AppendN2kPGN130074(tN2kMsg &N2kMsg, uint16_t ID, char* Name, double Latitude, double Longitude);
+// bool AppendN2kPGN130074(tN2kMsg &N2kMsg, uint16_t ID, char* Name, double Latitude, double Longitude);
 
 /************************************************************************//**
  * \brief Append a Waypoint to Message "Route and WP Service - WP List - 
@@ -4681,9 +4681,9 @@ bool AppendN2kPGN130074(tN2kMsg &N2kMsg, uint16_t ID, char* Name, double Latitud
  * Alias of PGN 130074. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref AppendN2kPGN130074
   */
-inline bool AppendN2kWaypointList(tN2kMsg &N2kMsg, uint16_t ID, char* Name, double Latitude, double Longitude) {
-  return AppendN2kPGN130074(N2kMsg,ID,Name,Latitude,Longitude);
-}
+// inline bool AppendN2kWaypointList(tN2kMsg &N2kMsg, uint16_t ID, char* Name, double Latitude, double Longitude) {
+//   return AppendN2kPGN130074(N2kMsg,ID,Name,Latitude,Longitude);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130306 Message "Wind Data"
@@ -4709,7 +4709,7 @@ inline bool AppendN2kWaypointList(tN2kMsg &N2kMsg, uint16_t ID, char* Name, doub
  * \param WindReference Wind reference, see definition of tN2kWindReference
  * 
  */
-void SetN2kPGN130306(tN2kMsg &N2kMsg, unsigned char SID, double WindSpeed, double WindAngle, tN2kWindReference WindReference);
+// void SetN2kPGN130306(tN2kMsg &N2kMsg, unsigned char SID, double WindSpeed, double WindAngle, tN2kWindReference WindReference);
 
 /************************************************************************//**
  * \brief Setting up Message "Wind Data" - PGN 130306
@@ -4718,9 +4718,9 @@ void SetN2kPGN130306(tN2kMsg &N2kMsg, unsigned char SID, double WindSpeed, doubl
  * Alias of PGN 130306. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130306
   */
-inline void SetN2kWindSpeed(tN2kMsg &N2kMsg, unsigned char SID, double WindSpeed, double WindAngle, tN2kWindReference WindReference) {
-  SetN2kPGN130306(N2kMsg,SID,WindSpeed,WindAngle,WindReference);
-}
+// inline void SetN2kWindSpeed(tN2kMsg &N2kMsg, unsigned char SID, double WindSpeed, double WindAngle, tN2kWindReference WindReference) {
+//   SetN2kPGN130306(N2kMsg,SID,WindSpeed,WindAngle,WindReference);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130306 "Wind Data"
@@ -4746,7 +4746,7 @@ inline void SetN2kWindSpeed(tN2kMsg &N2kMsg, unsigned char SID, double WindSpeed
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN130306(const tN2kMsg &N2kMsg, unsigned char &SID, double &WindSpeed, double &WindAngle, tN2kWindReference &WindReference);
+// bool ParseN2kPGN130306(const tN2kMsg &N2kMsg, unsigned char &SID, double &WindSpeed, double &WindAngle, tN2kWindReference &WindReference);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Wind Data" 
@@ -4756,9 +4756,9 @@ bool ParseN2kPGN130306(const tN2kMsg &N2kMsg, unsigned char &SID, double &WindSp
  * Alias of PGN 130306. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130306 
  */
-inline bool ParseN2kWindSpeed(const tN2kMsg &N2kMsg, unsigned char &SID, double &WindSpeed, double &WindAngle, tN2kWindReference &WindReference) {
-  return ParseN2kPGN130306(N2kMsg,SID,WindSpeed,WindAngle,WindReference);
-}
+// inline bool ParseN2kWindSpeed(const tN2kMsg &N2kMsg, unsigned char &SID, double &WindSpeed, double &WindAngle, tN2kWindReference &WindReference) {
+//   return ParseN2kPGN130306(N2kMsg,SID,WindSpeed,WindAngle,WindReference);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130310 Message " Environmental Parameters - DEPRECATED"
@@ -4783,8 +4783,8 @@ inline bool ParseN2kWindSpeed(const tN2kMsg &N2kMsg, unsigned char &SID, double 
  *                                 \ref mBarToPascal, if you like to use mBar
  * 
  */
-void SetN2kPGN130310(tN2kMsg &N2kMsg, unsigned char SID, double WaterTemperature,
-                     double OutsideAmbientAirTemperature=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA);
+// void SetN2kPGN130310(tN2kMsg &N2kMsg, unsigned char SID, double WaterTemperature,
+//                      double OutsideAmbientAirTemperature=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "Environmental Parameters - DEPRECATED" - 
@@ -4794,10 +4794,10 @@ void SetN2kPGN130310(tN2kMsg &N2kMsg, unsigned char SID, double WaterTemperature
  * Alias of PGN 130310. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130310
   */
-inline void SetN2kOutsideEnvironmentalParameters(tN2kMsg &N2kMsg, unsigned char SID, double WaterTemperature,
-                     double OutsideAmbientAirTemperature=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA) {
-  SetN2kPGN130310(N2kMsg,SID,WaterTemperature,OutsideAmbientAirTemperature,AtmosphericPressure);
-}
+// inline void SetN2kOutsideEnvironmentalParameters(tN2kMsg &N2kMsg, unsigned char SID, double WaterTemperature,
+//                      double OutsideAmbientAirTemperature=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA) {
+//   SetN2kPGN130310(N2kMsg,SID,WaterTemperature,OutsideAmbientAirTemperature,AtmosphericPressure);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130310
@@ -4823,8 +4823,8 @@ inline void SetN2kOutsideEnvironmentalParameters(tN2kMsg &N2kMsg, unsigned char 
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN130310(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterTemperature,
-                     double &OutsideAmbientAirTemperature, double &AtmosphericPressure);
+// bool ParseN2kPGN130310(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterTemperature,
+//                      double &OutsideAmbientAirTemperature, double &AtmosphericPressure);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Environmental Parameters - DEPRECATED" 
@@ -4834,10 +4834,10 @@ bool ParseN2kPGN130310(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterT
  * Alias of PGN 130310. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130310 
  */
-inline bool ParseN2kOutsideEnvironmentalParameters(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterTemperature,
-                     double &OutsideAmbientAirTemperature, double &AtmosphericPressure) {
-  return ParseN2kPGN130310(N2kMsg, SID,WaterTemperature,OutsideAmbientAirTemperature,AtmosphericPressure);
-}
+// inline bool ParseN2kOutsideEnvironmentalParameters(const tN2kMsg &N2kMsg, unsigned char &SID, double &WaterTemperature,
+//                      double &OutsideAmbientAirTemperature, double &AtmosphericPressure) {
+//   return ParseN2kPGN130310(N2kMsg, SID,WaterTemperature,OutsideAmbientAirTemperature,AtmosphericPressure);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130311 Message "Environmental Parameters - DEPRECATED"
@@ -4866,8 +4866,8 @@ inline bool ParseN2kOutsideEnvironmentalParameters(const tN2kMsg &N2kMsg, unsign
  *                              \ref mBarToPascal, if you like to use mBar
  * 
  */
-void SetN2kPGN130311(tN2kMsg &N2kMsg, unsigned char SID, tN2kTempSource TempSource, double Temperature,
-                     tN2kHumiditySource HumiditySource=N2khs_Undef, double Humidity=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA);
+// void SetN2kPGN130311(tN2kMsg &N2kMsg, unsigned char SID, tN2kTempSource TempSource, double Temperature,
+//                      tN2kHumiditySource HumiditySource=N2khs_Undef, double Humidity=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "Environmental Parameters - DEPRECATED" - 
@@ -4877,10 +4877,10 @@ void SetN2kPGN130311(tN2kMsg &N2kMsg, unsigned char SID, tN2kTempSource TempSour
  * Alias of PGN 130311. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130311
   */
-inline void SetN2kEnvironmentalParameters(tN2kMsg &N2kMsg, unsigned char SID, tN2kTempSource TempSource, double Temperature,
-                     tN2kHumiditySource HumiditySource=N2khs_Undef, double Humidity=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA) {
-  SetN2kPGN130311(N2kMsg,SID,TempSource,Temperature,HumiditySource,Humidity,AtmosphericPressure);
-}
+// inline void SetN2kEnvironmentalParameters(tN2kMsg &N2kMsg, unsigned char SID, tN2kTempSource TempSource, double Temperature,
+//                      tN2kHumiditySource HumiditySource=N2khs_Undef, double Humidity=N2kDoubleNA, double AtmosphericPressure=N2kDoubleNA) {
+//   SetN2kPGN130311(N2kMsg,SID,TempSource,Temperature,HumiditySource,Humidity,AtmosphericPressure);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130311 
@@ -4910,8 +4910,8 @@ inline void SetN2kEnvironmentalParameters(tN2kMsg &N2kMsg, unsigned char SID, tN
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN130311(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kTempSource &TempSource, double &Temperature,
-                     tN2kHumiditySource &HumiditySource, double &Humidity, double &AtmosphericPressure);
+// bool ParseN2kPGN130311(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kTempSource &TempSource, double &Temperature,
+//                      tN2kHumiditySource &HumiditySource, double &Humidity, double &AtmosphericPressure);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Environmental Parameters - DEPRECATED" 
@@ -4921,10 +4921,10 @@ bool ParseN2kPGN130311(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kTempSource
  * Alias of PGN 130311. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130311 
  */
-inline bool ParseN2kEnvironmentalParameters(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kTempSource &TempSource, double &Temperature,
-                     tN2kHumiditySource &HumiditySource, double &Humidity, double &AtmosphericPressure) {
-  return ParseN2kPGN130311(N2kMsg,SID,TempSource,Temperature,HumiditySource,Humidity,AtmosphericPressure);
-}
+// inline bool ParseN2kEnvironmentalParameters(const tN2kMsg &N2kMsg, unsigned char &SID, tN2kTempSource &TempSource, double &Temperature,
+//                      tN2kHumiditySource &HumiditySource, double &Humidity, double &AtmosphericPressure) {
+//   return ParseN2kPGN130311(N2kMsg,SID,TempSource,Temperature,HumiditySource,Humidity,AtmosphericPressure);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130312 Message "Temperature - DEPRECATED"
@@ -4953,8 +4953,8 @@ inline bool ParseN2kEnvironmentalParameters(const tN2kMsg &N2kMsg, unsigned char
  *                            use value for this for outside and sea 
  *                            temperature values.
  */
-void SetN2kPGN130312(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
-                     double ActualTemperature, double SetTemperature=N2kDoubleNA);
+// void SetN2kPGN130312(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
+//                      double ActualTemperature, double SetTemperature=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "Temperature - DEPRECATED" - PGN 130312
@@ -4963,10 +4963,10 @@ void SetN2kPGN130312(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInsta
  * Alias of PGN 130312. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130312
   */
-inline void SetN2kTemperature(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
-                     double ActualTemperature, double SetTemperature=N2kDoubleNA) {
-  SetN2kPGN130312(N2kMsg,SID,TempInstance,TempSource,ActualTemperature,SetTemperature);
-}
+// inline void SetN2kTemperature(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
+//                      double ActualTemperature, double SetTemperature=N2kDoubleNA) {
+//   SetN2kPGN130312(N2kMsg,SID,TempInstance,TempSource,ActualTemperature,SetTemperature);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130312 "Temperature - DEPRECATED"
@@ -4996,8 +4996,8 @@ inline void SetN2kTemperature(tN2kMsg &N2kMsg, unsigned char SID, unsigned char 
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN130312(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
-                     double &ActualTemperature, double &SetTemperature);
+// bool ParseN2kPGN130312(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
+//                      double &ActualTemperature, double &SetTemperature);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Temperature - DEPRECATED" 
@@ -5007,10 +5007,10 @@ bool ParseN2kPGN130312(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char 
  * Alias of PGN 130312. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130312 
  */
-inline bool ParseN2kTemperature(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
-                     double &ActualTemperature, double &SetTemperature) {
-  return ParseN2kPGN130312(N2kMsg, SID, TempInstance, TempSource, ActualTemperature, SetTemperature);
-}
+// inline bool ParseN2kTemperature(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
+//                      double &ActualTemperature, double &SetTemperature) {
+//   return ParseN2kPGN130312(N2kMsg, SID, TempInstance, TempSource, ActualTemperature, SetTemperature);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130313 Message "Humidity"
@@ -5031,8 +5031,8 @@ inline bool ParseN2kTemperature(const tN2kMsg &N2kMsg, unsigned char &SID, unsig
  * \param ActualHumidity    Humidity in percent
  * \param SetHumidity       Set value of Humidity in percent
  */
-void SetN2kPGN130313(tN2kMsg &N2kMsg, unsigned char SID, unsigned char HumidityInstance,
-                     tN2kHumiditySource HumiditySource, double ActualHumidity, double SetHumidity=N2kDoubleNA);
+// void SetN2kPGN130313(tN2kMsg &N2kMsg, unsigned char SID, unsigned char HumidityInstance,
+//                      tN2kHumiditySource HumiditySource, double ActualHumidity, double SetHumidity=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "Humidity" - PGN 130313
@@ -5041,10 +5041,10 @@ void SetN2kPGN130313(tN2kMsg &N2kMsg, unsigned char SID, unsigned char HumidityI
  * Alias of PGN 130313. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130313
   */
-inline void SetN2kHumidity(tN2kMsg &N2kMsg, unsigned char SID, unsigned char HumidityInstance,
-                     tN2kHumiditySource HumiditySource, double ActualHumidity, double SetHumidity=N2kDoubleNA) {
-  SetN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity,SetHumidity);
-}
+// inline void SetN2kHumidity(tN2kMsg &N2kMsg, unsigned char SID, unsigned char HumidityInstance,
+//                      tN2kHumiditySource HumiditySource, double ActualHumidity, double SetHumidity=N2kDoubleNA) {
+//   SetN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity,SetHumidity);
+// }
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130313 "Humidity"
  * \ingroup group_msgParsers
@@ -5064,8 +5064,8 @@ inline void SetN2kHumidity(tN2kMsg &N2kMsg, unsigned char SID, unsigned char Hum
  * \return false    Parsing of PGN Message aborted
  *
  */
-bool ParseN2kPGN130313(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
-                       tN2kHumiditySource &HumiditySource, double &ActualHumidity, double &SetHumidity);
+// bool ParseN2kPGN130313(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
+//                        tN2kHumiditySource &HumiditySource, double &ActualHumidity, double &SetHumidity);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Humidity" 
@@ -5075,10 +5075,10 @@ bool ParseN2kPGN130313(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char 
  * Alias of PGN 130313. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130313 
  */
-inline bool ParseN2kHumidity(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
-                       tN2kHumiditySource &HumiditySource, double &ActualHumidity, double &SetHumidity) {
-  return ParseN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity, SetHumidity);
-}
+// inline bool ParseN2kHumidity(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
+//                        tN2kHumiditySource &HumiditySource, double &ActualHumidity, double &SetHumidity) {
+//   return ParseN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity, SetHumidity);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of a "Humidity" 
@@ -5088,11 +5088,11 @@ inline bool ParseN2kHumidity(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned
  * Alias of PGN 130313. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130313 
  */
-inline bool ParseN2kPGN130313(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
-                       tN2kHumiditySource &HumiditySource, double &ActualHumidity) {
-  double SetHumidity;
-  return ParseN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity, SetHumidity);
-}
+// inline bool ParseN2kPGN130313(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
+//                        tN2kHumiditySource &HumiditySource, double &ActualHumidity) {
+//   double SetHumidity;
+//   return ParseN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity, SetHumidity);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of a "Humidity" 
@@ -5102,10 +5102,10 @@ inline bool ParseN2kPGN130313(const tN2kMsg &N2kMsg, unsigned char &SID, unsigne
  * Alias of PGN 130313. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130313 
  */
-inline bool ParseN2kHumidity(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
-                       tN2kHumiditySource &HumiditySource, double &ActualHumidity) {
-  return ParseN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity);
-}
+// inline bool ParseN2kHumidity(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &HumidityInstance,
+//                        tN2kHumiditySource &HumiditySource, double &ActualHumidity) {
+//   return ParseN2kPGN130313(N2kMsg, SID, HumidityInstance, HumiditySource, ActualHumidity);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130314 Message "Actual Pressure"
@@ -5127,8 +5127,8 @@ inline bool ParseN2kHumidity(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned
  *                          mBarToPascal, if you like to use mBar
  * 
  */
-void SetN2kPGN130314(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
-                     tN2kPressureSource PressureSource, double Pressure);
+// void SetN2kPGN130314(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
+//                      tN2kPressureSource PressureSource, double Pressure);
 
 /************************************************************************//**
  * \brief Setting up Message "Actual Pressure" - PGN 130314
@@ -5137,10 +5137,10 @@ void SetN2kPGN130314(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureI
  * Alias of PGN 130314. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130314
   */
-inline void SetN2kPressure(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
-                           tN2kPressureSource PressureSource, double Pressure) {
-  SetN2kPGN130314(N2kMsg, SID, PressureInstance, PressureSource, Pressure);
-}
+// inline void SetN2kPressure(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
+//                            tN2kPressureSource PressureSource, double Pressure) {
+//   SetN2kPGN130314(N2kMsg, SID, PressureInstance, PressureSource, Pressure);
+// }
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130314 "Actual Pressure"
  * \ingroup group_msgParsers
@@ -5161,8 +5161,8 @@ inline void SetN2kPressure(tN2kMsg &N2kMsg, unsigned char SID, unsigned char Pre
  * \return false    Parsing of PGN Message aborted
  *  
  */
-bool ParseN2kPGN130314(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &PressureInstance,
-                       tN2kPressureSource &PressureSource, double &Pressure);
+// bool ParseN2kPGN130314(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &PressureInstance,
+//                        tN2kPressureSource &PressureSource, double &Pressure);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Actual Pressure" 
@@ -5172,10 +5172,10 @@ bool ParseN2kPGN130314(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char 
  * Alias of PGN 130314. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130314 
  */
-inline bool ParseN2kPressure(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &PressureInstance,
-                       tN2kPressureSource &PressureSource, double &Pressure) {
-  return ParseN2kPGN130314(N2kMsg, SID, PressureInstance, PressureSource, Pressure);
-}
+// inline bool ParseN2kPressure(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &PressureInstance,
+//                        tN2kPressureSource &PressureSource, double &Pressure) {
+//   return ParseN2kPGN130314(N2kMsg, SID, PressureInstance, PressureSource, Pressure);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130315 Message "Set Pressure"
@@ -5199,8 +5199,8 @@ inline bool ParseN2kPressure(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned
  *                          if you like to use mBar
  * 
  */
-void SetN2kPGN130315(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
-                     tN2kPressureSource PressureSource, double SetPressure);
+// void SetN2kPGN130315(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
+//                      tN2kPressureSource PressureSource, double SetPressure);
 
 /************************************************************************//**
  * \brief Setting up Message "Set Pressure" - PGN 130315
@@ -5209,10 +5209,10 @@ void SetN2kPGN130315(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureI
  * Alias of PGN 130315. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130315
   */
-inline void SetN2kSetPressure(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
-                           tN2kPressureSource PressureSource, double SetPressure) {
-  SetN2kPGN130315(N2kMsg, SID, PressureInstance, PressureSource, SetPressure);
-}
+// inline void SetN2kSetPressure(tN2kMsg &N2kMsg, unsigned char SID, unsigned char PressureInstance,
+//                            tN2kPressureSource PressureSource, double SetPressure) {
+//   SetN2kPGN130315(N2kMsg, SID, PressureInstance, PressureSource, SetPressure);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130316 Message "Temperature, Extended Range"
@@ -5237,8 +5237,8 @@ inline void SetN2kSetPressure(tN2kMsg &N2kMsg, unsigned char SID, unsigned char 
  *                          you want to use °C.
  * 
  */
-void SetN2kPGN130316(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
-                     double ActualTemperature, double SetTemperature=N2kDoubleNA);
+// void SetN2kPGN130316(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
+//                      double ActualTemperature, double SetTemperature=N2kDoubleNA);
 
 /************************************************************************//**
  * \brief Setting up Message "Temperature, Extended Range" - PGN 130316
@@ -5247,10 +5247,10 @@ void SetN2kPGN130316(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInsta
  * Alias of PGN 130316. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130316
   */
-inline void SetN2kTemperatureExt(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
-                     double ActualTemperature, double SetTemperature=N2kDoubleNA) {
-  SetN2kPGN130316(N2kMsg,SID,TempInstance,TempSource,ActualTemperature,SetTemperature);
-}
+// inline void SetN2kTemperatureExt(tN2kMsg &N2kMsg, unsigned char SID, unsigned char TempInstance, tN2kTempSource TempSource,
+//                      double ActualTemperature, double SetTemperature=N2kDoubleNA) {
+//   SetN2kPGN130316(N2kMsg,SID,TempInstance,TempSource,ActualTemperature,SetTemperature);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130316 "Temperature, 
@@ -5276,8 +5276,8 @@ inline void SetN2kTemperatureExt(tN2kMsg &N2kMsg, unsigned char SID, unsigned ch
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN130316(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
-                     double &ActualTemperature, double &SetTemperature);
+// bool ParseN2kPGN130316(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
+//                      double &ActualTemperature, double &SetTemperature);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Temperature, Extended Range" 
@@ -5287,10 +5287,10 @@ bool ParseN2kPGN130316(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char 
  * Alias of PGN 130316. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130316 
  */
-inline bool ParseN2kTemperatureExt(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
-                     double &ActualTemperature, double &SetTemperature) {
-  return ParseN2kPGN130316(N2kMsg, SID, TempInstance, TempSource, ActualTemperature, SetTemperature);
-}
+// inline bool ParseN2kTemperatureExt(const tN2kMsg &N2kMsg, unsigned char &SID, unsigned char &TempInstance, tN2kTempSource &TempSource,
+//                      double &ActualTemperature, double &SetTemperature) {
+//   return ParseN2kPGN130316(N2kMsg, SID, TempInstance, TempSource, ActualTemperature, SetTemperature);
+// }
 
 
 /************************************************************************//**
@@ -5302,77 +5302,77 @@ inline bool ParseN2kTemperatureExt(const tN2kMsg &N2kMsg, unsigned char &SID, un
  * \sa SetN2kPGN130323 and ParseN2kPGN130323
  */
 
-struct tN2kMeteorlogicalStationData {
-  /** \brief  */
-  tN2kAISMode Mode;
-  /** \brief  Days since 1970-01-01*/
-  uint16_t SystemDate;
-  /** \brief  seconds since midnight*/
-  double SystemTime;
-   /** \brief The latitude of the current waypoint [degree] */
-  double Latitude;
-  /** \brief The longitude of the current waypoint [degree] */
-  double Longitude;
-  /** \brief  Measured wind speed in m/s */
-  double WindSpeed;
-  /** \brief  Measured wind direction in radians. If you have value 
-   * in degrees, use \ref DegToRad() in call.*/
-  double WindDirection;
-  /** \brief  Wind reference, see definition \ref tN2kWindReference*/
-  tN2kWindReference WindReference;
-  /** \brief  Measured wind gusts speed in m/s*/
-  double WindGusts;
-  /** \brief  Atmospheric pressure in Pascals. Use \ref mBarToPascal,
-   * if you like to use mBar*/
-  double AtmosphericPressure;
-  /** \brief  Outside ambient temperature in K. Use \ref CToKelvin,
-   * if you want to use °C.*/
-  double OutsideAmbientAirTemperature;
-  /** \brief  Identifier of the transmitting weather station.
-   * (15 bytes max)*/
-  char StationID[15 + 1];
-  /** \brief  Friendly name of the transmitting weather station. (
-   * 50 bytes max)*/
-  char StationName[50 + 1];
+// struct tN2kMeteorlogicalStationData {
+//   /** \brief  */
+//   tN2kAISMode Mode;
+//   /** \brief  Days since 1970-01-01*/
+//   uint16_t SystemDate;
+//   /** \brief  seconds since midnight*/
+//   double SystemTime;
+//    /** \brief The latitude of the current waypoint [degree] */
+//   double Latitude;
+//   /** \brief The longitude of the current waypoint [degree] */
+//   double Longitude;
+//   /** \brief  Measured wind speed in m/s */
+//   double WindSpeed;
+//   /** \brief  Measured wind direction in radians. If you have value 
+//    * in degrees, use \ref DegToRad() in call.*/
+//   double WindDirection;
+//   /** \brief  Wind reference, see definition \ref tN2kWindReference*/
+//   tN2kWindReference WindReference;
+//   /** \brief  Measured wind gusts speed in m/s*/
+//   double WindGusts;
+//   /** \brief  Atmospheric pressure in Pascals. Use \ref mBarToPascal,
+//    * if you like to use mBar*/
+//   double AtmosphericPressure;
+//   /** \brief  Outside ambient temperature in K. Use \ref CToKelvin,
+//    * if you want to use °C.*/
+//   double OutsideAmbientAirTemperature;
+//   /** \brief  Identifier of the transmitting weather station.
+//    * (15 bytes max)*/
+//   char StationID[15 + 1];
+//   /** \brief  Friendly name of the transmitting weather station. (
+//    * 50 bytes max)*/
+//   char StationName[50 + 1];
 
-  tN2kMeteorlogicalStationData():
-    Mode(N2kaismode_Autonomous),
-    SystemDate(N2kUInt16NA),
-    SystemTime(N2kDoubleNA),
-    Latitude(N2kDoubleNA),
-    Longitude(N2kDoubleNA),
-    WindSpeed(N2kDoubleNA),
-    WindDirection(N2kDoubleNA),
-    WindReference(N2kWind_Unavailable),
-    WindGusts(N2kDoubleNA),
-    AtmosphericPressure(N2kDoubleNA),
-    OutsideAmbientAirTemperature(N2kDoubleNA) {
-      StationID[0] = 0;
-      StationName[0] = 0;
-    }
+//   tN2kMeteorlogicalStationData():
+//     Mode(N2kaismode_Autonomous),
+//     SystemDate(N2kUInt16NA),
+//     SystemTime(N2kDoubleNA),
+//     Latitude(N2kDoubleNA),
+//     Longitude(N2kDoubleNA),
+//     WindSpeed(N2kDoubleNA),
+//     WindDirection(N2kDoubleNA),
+//     WindReference(N2kWind_Unavailable),
+//     WindGusts(N2kDoubleNA),
+//     AtmosphericPressure(N2kDoubleNA),
+//     OutsideAmbientAirTemperature(N2kDoubleNA) {
+//       StationID[0] = 0;
+//       StationName[0] = 0;
+//     }
 
-  /**********************************************************************//**
-   * \brief Set the StationID object
-   * 
-   * \param id  Identifier of the transmitting weather station
-   *            (15 bytes max)
-   */
-  void SetStationID(const char *id) {
-    strncpy(StationID, id, sizeof(StationID));
-    StationID[sizeof(StationID) - 1] = 0;
-  }
+//   /**********************************************************************//**
+//    * \brief Set the StationID object
+//    * 
+//    * \param id  Identifier of the transmitting weather station
+//    *            (15 bytes max)
+//    */
+//   void SetStationID(const char *id) {
+//     strncpy(StationID, id, sizeof(StationID));
+//     StationID[sizeof(StationID) - 1] = 0;
+//   }
 
-  /**********************************************************************//**
-   * \brief Set the Station Name object
-   * 
-   * \param name  Friendly name of the transmitting weather 
-   *              station. (50 bytes max)
-   */
-  void SetStationName(const char *name) {
-    strncpy(StationName, name, sizeof(StationName));
-    StationName[sizeof(StationName) - 1] = 0;
-  }
-};
+//   /**********************************************************************//**
+//    * \brief Set the Station Name object
+//    * 
+//    * \param name  Friendly name of the transmitting weather 
+//    *              station. (50 bytes max)
+//    */
+//   void SetStationName(const char *name) {
+//     strncpy(StationName, name, sizeof(StationName));
+//     StationName[sizeof(StationName) - 1] = 0;
+//   }
+// };
 
 /************************************************************************//**
  * \brief Setting up PGN 130323 Message "Meterological Station Data"
@@ -5387,7 +5387,7 @@ struct tN2kMeteorlogicalStationData {
  *                    \ref tN2kMeteorlogicalStationData
  */
 
-void SetN2kPGN130323(tN2kMsg &N2kMsg, const tN2kMeteorlogicalStationData &N2kData);
+// void SetN2kPGN130323(tN2kMsg &N2kMsg, const tN2kMeteorlogicalStationData &N2kData);
 
 /************************************************************************//**
  * \brief Setting up Message "Meterological Station Data" - PGN 130323
@@ -5396,7 +5396,7 @@ void SetN2kPGN130323(tN2kMsg &N2kMsg, const tN2kMeteorlogicalStationData &N2kDat
  * Alias of PGN 130323. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130323
   */
-inline void SetN2kMeteorlogicalStationData(tN2kMsg &N2kMsg, const tN2kMeteorlogicalStationData &N2kData) { SetN2kPGN130323(N2kMsg, N2kData); }
+// inline void SetN2kMeteorlogicalStationData(tN2kMsg &N2kMsg, const tN2kMeteorlogicalStationData &N2kData) { SetN2kPGN130323(N2kMsg, N2kData); }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130323 "Meterological Station Data"
@@ -5409,7 +5409,7 @@ inline void SetN2kMeteorlogicalStationData(tN2kMsg &N2kMsg, const tN2kMeteorlogi
  * \param N2kData     Meterological Station Data, see 
  *                    \ref tN2kMeteorlogicalStationData
  */
-bool ParseN2kPGN130323(const tN2kMsg &N2kMsg, tN2kMeteorlogicalStationData &N2kData);
+// bool ParseN2kPGN130323(const tN2kMsg &N2kMsg, tN2kMeteorlogicalStationData &N2kData);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Meterological Station Data" 
@@ -5419,9 +5419,9 @@ bool ParseN2kPGN130323(const tN2kMsg &N2kMsg, tN2kMeteorlogicalStationData &N2kD
  * Alias of PGN 130323. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130323 
  */
-inline bool ParseN2kMeteorlogicalStationData(const tN2kMsg &N2kMsg, tN2kMeteorlogicalStationData &N2kData) {
-  return ParseN2kPGN130323(N2kMsg, N2kData);
-}
+// inline bool ParseN2kMeteorlogicalStationData(const tN2kMsg &N2kMsg, tN2kMeteorlogicalStationData &N2kData) {
+//   return ParseN2kPGN130323(N2kMsg, N2kData);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130576 Message "Trim Tab Status"
@@ -5477,9 +5477,9 @@ bool ParseN2kPGN130576(const tN2kMsg &N2kMsg, int8_t &PortTrimTab, int8_t &StbdT
  * Alias of PGN 130576. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130576 
  */
-inline bool ParseN2kTrimTab(const tN2kMsg &N2kMsg, int8_t &PortTrimTab, int8_t &StbdTrimTab) {
-  return ParseN2kPGN130576(N2kMsg, PortTrimTab, StbdTrimTab);
-}
+// inline bool ParseN2kTrimTab(const tN2kMsg &N2kMsg, int8_t &PortTrimTab, int8_t &StbdTrimTab) {
+//   return ParseN2kPGN130576(N2kMsg, PortTrimTab, StbdTrimTab);
+// }
 
 /************************************************************************//**
  * \brief Setting up PGN 130577 Message "Direction Data"
@@ -5504,8 +5504,8 @@ inline bool ParseN2kTrimTab(const tN2kMsg &N2kMsg, int8_t &PortTrimTab, int8_t &
  * \param Set                  Set in radians
  * \param Drift                drift in m/s
  */
-void SetN2kPGN130577(tN2kMsg &N2kMsg, tN2kDataMode DataMode, tN2kHeadingReference CogReference, unsigned char SID, double COG, double SOG,
-      double Heading, double SpeedThroughWater, double Set, double Drift);
+// void SetN2kPGN130577(tN2kMsg &N2kMsg, tN2kDataMode DataMode, tN2kHeadingReference CogReference, unsigned char SID, double COG, double SOG,
+//       double Heading, double SpeedThroughWater, double Set, double Drift);
 
 /************************************************************************//**
  * \brief Setting up Message "Direction Data" - PGN 130577
@@ -5514,11 +5514,11 @@ void SetN2kPGN130577(tN2kMsg &N2kMsg, tN2kDataMode DataMode, tN2kHeadingReferenc
  * Alias of PGN 130577. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref SetN2kPGN130577
   */
-inline void SetN2kDirectionData(tN2kMsg &N2kMsg, tN2kDataMode DataMode, tN2kHeadingReference CogReference, unsigned char SID, double COG, double SOG,
-      double Heading, double SpeedThroughWater, double Set, double Drift){
+// inline void SetN2kDirectionData(tN2kMsg &N2kMsg, tN2kDataMode DataMode, tN2kHeadingReference CogReference, unsigned char SID, double COG, double SOG,
+//       double Heading, double SpeedThroughWater, double Set, double Drift){
 
-   SetN2kPGN130577(N2kMsg,DataMode,CogReference,SID,COG,SOG,Heading,SpeedThroughWater,Set,Drift);
-}
+//    SetN2kPGN130577(N2kMsg,DataMode,CogReference,SID,COG,SOG,Heading,SpeedThroughWater,Set,Drift);
+// }
 
 /************************************************************************//**
  * \brief Parsing the content of message PGN 130577 "Direction Data"
@@ -5543,8 +5543,8 @@ inline void SetN2kDirectionData(tN2kMsg &N2kMsg, tN2kDataMode DataMode, tN2kHead
  * \return true     Parsing of PGN Message successful
  * \return false    Parsing of PGN Message aborted
  */
-bool ParseN2kPGN130577(const tN2kMsg &N2kMsg,tN2kDataMode &DataMode, tN2kHeadingReference &CogReference,unsigned char &SID,double &COG,
-      double &SOG,double &Heading,double &SpeedThroughWater,double &Set,double &Drift);
+// bool ParseN2kPGN130577(const tN2kMsg &N2kMsg,tN2kDataMode &DataMode, tN2kHeadingReference &CogReference,unsigned char &SID,double &COG,
+//       double &SOG,double &Heading,double &SpeedThroughWater,double &Set,double &Drift);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Direction Data" 
@@ -5554,11 +5554,11 @@ bool ParseN2kPGN130577(const tN2kMsg &N2kMsg,tN2kDataMode &DataMode, tN2kHeading
  * Alias of PGN 130577. This alias was introduced to improve the readability
  * of the source code. See parameter details on \ref ParseN2kPGN130577 
  */
-inline bool ParseN2kDirectionData(const tN2kMsg &N2kMsg,tN2kDataMode &DataMode, tN2kHeadingReference &CogReference,unsigned char &SID,double &COG,
-      double &SOG,double &Heading,double &SpeedThroughWater,double &Set,double &Drift) {
+// inline bool ParseN2kDirectionData(const tN2kMsg &N2kMsg,tN2kDataMode &DataMode, tN2kHeadingReference &CogReference,unsigned char &SID,double &COG,
+//       double &SOG,double &Heading,double &SpeedThroughWater,double &Set,double &Drift) {
 
-   return ParseN2kPGN130577(N2kMsg,DataMode,CogReference,SID,COG,SOG,Heading,SpeedThroughWater,Set,Drift);
-}
+//    return ParseN2kPGN130577(N2kMsg,DataMode,CogReference,SID,COG,SOG,Heading,SpeedThroughWater,Set,Drift);
+// }
 
 
 #endif

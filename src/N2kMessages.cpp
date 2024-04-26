@@ -822,28 +822,28 @@ void SetN2kPGN127502(tN2kMsg &N2kMsg, unsigned char TargetBankInstance, tN2kBina
 
 //*****************************************************************************
 // Leeway
-void SetN2kPGN128000(tN2kMsg &N2kMsg, unsigned char SID, double Leeway) {
-    N2kMsg.SetPGN(128000L);
-    N2kMsg.Priority=4;
-    N2kMsg.AddByte(SID);
-    N2kMsg.Add2ByteDouble(Leeway,0.0001);
-    N2kMsg.AddByte(0xff); // Reserved
-    N2kMsg.AddByte(0xff); // Reserved
-    N2kMsg.AddByte(0xff); // Reserved
-    N2kMsg.AddByte(0xff); // Reserved
-    N2kMsg.AddByte(0xff); // Reserved
-}
+// void SetN2kPGN128000(tN2kMsg &N2kMsg, unsigned char SID, double Leeway) {
+//     N2kMsg.SetPGN(128000L);
+//     N2kMsg.Priority=4;
+//     N2kMsg.AddByte(SID);
+//     N2kMsg.Add2ByteDouble(Leeway,0.0001);
+//     N2kMsg.AddByte(0xff); // Reserved
+//     N2kMsg.AddByte(0xff); // Reserved
+//     N2kMsg.AddByte(0xff); // Reserved
+//     N2kMsg.AddByte(0xff); // Reserved
+//     N2kMsg.AddByte(0xff); // Reserved
+// }
 
-bool ParseN2kPGN128000(const tN2kMsg &N2kMsg, unsigned char &SID, double &Leeway) {
-  if (N2kMsg.PGN!=128000L) return false;
+// bool ParseN2kPGN128000(const tN2kMsg &N2kMsg, unsigned char &SID, double &Leeway) {
+//   if (N2kMsg.PGN!=128000L) return false;
 
-  int Index=0;
+//   int Index=0;
 
-  SID=N2kMsg.GetByte(Index);
-  Leeway=N2kMsg.Get2ByteDouble(0.0001,Index);
+//   SID=N2kMsg.GetByte(Index);
+//   Leeway=N2kMsg.Get2ByteDouble(0.0001,Index);
 
-  return true;
-}
+//   return true;
+// }
 
 //*****************************************************************************
 // Boat speed
