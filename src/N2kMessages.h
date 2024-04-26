@@ -261,8 +261,8 @@ inline bool ParseN2kSystemTime(const tN2kMsg &N2kMsg, unsigned char &SID, uint16
  * 
  * \sa tN2kAISTransceiverInformation
  */
-void SetN2kPGN129802(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t SourceID,
-      tN2kAISTransceiverInformation AISTransceiverInformation, char * SafetyRelatedText);
+// void SetN2kPGN129802(tN2kMsg &N2kMsg, uint8_t MessageID, tN2kAISRepeat Repeat, uint32_t SourceID,
+//       tN2kAISTransceiverInformation AISTransceiverInformation, char * SafetyRelatedText);
 
 /************************************************************************//**
  * \brief Setting up Message "AIS Safety Related Broadcast Message" - 
@@ -304,8 +304,8 @@ inline void SetN2kAISSafetyRelatedBroadcastMsg(tN2kMsg &N2kMsg, uint8_t MessageI
  * 
  * \sa tN2kAISTransceiverInformation
  */
-bool ParseN2kPGN129802(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &SourceID,
-      tN2kAISTransceiverInformation &AISTransceiverInformation, char * SafetyRelatedText, size_t &SafetyRelatedTextMaxSize);
+// bool ParseN2kPGN129802(const tN2kMsg &N2kMsg, uint8_t &MessageID, tN2kAISRepeat &Repeat, uint32_t &SourceID,
+//       tN2kAISTransceiverInformation &AISTransceiverInformation, char * SafetyRelatedText, size_t &SafetyRelatedTextMaxSize);
 
 /************************************************************************//**
  * \brief Parsing the content of a "AIS Safety Related Broadcast Message" 
@@ -352,21 +352,21 @@ inline bool ParseN2kAISSafetyRelatedBroadcastMsg(const tN2kMsg &N2kMsg, uint8_t 
  * \param MOBEmitterBatteryStatus   Battery status
  * 
  */
-void SetN2kPGN127233(tN2kMsg &N2kMsg,
-      unsigned char SID,
-      uint32_t MobEmitterId,
-      tN2kMOBStatus MOBStatus,
-      double ActivationTime,
-      tN2kMOBPositionSource PositionSource,
-      uint16_t PositionDate,
-      double PositionTime,
-      double Latitude,
-      double Longitude,
-      tN2kHeadingReference COGReference,
-      double COG,
-      double SOG,
-      uint32_t MMSI,
-      tN2kMOBEmitterBatteryStatus MOBEmitterBatteryStatus);
+// void SetN2kPGN127233(tN2kMsg &N2kMsg,
+//       unsigned char SID,
+//       uint32_t MobEmitterId,
+//       tN2kMOBStatus MOBStatus,
+//       double ActivationTime,
+//       tN2kMOBPositionSource PositionSource,
+//       uint16_t PositionDate,
+//       double PositionTime,
+//       double Latitude,
+//       double Longitude,
+//       tN2kHeadingReference COGReference,
+//       double COG,
+//       double SOG,
+//       uint32_t MMSI,
+//       tN2kMOBEmitterBatteryStatus MOBEmitterBatteryStatus);
 
 /************************************************************************//**
  * \brief Setting up Message "Man Overboard Notification" - PGN 127233
@@ -425,21 +425,21 @@ inline void SetN2kMOBNotification(tN2kMsg &N2kMsg,
  * \return false    Parsing of PGN Message aborted
  * 
  */
-bool ParseN2kPGN127233(const tN2kMsg &N2kMsg,
-      unsigned char &SID,
-      uint32_t &MobEmitterId,
-      tN2kMOBStatus &MOBStatus,
-      double &ActivationTime,
-      tN2kMOBPositionSource &PositionSource,
-      uint16_t &PositionDate,
-      double &PositionTime,
-      double &Latitude,
-      double &Longitude,
-      tN2kHeadingReference &COGReference,
-      double &COG,
-      double &SOG,
-      uint32_t &MMSI,
-      tN2kMOBEmitterBatteryStatus &MOBEmitterBatteryStatus);
+// bool ParseN2kPGN127233(const tN2kMsg &N2kMsg,
+//       unsigned char &SID,
+//       uint32_t &MobEmitterId,
+//       tN2kMOBStatus &MOBStatus,
+//       double &ActivationTime,
+//       tN2kMOBPositionSource &PositionSource,
+//       uint16_t &PositionDate,
+//       double &PositionTime,
+//       double &Latitude,
+//       double &Longitude,
+//       tN2kHeadingReference &COGReference,
+//       double &COG,
+//       double &SOG,
+//       uint32_t &MMSI,
+//       tN2kMOBEmitterBatteryStatus &MOBEmitterBatteryStatus);
 
 /************************************************************************//**
  * \brief Parsing the content of a "Man Overboard Notification" 
