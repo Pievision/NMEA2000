@@ -276,29 +276,29 @@ bool IsFastPacketSystemMessage(unsigned long PGN) {
 bool IsDefaultSingleFrameMessage(unsigned long PGN) {
                                   switch (PGN) {
                                       case 126992L: // System date/time, pri=3, period=1000
-                                      case 126993L: // Heartbeat, pri=7, period=60000
-                                      case 127245L: // Rudder, pri=2, period=100
-                                      case 127250L: // Vessel Heading, pri=2, period=100
-                                      case 127251L: // Rate of Turn, pri=2, period=100
-                                      case 127257L: // Attitude, pri=3, period=1000
+                                      // case 126993L: // Heartbeat, pri=7, period=60000
+                                      // case 127245L: // Rudder, pri=2, period=100
+                                      // case 127250L: // Vessel Heading, pri=2, period=100
+                                      // case 127251L: // Rate of Turn, pri=2, period=100
+                                      // case 127257L: // Attitude, pri=3, period=1000
                                       case 127488L: // Engine parameters rapid, rapid Update, pri=2, period=100
                                       case 127493L: // Transmission parameters: dynamic, pri=2, period=100
-                                      case 127501L: // Binary status report, pri=3, period=NA
-                                      case 127505L: // Fluid level, pri=6, period=2500
-                                      case 127508L: // Battery Status, pri=6, period=1500
-                                      case 128259L: // Boat speed, pri=2, period=1000
-                                      case 128267L: // Water depth, pri=3, period=1000
-                                      case 129025L: // Lat/lon rapid, pri=2, period=100
-                                      case 129026L: // COG SOG rapid, pri=2, period=250
-                                      case 129283L: // Cross Track Error, pri=3, period=1000
-                                      case 130306L: // Wind Speed, pri=2, period=100
-                                      case 130310L: // Outside Environmental parameters, pri=5, period=500
-                                      case 130311L: // Environmental parameters, pri=5, period=500
-                                      case 130312L: // Temperature, pri=5, period=2000
-                                      case 130313L: // Humidity, pri=5, period=2000
-                                      case 130314L: // Pressure, pri=5, period=2000
-                                      case 130316L: // Temperature extended range, pri=5, period=2000
-                                      case 130576L: // Small Craft Status (Trim Tab position), pri=2, period=200
+                                      // case 127501L: // Binary status report, pri=3, period=NA
+                                      // case 127505L: // Fluid level, pri=6, period=2500
+                                      // case 127508L: // Battery Status, pri=6, period=1500
+                                      // case 128259L: // Boat speed, pri=2, period=1000
+                                      // case 128267L: // Water depth, pri=3, period=1000
+                                      // case 129025L: // Lat/lon rapid, pri=2, period=100
+                                      // case 129026L: // COG SOG rapid, pri=2, period=250
+                                      // case 129283L: // Cross Track Error, pri=3, period=1000
+                                      // case 130306L: // Wind Speed, pri=2, period=100
+                                      // case 130310L: // Outside Environmental parameters, pri=5, period=500
+                                      // case 130311L: // Environmental parameters, pri=5, period=500
+                                      // case 130312L: // Temperature, pri=5, period=2000
+                                      // case 130313L: // Humidity, pri=5, period=2000
+                                      // case 130314L: // Pressure, pri=5, period=2000
+                                      // case 130316L: // Temperature extended range, pri=5, period=2000
+                                      // case 130576L: // Small Craft Status (Trim Tab position), pri=2, period=200
                                       return true;
                                   }
                                   return false;
@@ -453,114 +453,114 @@ bool IsDefaultFastPacketMessage(unsigned long PGN) {
                                       case 126986L: // Alert Configuration, pri=2, period=NA
                                       case 126987L: // Alert Threshold, pri=2, period=NA
                                       case 126988L: // Alert Value, pri=2, period=10000
-                                      case 127233L: // Man Overboard Notification(MOB), pri=3, period=NA
-                                      case 127237L: // Heading/Track control, pri=2, period=250
+                                      // case 127233L: // Man Overboard Notification(MOB), pri=3, period=NA
+                                      // case 127237L: // Heading/Track control, pri=2, period=250
                                       case 127489L: // Engine parameters dynamic, pri=2, period=500
                                       case 127490L: // Electric Drive Status (Dynamic), pri=1, period=1500 
                                       case 127491L: // Electric Energy Storage Status (Dynamic), pri=7, period=1500
                                       case 127494L: // Electric Drive Information, pri=4, period=NA
                                       case 127495L: // Electric Energy Storage Information, pri=6, period=NA
-                                      case 127496L: // Trip fuel consumption, vessel, pri=5, period=1000
-                                      case 127497L: // Trip fuel consumption, engine, pri=5, period=1000
+                                      // case 127496L: // Trip fuel consumption, vessel, pri=5, period=1000
+                                      // case 127497L: // Trip fuel consumption, engine, pri=5, period=1000
                                       case 127498L: // Engine parameters static, pri=5, period=NA
-                                      case 127503L: // AC Input Status, pri=6, period=1500
-                                      case 127504L: // AC Output Status, pri=6, period=1500
-                                      case 127506L: // DC Detailed status, pri=6, period=1500
-                                      case 127507L: // Charger status, pri=6, period=1500
-                                      case 127509L: // Inverter status, pri=6, period=1500
-                                      case 127510L: // Charger configuration status, pri=6, period=NA
-                                      case 127511L: // Inverter Configuration Status, pri=6, period=NA
-                                      case 127512L: // AGS configuration status, pri=6, period=NA
-                                      case 127513L: // Battery configuration status, pri=6, period=NA
-                                      case 127514L: // AGS Status, pri=6, period=1500
-                                      case 128275L: // Distance log, pri=6, period=1000
-                                      case 128520L: // Tracked Target Data, pri=2, period=1000
-                                      case 128538L: // Elevator car status, pri=6, period=100
-                                      case 129029L: // GNSS Position Data, pri=3, period=1000
-                                      case 129038L: // AIS Class A Position Report, pri=4, period=NA
-                                      case 129039L: // AIS Class B Position Report, pri=4, period=NA
-                                      case 129040L: // AIS Class B Extended Position Report, pri=4, period=NA
-                                      case 129041L: // AIS Aids to Navigation (AtoN) Report, pri=4, period=NA
-                                      case 129044L: // Datum, pri=6, period=10000
-                                      case 129045L: // User Datum Settings, pri=6, period=NA
-                                      case 129284L: // Navigation info, pri=3, period=1000
-                                      case 129285L: // Waypoint list, pri=3, period=NA
-                                      case 129301L: // Time to/from Mark, pri=3, period=1000
-                                      case 129302L: // Bearing and Distance between two Marks, pri=6, period=NA
-                                      case 129538L: // GNSS Control Status, pri=6, period=NA
-                                      case 129540L: // GNSS Sats in View, pri=6, period=1000
-                                      case 129541L: // GPS Almanac Data, pri=6, period=NA
-                                      case 129542L: // GNSS Pseudorange Noise Statistics, pri=6, period=1000
-                                      case 129545L: // GNSS RAIM Output, pri=6, period=NA
-                                      case 129547L: // GNSS Pseudorange Error Statistics, pri=6, period=NA
-                                      case 129549L: // DGNSS Corrections, pri=6, period=NA
-                                      case 129551L: // GNSS Differential Correction Receiver Signal, pri=6, period=NA
-                                      case 129556L: // GLONASS Almanac Data, pri=6, period=NA
-                                      case 129792L: // AIS DGNSS Broadcast Binary Message, pri=6, period=NA
-                                      case 129793L: // AIS UTC and Date Report, pri=7, period=NA
-                                      case 129794L: // AIS Class A Static data, pri=6, period=NA
-                                      case 129795L: // AIS Addressed Binary Message, pri=5, period=NA
-                                      case 129796L: // AIS Acknowledge, pri=7, period=NA
-                                      case 129797L: // AIS Binary Broadcast Message, pri=5, period=NA
-                                      case 129798L: // AIS SAR Aircraft Position Report, pri=4, period=NA
-                                      case 129799L: // Radio Frequency/Mode/Power, pri=3, period=NA
-                                      case 129800L: // AIS UTC/Date Inquiry, pri=7, period=NA
-                                      case 129801L: // AIS Addressed Safety Related Message, pri=5, period=NA
-                                      case 129802L: // AIS Safety Related Broadcast Message, pri=5, period=NA
-                                      case 129803L: // AIS Interrogation PGN, pri=7, period=NA
-                                      case 129804L: // AIS Assignment Mode Command, pri=7, period=NA
-                                      case 129805L: // AIS Data Link Management Message, pri=7, period=NA
-                                      case 129806L: // AIS Channel Management, pri=7, period=NA
-                                      case 129807L: // AIS Group Assignment, pri=7, period=NA
-                                      case 129808L: // DSC Call Information, pri=8, period=NA
-                                      case 129809L: // AIS Class B Static Data: Part A, pri=6, period=NA
-                                      case 129810L: // AIS Class B Static Data Part B, pri=6, period=NA
-                                      case 129811L: // AIS Single Slot Binary Message, pri=5, period=NA
-                                      case 129812L: // AIS Multi Slot Binary Message, pri=5, period=NA
-                                      case 129813L: // AIS Long-Range Broadcast Message, pri=5, period=NA
-                                      case 130052L: // Loran-C TD Data, pri=3, period=1000
-                                      case 130053L: // Loran-C Range Data, pri=3, period=1000
-                                      case 130054L: // Loran-C Signal Data, pri=3, period=1000
-                                      case 130060L: // Label, pri=7, period=NA
-                                      case 130061L: // Channel Source Configuration, pri=7, period=NA
-                                      case 130064L: // Route and WP Service - Database List, pri=7, period=NA
-                                      case 130065L: // Route and WP Service - Route List, pri=7, period=NA
-                                      case 130066L: // Route and WP Service - Route/WP-List Attributes, pri=7, period=NA
-                                      case 130067L: // Route and WP Service - Route - WP Name & Position, pri=7, period=NA
-                                      case 130068L: // Route and WP Service - Route - WP Name, pri=7, period=NA
-                                      case 130069L: // Route and WP Service - XTE Limit & Navigation Method, pri=7, period=NA
-                                      case 130070L: // Route and WP Service - WP Comment, pri=7, period=NA
-                                      case 130071L: // Route and WP Service - Route Comment, pri=7, period=NA
-                                      case 130072L: // Route and WP Service - Database Comment, pri=7, period=NA
-                                      case 130073L: // Route and WP Service - Radius of Turn, pri=7, period=NA
-                                      case 130074L: // Route and WP Service - WP List - WP Name & Position, pri=7, period=NA
-                                      case 130320L: // Tide Station Data, pri=6, period=1000
-                                      case 130321L: // Salinity Station Data, pri=6, period=1000
-                                      case 130322L: // Current Station Data, pri=6, period=1000
-                                      case 130323L: // Meteorological Station Data, pri=6, period=1000
-                                      case 130324L: // Moored Buoy Station Data, pri=6, period=1000
-                                      case 130330L: // Lighting system settings, pri=7, period=NA
-                                      case 130561L: // Lighting zone, pri=7, period=NA
-                                      case 130562L: // Lighting scene, pri=7, period=NA
-                                      case 130563L: // Lighting device, pri=7, period=NA
-                                      case 130564L: // Lighting device enumeration, pri=7, period=NA
-                                      case 130565L: // Lighting color sequence, pri=7, period=NA
-                                      case 130566L: // Lighting program, pri=7, period=NA
-                                      case 130567L: // Watermaker Input Setting and Status, pri=6, period=2500
-                                      case 130577L: // Direction Data PGN, pri=3, period=1000
-                                      case 130578L: // Vessel Speed Components, pri=2, period=250
-                                      // Entertainment PGNs
-                                      case 130569L: // Current File and Status, pri=6, period=500
-                                      case 130570L: // Library Data File, pri=6, period=NA
-                                      case 130571L: // Library Data Group, pri=6, period=NA
-                                      case 130572L: // Library Data Search, pri=6, period=NA
-                                      case 130573L: // Supported Source Data, pri=6, period=NA
-                                      case 130574L: // Supported Zone Data, pri=6, period=NA
-                                      case 130580L: // System Configuration Status, pri=6, period=NA
-                                      case 130581L: // Zone Configuration Status, pri=6, period=NA
-                                      case 130583L: // Available Audio EQ Presets, pri=6, period=NA
-                                      case 130584L: // Bluetooth Devices, pri=6, period=NA
-                                      case 130586L: // Zone Configuration Status, pri=6, period=NA
+                                      // case 127503L: // AC Input Status, pri=6, period=1500
+                                      // case 127504L: // AC Output Status, pri=6, period=1500
+                                      // case 127506L: // DC Detailed status, pri=6, period=1500
+                                      // case 127507L: // Charger status, pri=6, period=1500
+                                      // case 127509L: // Inverter status, pri=6, period=1500
+                                      // case 127510L: // Charger configuration status, pri=6, period=NA
+                                      // case 127511L: // Inverter Configuration Status, pri=6, period=NA
+                                      // case 127512L: // AGS configuration status, pri=6, period=NA
+                                      // case 127513L: // Battery configuration status, pri=6, period=NA
+                                      // case 127514L: // AGS Status, pri=6, period=1500
+                                      // case 128275L: // Distance log, pri=6, period=1000
+                                      // case 128520L: // Tracked Target Data, pri=2, period=1000
+                                      // case 128538L: // Elevator car status, pri=6, period=100
+                                      // case 129029L: // GNSS Position Data, pri=3, period=1000
+                                      // case 129038L: // AIS Class A Position Report, pri=4, period=NA
+                                      // case 129039L: // AIS Class B Position Report, pri=4, period=NA
+                                      // case 129040L: // AIS Class B Extended Position Report, pri=4, period=NA
+                                      // case 129041L: // AIS Aids to Navigation (AtoN) Report, pri=4, period=NA
+                                      // case 129044L: // Datum, pri=6, period=10000
+                                      // case 129045L: // User Datum Settings, pri=6, period=NA
+                                      // case 129284L: // Navigation info, pri=3, period=1000
+                                      // case 129285L: // Waypoint list, pri=3, period=NA
+                                      // case 129301L: // Time to/from Mark, pri=3, period=1000
+                                      // case 129302L: // Bearing and Distance between two Marks, pri=6, period=NA
+                                      // case 129538L: // GNSS Control Status, pri=6, period=NA
+                                      // case 129540L: // GNSS Sats in View, pri=6, period=1000
+                                      // case 129541L: // GPS Almanac Data, pri=6, period=NA
+                                      // case 129542L: // GNSS Pseudorange Noise Statistics, pri=6, period=1000
+                                      // case 129545L: // GNSS RAIM Output, pri=6, period=NA
+                                      // case 129547L: // GNSS Pseudorange Error Statistics, pri=6, period=NA
+                                      // case 129549L: // DGNSS Corrections, pri=6, period=NA
+                                      // case 129551L: // GNSS Differential Correction Receiver Signal, pri=6, period=NA
+                                      // case 129556L: // GLONASS Almanac Data, pri=6, period=NA
+                                      // case 129792L: // AIS DGNSS Broadcast Binary Message, pri=6, period=NA
+                                      // case 129793L: // AIS UTC and Date Report, pri=7, period=NA
+                                      // case 129794L: // AIS Class A Static data, pri=6, period=NA
+                                      // case 129795L: // AIS Addressed Binary Message, pri=5, period=NA
+                                      // case 129796L: // AIS Acknowledge, pri=7, period=NA
+                                      // case 129797L: // AIS Binary Broadcast Message, pri=5, period=NA
+                                      // case 129798L: // AIS SAR Aircraft Position Report, pri=4, period=NA
+                                      // case 129799L: // Radio Frequency/Mode/Power, pri=3, period=NA
+                                      // case 129800L: // AIS UTC/Date Inquiry, pri=7, period=NA
+                                      // case 129801L: // AIS Addressed Safety Related Message, pri=5, period=NA
+                                      // case 129802L: // AIS Safety Related Broadcast Message, pri=5, period=NA
+                                      // case 129803L: // AIS Interrogation PGN, pri=7, period=NA
+                                      // case 129804L: // AIS Assignment Mode Command, pri=7, period=NA
+                                      // case 129805L: // AIS Data Link Management Message, pri=7, period=NA
+                                      // case 129806L: // AIS Channel Management, pri=7, period=NA
+                                      // case 129807L: // AIS Group Assignment, pri=7, period=NA
+                                      // case 129808L: // DSC Call Information, pri=8, period=NA
+                                      // case 129809L: // AIS Class B Static Data: Part A, pri=6, period=NA
+                                      // case 129810L: // AIS Class B Static Data Part B, pri=6, period=NA
+                                      // case 129811L: // AIS Single Slot Binary Message, pri=5, period=NA
+                                      // case 129812L: // AIS Multi Slot Binary Message, pri=5, period=NA
+                                      // case 129813L: // AIS Long-Range Broadcast Message, pri=5, period=NA
+                                      // case 130052L: // Loran-C TD Data, pri=3, period=1000
+                                      // case 130053L: // Loran-C Range Data, pri=3, period=1000
+                                      // case 130054L: // Loran-C Signal Data, pri=3, period=1000
+                                      // case 130060L: // Label, pri=7, period=NA
+                                      // case 130061L: // Channel Source Configuration, pri=7, period=NA
+                                      // case 130064L: // Route and WP Service - Database List, pri=7, period=NA
+                                      // case 130065L: // Route and WP Service - Route List, pri=7, period=NA
+                                      // case 130066L: // Route and WP Service - Route/WP-List Attributes, pri=7, period=NA
+                                      // case 130067L: // Route and WP Service - Route - WP Name & Position, pri=7, period=NA
+                                      // case 130068L: // Route and WP Service - Route - WP Name, pri=7, period=NA
+                                      // case 130069L: // Route and WP Service - XTE Limit & Navigation Method, pri=7, period=NA
+                                      // case 130070L: // Route and WP Service - WP Comment, pri=7, period=NA
+                                      // case 130071L: // Route and WP Service - Route Comment, pri=7, period=NA
+                                      // case 130072L: // Route and WP Service - Database Comment, pri=7, period=NA
+                                      // case 130073L: // Route and WP Service - Radius of Turn, pri=7, period=NA
+                                      // case 130074L: // Route and WP Service - WP List - WP Name & Position, pri=7, period=NA
+                                      // case 130320L: // Tide Station Data, pri=6, period=1000
+                                      // case 130321L: // Salinity Station Data, pri=6, period=1000
+                                      // case 130322L: // Current Station Data, pri=6, period=1000
+                                      // case 130323L: // Meteorological Station Data, pri=6, period=1000
+                                      // case 130324L: // Moored Buoy Station Data, pri=6, period=1000
+                                      // case 130330L: // Lighting system settings, pri=7, period=NA
+                                      // case 130561L: // Lighting zone, pri=7, period=NA
+                                      // case 130562L: // Lighting scene, pri=7, period=NA
+                                      // case 130563L: // Lighting device, pri=7, period=NA
+                                      // case 130564L: // Lighting device enumeration, pri=7, period=NA
+                                      // case 130565L: // Lighting color sequence, pri=7, period=NA
+                                      // case 130566L: // Lighting program, pri=7, period=NA
+                                      // case 130567L: // Watermaker Input Setting and Status, pri=6, period=2500
+                                      // case 130577L: // Direction Data PGN, pri=3, period=1000
+                                      // case 130578L: // Vessel Speed Components, pri=2, period=250
+                                      // // Entertainment PGNs
+                                      // case 130569L: // Current File and Status, pri=6, period=500
+                                      // case 130570L: // Library Data File, pri=6, period=NA
+                                      // case 130571L: // Library Data Group, pri=6, period=NA
+                                      // case 130572L: // Library Data Search, pri=6, period=NA
+                                      // case 130573L: // Supported Source Data, pri=6, period=NA
+                                      // case 130574L: // Supported Zone Data, pri=6, period=NA
+                                      // case 130580L: // System Configuration Status, pri=6, period=NA
+                                      // case 130581L: // Zone Configuration Status, pri=6, period=NA
+                                      // case 130583L: // Available Audio EQ Presets, pri=6, period=NA
+                                      // case 130584L: // Bluetooth Devices, pri=6, period=NA
+                                      // case 130586L: // Zone Configuration Status, pri=6, period=NA
                                       return true;
                                   }
                                   return false;
@@ -599,16 +599,16 @@ bool tNMEA2000::IsProprietaryMessage(unsigned long PGN) {
  * - LoadEquivalency = 1
  * 
  */
-const tNMEA2000::tProductInformation DefProductInformation PROGMEM = {
-                                       2101,               // N2kVersion
-                                       666,                // ProductCode
-                                       "Arduino N2k->PC",  //N2kModelID
-                                       "1.0.0.0",          //N2kSwCode
-                                       "1.0.0",    // N2kModelVersion
-                                       "00000001", // N2kModelSerialCode
-                                       0, // CertificationLevel
-                                       1 // LoadEquivalency
-                                      };
+// const tNMEA2000::tProductInformation DefProductInformation PROGMEM = {
+//                                        2101,               // N2kVersion
+//                                        666,                // ProductCode
+//                                        "Arduino N2k->PC",  //N2kModelID
+//                                        "1.0.0.0",          //N2kSwCode
+//                                        "1.0.0",    // N2kModelVersion
+//                                        "00000001", // N2kModelSerialCode
+//                                        0, // CertificationLevel
+//                                        1 // LoadEquivalency
+//                                       };
 
 /************************************************************************//**
  * \brief Default Manufacturer Information
@@ -1534,10 +1534,10 @@ bool tNMEA2000::SendMsg(const tN2kMsg &N2kMsg, int DeviceIndex) {
       result=true;
       N2kMsg.Print(ForwardStream);
       break;
-    case dm_Actisense:
-      result=true;
-      N2kMsg.SendInActisenseFormat(ForwardStream);
-      break;
+    // case dm_Actisense:
+    //   result=true;
+    //   N2kMsg.SendInActisenseFormat(ForwardStream);
+    //   break;
   }
 
   return result;
@@ -2079,9 +2079,9 @@ void tNMEA2000::ForwardMessage(const tN2kMsg &N2kMsg) {
   if ( !ForwardEnabled() || ( !( ForwardOwnMessages() && IsMySource(N2kMsg.Source) ) && N2kMode==N2km_NodeOnly ) ) return;
 
   switch (ForwardType) {
-    case fwdt_Actisense:
-      N2kMsg.SendInActisenseFormat(ForwardStream);
-      break;
+    // case fwdt_Actisense:
+    //   N2kMsg.SendInActisenseFormat(ForwardStream);
+    //   break;
     case fwdt_Text:
       N2kMsg.Print(ForwardStream);
       break;

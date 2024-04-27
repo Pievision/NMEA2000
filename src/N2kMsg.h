@@ -1258,7 +1258,7 @@ public:
    * 
    * \param port      port where to stream, see \ref N2kStream
    */
-  void SendInActisenseFormat(N2kStream *port) const;
+  // void SendInActisenseFormat(N2kStream *port) const;
 };
 
 /************************************************************************//**
